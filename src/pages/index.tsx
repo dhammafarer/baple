@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Paper from "@material-ui/core/Paper";
-import { Theme, createStyles, withStyles } from "@material-ui/core/styles";
+import { Theme, createStyles, WithStyles, withStyles } from "@material-ui/core/styles";
 
 const styles = (theme:Theme) => createStyles({
   paper: {
@@ -10,18 +10,48 @@ const styles = (theme:Theme) => createStyles({
   }
 });
 
-interface Props {
+type Props = {
   classes: any
-}
+  data: {
+    javascriptFrontmatter: {
+      frontmatter: {
+        name: string
+        image: {
+          childImageSharp: {
+            sizes: {
+              src: string
+            }
+          }
+        }
+      }
+    }
+  }
+} & WithStyles<typeof styles>
 
-const IndexPage: React.SFC<Props> = ({ classes }) => (
+const IndexPage: React.SFC<Props> = ({ classes, data }) => (
   <Layout>
     <Paper className={classes.paper}>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <Link to="/page-2/">Go to page 2</Link>
+      {data.javascriptFrontmatter.frontmatter.name}
+      <img src={data.javascriptFrontmatter.frontmatter.image.childImageSharp.sizes.src}/>
     </Paper>
   </Layout>
 )
 
 export default withStyles(styles)(IndexPage);
+
+export const query = graphql`
+  query IndexQuery {
+    javascriptFrontmatter(fileAbsolutePath: {regex: "/test.ts/"}) {
+      frontmatter {
+        name
+        image {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`

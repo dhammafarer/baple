@@ -26,7 +26,6 @@ const Layout: React.SFC<Props> = ({ children }) => (
     render={(data: Data) => (
       <>
         <div>
-          {data.site.siteMetadata.title}
           {children}
         </div>
       </>

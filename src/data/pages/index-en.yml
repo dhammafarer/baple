@@ -1,0 +1,7 @@
+welcome:
+  image: './img/header/scada.jpg'
+  heading: 'Controlnet International'
+  subheading: 'Expert in Power Automation'
+  text:
+    - 'Paragraph one of the text'
+    - 'Paragraph two of the text'
