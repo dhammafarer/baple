@@ -1,7 +1,4 @@
-interface Page {
-  welcome: Data.Welcome
-}
-export const frontmatter: Page = {
+export const frontmatter = {
   welcome: {
     heading: 'one',
     subheading: 'hello',

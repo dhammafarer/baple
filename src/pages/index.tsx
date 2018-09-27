@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Paper from "@material-ui/core/Paper";
 import { Theme, createStyles, WithStyles, withStyles } from "@material-ui/core/styles";
+import {Welcome_2} from '../graphql';
 
 const styles = (theme:Theme) => createStyles({
   paper: {
@@ -15,7 +16,7 @@ type Props = {
   data: {
     javascriptFrontmatter: {
       frontmatter: {
-        welcome: Sections.Welcome
+        welcome: Welcome_2
       }
     }
   }

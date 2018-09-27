@@ -27,10 +27,13 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:types": "gql-gen --schema http://localhost:8000/___graphql --template graphql-codegen-typescript-template --out ./src/graphql.d.ts/"
   },
   "devDependencies": {
     "@types/react": "^16.4.14",
+    "graphql-code-generator": "^0.12.6",
+    "graphql-codegen-typescript-template": "^0.12.6",
     "prettier": "^1.14.2"
   },
   "repository": {
