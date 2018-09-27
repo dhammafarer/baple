@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Paper from "@material-ui/core/Paper";
 import { Theme, createStyles, WithStyles, withStyles } from "@material-ui/core/styles";
 import {Welcome_2} from '../graphql';
+import Welcome from '../components/Welcome';
 
 const styles = (theme:Theme) => createStyles({
   paper: {
@@ -24,10 +25,7 @@ type Props = {
 
 const IndexPage: React.SFC<Props> = ({ classes, data }) => (
   <Layout>
-    <Paper className={classes.paper}>
-      {data.javascriptFrontmatter.frontmatter.welcome.heading}
-      <img src={data.javascriptFrontmatter.frontmatter.welcome.image.childImageSharp.fluid.src}/>
-    </Paper>
+    <Welcome {...data.javascriptFrontmatter.frontmatter.welcome}/>
   </Layout>
 )
 
