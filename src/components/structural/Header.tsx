@@ -5,6 +5,7 @@ interface Props {
   logo: string
   title: string
   nav: any
+  contact?: any
 }
 
 interface State {
@@ -25,13 +26,14 @@ class Header extends React.Component<Props, State> {
   }
 
   render () {
-    const { nav, logo, title } = this.props;
+    const { nav, logo, title, contact } = this.props;
 
     return (
       <HeaderBar
         nav={nav}
         title={title}
         logo={logo}
+        contact={contact}
         toggleMenu={this.toggleMenu}
         handleClose={this.handleClose}
         open={this.state.menu}

@@ -12,12 +12,6 @@ import styles from '../../styles/header-bar-styles';
 import Link from 'gatsby-link';
 import { Nav_2} from '../../graphql';
 
-interface Lnk {
-  to: string
-  label: string
-  links: Array<Lnk>
-}
-
 type Props = WithStyles<typeof styles> & {
   handleClose: any
   toggleMenu: any
@@ -25,9 +19,10 @@ type Props = WithStyles<typeof styles> & {
   title: string
   logo: string
   nav: Nav_2
+  contact?: any
 }
 
-const HeaderBar: React.SFC<Props> = ({ classes, open, handleClose, toggleMenu, nav, title, logo }) => (
+const HeaderBar: React.SFC<Props> = ({ classes, open, handleClose, toggleMenu, nav, title, logo, contact }) => (
     <div>
       <AppBar position="fixed" className={classes.bar}>
         <Toolbar>
@@ -58,6 +53,7 @@ const HeaderBar: React.SFC<Props> = ({ classes, open, handleClose, toggleMenu, n
         title={title}
         open={open}
         handleClose={handleClose}
+        contact={contact}
       />
     </div>
 );

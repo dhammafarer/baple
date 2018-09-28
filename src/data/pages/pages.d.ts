@@ -51,7 +51,7 @@ interface ContactDetails {
   address: Address
 }
 
-type Details = Array<ContactDetails>
+type Contact = Array<ContactDetails>
 
 interface Nav {
   home: string
@@ -63,7 +63,7 @@ interface App {
   lang: Lang
   logo: Logo
   nav: Nav
-  details: Details
+  contact: Contact
 }
 
 //sections
@@ -99,9 +99,8 @@ type QAS = ImageSection
 type About = ImageSection
 type Intro = ImageSection
 
-interface Contact extends ImageSection {
+interface ContactUs extends ImageSection {
   logo: Logo
-  details: Details
 }
 
 interface ProductCards extends Section {
@@ -111,7 +110,7 @@ interface ProductCards extends Section {
 type Sections =
   Welcome |
   About |
-  Contact |
+  ContactUs |
   Categories |
   More |
   Advantages |
@@ -136,7 +135,7 @@ export interface CategoryPage extends Page {
 }
 
 export interface ContactPage extends Page {
-  contact: Contact
+  contactUs: ContactUs
 }
 
 export interface AboutPage extends Page {

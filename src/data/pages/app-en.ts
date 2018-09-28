@@ -4,7 +4,7 @@ export const frontmatter: App = {
   title: 'Controlnet International',
   lang: 'en',
   logo: './img/logos/ctn-logo-square.jpg',
-  details: [
+  contact: [
     {
       contactName: 'Taipei Headquarters',
       phone: '+886-2-8791-2889',

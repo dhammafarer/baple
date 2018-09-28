@@ -24,7 +24,7 @@ const Layout: React.SFC<{}> = ({ children }) => (
           logo={data.app.frontmatter.logo}
           nav={data.app.frontmatter.nav}
           lang={data.app.frontmatter.lang}
-          details={data.app.frontmatter.details}
+          contact={data.app.frontmatter.contact}
         >
           {children}
         </App>

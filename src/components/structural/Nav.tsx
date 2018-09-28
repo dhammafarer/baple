@@ -13,7 +13,7 @@ import Link from 'gatsby-link';
 import CloseIcon from "@material-ui/icons/Close";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
-import { Nav_2 } from '../../graphql';
+import { Nav_2, Contact_2 } from '../../graphql';
 
 type Props = WithStyles<typeof styles> & {
   handleClose: any
@@ -21,9 +21,10 @@ type Props = WithStyles<typeof styles> & {
   logo: string
   title: string
   nav: Nav_2
+  contact?: Contact_2
 }
 
-const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title}) => (
+const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title, contact}) => (
   <Drawer anchor="right" open={open} onClose={handleClose}>
     <div
       tabIndex={0}
@@ -91,20 +92,22 @@ const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title}) 
           })
         }
       </List>
-      <div className={classes.contact}>
-        <div className={classes.details}>
-          <PhoneIcon className={classes.icon}/>
-          <Typography color="inherit" gutterBottom>
-            +886-2-5431-2421
-          </Typography>
+      { contact &&
+        <div className={classes.contact}>
+          <div className={classes.details}>
+            <PhoneIcon className={classes.icon}/>
+            <Typography color="inherit" gutterBottom>
+              {contact[0].phone}
+            </Typography>
+          </div>
+          <div className={classes.details}>
+            <EmailIcon className={classes.icon}/>
+            <Typography color="inherit">
+              {contact[0].email}
+            </Typography>
+          </div>
         </div>
-        <div className={classes.details}>
-          <EmailIcon className={classes.icon}/>
-          <Typography color="inherit">
-            info@baple.es
-          </Typography>
-        </div>
-      </div>
+      }
     </div>
   </Drawer>
 );
