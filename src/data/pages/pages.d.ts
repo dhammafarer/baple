@@ -12,6 +12,7 @@ type Phone = string
 type Email = string
 type Address = Array<string>
 type Lang = 'en' | 'zh'
+type SocialMedia = string
 
 // compound types
 interface Link {
@@ -49,6 +50,10 @@ interface ContactDetails {
   phone: Phone
   email: Email
   address: Address
+  twitter?: SocialMedia
+  facebook?: SocialMedia
+  instagram?: SocialMedia
+  youtube?: SocialMedia
 }
 
 type Contact = Array<ContactDetails>

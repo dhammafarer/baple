@@ -47,6 +47,10 @@ export const AppFragment = graphql`
         phone
         email
         address
+        facebook
+        twitter
+        youtube
+        instagram
       }
       nav {
         home
