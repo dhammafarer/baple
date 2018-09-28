@@ -8,7 +8,6 @@ const footerStyles = (theme:any) => createStyles({
     paddingBottom: theme.spacing.unit * 3,
   },
   footer: {
-    marginTop: theme.spacing.unit * 3,
   },
   footerSocial: {
     backgroundColor: theme.palette.primary.light,

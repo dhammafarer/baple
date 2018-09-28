@@ -15,13 +15,15 @@ const layoutStyles = (theme:Theme) => createStyles({
   main: {
     flex: 1,
     width: '100%',
-    paddingLeft: theme.spacing.unit * 3,
-    paddingRight: theme.spacing.unit * 3,
     display: 'flex',
     flexDirection: 'column',
     paddingTop: 64,
     margin: '0 auto',
     maxWidth: 1600,
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: theme.spacing.unit * 3,
+      paddingRight: theme.spacing.unit * 3,
+    }
   }
 });
 

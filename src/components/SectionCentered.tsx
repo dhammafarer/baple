@@ -6,6 +6,8 @@ import classnames from 'classnames';
 
 const styles = (theme: Theme) => createStyles({
   section: {
+    display: 'flex',
+    flexDirection: 'column',
   },
   content: {
     padding: theme.spacing.unit * 3,
@@ -22,6 +24,7 @@ const styles = (theme: Theme) => createStyles({
   subheading: {},
   paragraph: {},
   image: {
+    height: '100%',
     width: '100%'
   }
 });
