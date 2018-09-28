@@ -12,7 +12,7 @@ interface Props {
 
 const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image }) => (
   <Section
-    fullHeight
+    reverse
     heading={heading}
     image={image.childImageSharp.fluid.src}
     subheading={subheading}
