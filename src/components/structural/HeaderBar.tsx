@@ -33,15 +33,17 @@ const HeaderBar: React.SFC<Props> = ({ classes, open, handleClose, toggleMenu, n
             </Typography>
           </Hidden>
           <div className={classes.grow}/>
-          <div>
-            {nav.navLinks.map(x =>
-              <Link key={x.to} to={x.to}>
-                <Button className={classes.link}>
-                  {x.label}
-                </Button>
-              </Link>
-            )}
-          </div>
+          <Hidden smDown>
+            <div>
+              {nav.navLinks.map(x =>
+                <Link key={x.to} to={x.to}>
+                  <Button className={classes.link}>
+                    {x.label}
+                  </Button>
+                </Link>
+              )}
+            </div>
+          </Hidden>
           <IconButton color="primary" onClick={toggleMenu}>
             <MenuIcon/>
           </IconButton>
