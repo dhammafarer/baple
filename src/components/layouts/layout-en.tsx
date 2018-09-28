@@ -1,5 +1,5 @@
 import * as React from 'react'
-import withRoot from '../utils/withRoot';
+import withRoot from '../../utils/withRoot';
 import { StaticQuery, graphql } from 'gatsby'
 
 interface Props{}
