@@ -24,6 +24,9 @@ const Footer: React.SFC<Props> = ({ classes, contact, title, logo }) => (
       {logo && <img className={classes.logo} src={logo}/>}
       <div className={classes.contact}>
         <Typography variant="title" color="inherit" gutterBottom>
+          {title}
+        </Typography>
+        <Typography variant="subheading" color="inherit" gutterBottom>
           {contact[0].contactName}
         </Typography>
         <Typography variant="caption" color="inherit">
