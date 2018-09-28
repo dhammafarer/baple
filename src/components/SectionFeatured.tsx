@@ -1,16 +1,20 @@
 import * as React from 'react';
-import { createStyles, Theme, withStyles } from "@material-ui/core/styles";
+import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import classnames from 'classnames';
 
 const styles = (theme: Theme) => createStyles({
   section: {
-    minHeight: `calc(100vh - 64px)`,
+    paddingTop: '3em',
+    paddingBottom: '3em',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
+  },
+  fullHeight: {
+    minHeight: 'calc(100vh - 64px)',
   },
   content: {
     height: '100%',
@@ -26,8 +30,7 @@ const styles = (theme: Theme) => createStyles({
   paragraph: {},
 });
 
-interface Props {
-  classes: any
+type Props = WithStyles<typeof styles> & {
   image: string
   gradient?: string 
   heading?: string
@@ -35,14 +38,15 @@ interface Props {
   text?: Array<string>
   before?: any
   after?: any
+  fullHeight?: boolean
 }
 
-const SectionFeatured: React.SFC<Props> = ({classes, before, after, gradient, heading, subheading, text, image}) => (
+const SectionFeatured: React.SFC<Props> = ({classes, before, after, gradient, heading, subheading, text, image, fullHeight}) => (
   <section style={{
     backgroundImage: `${gradient ? gradient + ",": ''}url( ${image ? image : ''}
       )`
     }}
-    className={classes.section}
+    className={classnames(classes.section, (fullHeight && classes.fullHeight))}
   >
     <div className={classes.content}>
       {before && before}

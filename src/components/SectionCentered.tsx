@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { createStyles, Theme, withStyles } from "@material-ui/core/styles";
+import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
 import HorizontalSplit from './layouts/HorizontalSplit';
 import Typography from "@material-ui/core/Typography";
+import classnames from 'classnames';
 
 const styles = (theme: Theme) => createStyles({
   section: {
@@ -9,6 +10,9 @@ const styles = (theme: Theme) => createStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  fullHeight: {
+    minHeight: 'calc(100vh - 64px)',
   },
   content: {
     padding: theme.spacing.unit * 3,
@@ -29,9 +33,9 @@ const styles = (theme: Theme) => createStyles({
   }
 });
 
-interface Props {
-  classes: any
-  image: string
+type Props = WithStyles<typeof styles> & {
+  fullHeight?: boolean
+  image?: string
   gradient?: string 
   heading?: string
   subheading?: string
@@ -40,8 +44,8 @@ interface Props {
   after?: any
 }
 
-const SectionCentered: React.SFC<Props> = ({classes, before, after, gradient, heading, subheading, text, image}) => (
-  <section className={classes.section}>
+const SectionCentered: React.SFC<Props> = ({classes, before, after, gradient, heading, subheading, text, image, fullHeight}) => (
+  <section className={classnames(classes.section, (fullHeight && classes.fullHeight))}>
     <div className={classes.content}>
       {before && before}
       { heading &&
