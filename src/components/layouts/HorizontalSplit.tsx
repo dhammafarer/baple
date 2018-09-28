@@ -15,6 +15,7 @@ type Props = {
   left: any
   right: any
   classes: any
+  reverse?: boolean
 };
 
 class HorizontalSplit extends React.Component<Props, {}> {
@@ -23,10 +24,10 @@ class HorizontalSplit extends React.Component<Props, {}> {
   }
 
   render () {
-    const { classes, left, right } = this.props;
+    const { classes, reverse, left, right } = this.props;
 
     return (
-      <Grid container className={classes.container}>
+      <Grid container className={classes.container} direction={(reverse ? 'row-reverse' : 'row')}>
         <Grid item xs={12} md={6} className={classes.item}>
           {left}
         </Grid>

@@ -28,7 +28,7 @@ const styles = (theme: Theme) => createStyles({
 
 interface Props {
   classes: any
-  image: any
+  image: string
   gradient?: string 
   heading?: string
   subheading?: string
@@ -39,7 +39,7 @@ interface Props {
 
 const SectionFeatured: React.SFC<Props> = ({classes, before, after, gradient, heading, subheading, text, image}) => (
   <section style={{
-    backgroundImage: `${gradient ? gradient + ",": ''}url( ${image ? image.childImageSharp.fluid.src : ''}
+    backgroundImage: `${gradient ? gradient + ",": ''}url( ${image ? image : ''}
       )`
     }}
     className={classes.section}

@@ -33,7 +33,7 @@ const styles = (theme: Theme) => createStyles({
 interface Props {
   classes: any
   reverse?: boolean
-  image: ChildImageSharp
+  image: string
   heading?: string
   subheading?: string
   text?: Array<string>
@@ -44,7 +44,7 @@ interface Props {
 const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, heading, subheading, text, image}) => (
   <HorizontalSplit
     reverse={reverse}
-    left={<img className={classes.image} src={image.childImageSharp.sizes.src}/>}
+    left={<img className={classes.image} src={image}/>}
     right={
       <div className={classes.content}>
         {before && before}

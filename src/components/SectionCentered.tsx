@@ -31,7 +31,7 @@ const styles = (theme: Theme) => createStyles({
 
 interface Props {
   classes: any
-  image: ChildImageSharp
+  image: string
   gradient?: string 
   heading?: string
   subheading?: string
@@ -66,7 +66,7 @@ const SectionCentered: React.SFC<Props> = ({classes, before, after, gradient, he
       {after && after}
     </div>
     { image &&
-      <img src={image.childImageSharp.sizes.src} className={classes.image}/>
+      <img src={image} className={classes.image}/>
     }
   </section>
 );

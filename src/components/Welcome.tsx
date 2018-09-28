@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SectionFeatured from './SectionFeatured';
+import Section from './SectionFeatured';
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
@@ -11,8 +11,8 @@ interface Props {
 }
 
 const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image }) => (
-  <SectionFeatured
-    image={image}
+  <Section
+    image={image.childImageSharp.fluid.src}
     heading={heading}
     subheading={subheading}
     before={logo && <img src={logo.childImageSharp.fluid.src}/>}
