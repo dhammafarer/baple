@@ -14,21 +14,22 @@ import styles from '../../styles/footer-styles';
 type Props = WithStyles<typeof styles> & {
   title: string
   logo: string
+  details: any
 }
 
-const Footer: React.SFC<Props> = ({ classes, title, logo }) => (
+const Footer: React.SFC<Props> = ({ classes, details, title, logo }) => (
   <footer className={classes.footer}>
     <div className={classNames(classes.footerAddress, classes.layout)}>
       <img className={classes.logo} src={logo}/>
       <div className={classes.contact}>
         <Typography variant="title" color="inherit" gutterBottom>
-          {title}
+          {details[0].contactName}
         </Typography>
         <Typography variant="caption" color="inherit">
-          info@baple.com
+          {details[0].phone}
         </Typography>
         <Typography variant="caption" color="inherit">
-          +886-2-2345-2354
+          {details[0].email}
         </Typography>
       </div>
     </div>

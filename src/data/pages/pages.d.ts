@@ -44,12 +44,14 @@ interface Product {
   spec: Array<Spec>
 }
 
-interface Details {
+interface ContactDetails {
   contactName: ContactName
   phone: Phone
   email: Email
   address: Address
 }
+
+type Details = Array<ContactDetails>
 
 interface Nav {
   home: string
@@ -61,6 +63,7 @@ interface App {
   lang: Lang
   logo: Logo
   nav: Nav
+  details: Details
 }
 
 //sections

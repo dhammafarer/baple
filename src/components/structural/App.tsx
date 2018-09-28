@@ -13,9 +13,10 @@ type Props = WithStyles<typeof styles> & {
   title: string
   logo: any
   nav: any
+  details: any
 }
 
-const App: React.SFC<Props> = ({ title, logo, children, nav, classes, lang }) => (
+const App: React.SFC<Props> = ({ title, logo, details, children, nav, classes, lang }) => (
   <div className={classes.layout}>
     <CssBaseline/>
     <Head title={title} lang={lang}/>
@@ -23,7 +24,7 @@ const App: React.SFC<Props> = ({ title, logo, children, nav, classes, lang }) =>
     <main className={classes.main}>
       {children}
     </main>
-    <Footer logo={logo.childImageSharp.fluid.src} title={title}/>
+    <Footer details={details} logo={logo.childImageSharp.fluid.src} title={title}/>
   </div>
 );
 
@@ -40,6 +41,12 @@ export const AppFragment = graphql`
             src
           }
         }
+      }
+      details {
+        contactName
+        phone
+        email
+        address
       }
       nav {
         home

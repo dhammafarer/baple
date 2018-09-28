@@ -8,6 +8,7 @@
     "@material-ui/icons": "^3.0.1",
     "@types/react-helmet": "^5.0.7",
     "browser-locale": "^1.0.3",
+    "classnames": "^2.2.6",
     "gatsby": "^2.0.0",
     "gatsby-plugin-manifest": "^2.0.2",
     "gatsby-plugin-offline": "^2.0.5",
@@ -34,6 +35,7 @@
     "generate:types": "gql-gen --schema http://localhost:8000/___graphql --template graphql-codegen-typescript-template --out ./src/graphql.d.ts/"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.6",
     "@types/react": "^16.4.14",
     "graphql-code-generator": "^0.12.6",
     "graphql-codegen-typescript-template": "^0.12.6",
