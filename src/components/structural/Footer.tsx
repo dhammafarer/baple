@@ -14,14 +14,14 @@ import styles from '../../styles/footer-styles';
 
 type Props = WithStyles<typeof styles> & {
   title: string
-  logo: string
+  logo?: string
   contact: Array<Contact_2>
 }
 
 const Footer: React.SFC<Props> = ({ classes, contact, title, logo }) => (
   <footer className={classes.footer}>
     <div className={classNames(classes.footerAddress, classes.layout)}>
-      <img className={classes.logo} src={logo}/>
+      {logo && <img className={classes.logo} src={logo}/>}
       <div className={classes.contact}>
         <Typography variant="title" color="inherit" gutterBottom>
           {contact[0].contactName}

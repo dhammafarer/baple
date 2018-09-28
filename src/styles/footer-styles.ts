@@ -30,11 +30,10 @@ const footerStyles = (theme:any) => createStyles({
   logo: {
     width: 150,
     height: 150,
+    marginRight: '1em',
   },
   contact: {
-    borderLeft: '1px solid gray',
     borderColor: theme.palette.secondary.light,
-    paddingLeft: 25,
     color: '#ccc',
   }
 });

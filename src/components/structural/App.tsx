@@ -24,7 +24,7 @@ const App: React.SFC<Props> = ({ title, logo, contact, children, nav, classes, l
     <main className={classes.main}>
       {children}
     </main>
-    <Footer contact={contact} logo={logo.childImageSharp.fluid.src} title={title}/>
+    <Footer logo={logo.childImageSharp.fluid.src} contact={contact} title={title}/>
   </div>
 );
 
