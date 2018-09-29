@@ -16,18 +16,16 @@ interface Props {
   };
 }
 
-const TestPage: React.SFC<Props> = ({ data }) => {
+const CategoryTemplate: React.SFC<Props> = (({ data }) => {
+  const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
   return (
     <Layout>
-      <div>
-        Test Page 2
-      </div>
-      {data.javascriptFrontmatter.frontmatter.sections.welcome.heading}
+      {s.heading}
     </Layout>
   );
-};
+});
 
-export default TestPage;
+export default CategoryTemplate;
 
 export const query = graphql`
   query($slug: String!) {

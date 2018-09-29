@@ -13,21 +13,22 @@ interface Props {
         },
       },
     },
+    app: {
+      frontmatter: any,
+    },
   };
 }
 
-const TestPage: React.SFC<Props> = ({ data }) => {
+const IndexTemplate: React.SFC<Props> = (({ data }) => {
+  const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
   return (
-    <Layout>
-      <div>
-        Test Page
-      </div>
-      {data.javascriptFrontmatter.frontmatter.sections.welcome.heading}
+    <Layout app={data.app}>
+      {s.heading}
     </Layout>
   );
-};
+});
 
-export default TestPage;
+export default IndexTemplate;
 
 export const query = graphql`
   query($slug: String!) {
@@ -39,6 +40,9 @@ export const query = graphql`
           }
         }
       }
+    }
+    app: javascriptFrontmatter(fileAbsolutePath: {regex: "/app.ts/"}) {
+      ...AppFrontmatter
     }
   }
 `;

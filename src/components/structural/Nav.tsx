@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -8,12 +8,12 @@ import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from '../../styles/nav-styles';
-import Link from 'gatsby-link';
+import styles from "../../styles/nav-styles";
+import Link from "gatsby-link";
 import CloseIcon from "@material-ui/icons/Close";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
-import { Nav_2, Contact_2 } from '../../graphql';
+import { Nav_2, Contact_2 } from "../../graphql";
 
 type Props = WithStyles<typeof styles> & {
   handleClose: any
@@ -21,8 +21,8 @@ type Props = WithStyles<typeof styles> & {
   logo: string
   title: string
   nav: Nav_2
-  contact?: Contact_2
-}
+  contact?: Contact_2[],
+};
 
 const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title, contact}) => (
   <Drawer anchor="right" open={open} onClose={handleClose}>
@@ -45,10 +45,10 @@ const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title, c
       <List className={classes.list}>
         <Divider/>
         {
-          nav.navLinks.map((x:any) => {
+          nav.navLinks.map((x: any) => {
             return (
               x.links ?
-              <ListItem divider className={classes.listItem}>
+              <ListItem key={x.to} divider className={classes.listItem}>
                 <List className={classes.list}>
                   <ListItem button className={classes.listItem}>
                     <Link to={x.to} className={classes.link}>
@@ -61,7 +61,7 @@ const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title, c
                       </Typography>
                     </Link>
                   </ListItem>
-                  {x.links.map((y:any) =>
+                  {x.links.map((y: any) =>
                     <ListItem button key={y.to} className={classes.listItem}>
                       <Link to={y.to} className={classes.linkNested}>
                         <Typography
@@ -72,7 +72,7 @@ const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title, c
                           {y.label}
                         </Typography>
                       </Link>
-                    </ListItem>
+                    </ListItem>,
                   )}
                 </List>
               </ListItem>
@@ -88,7 +88,7 @@ const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title, c
                   </Typography>
                 </Link>
               </ListItem>
-            )
+            );
           })
         }
       </List>
