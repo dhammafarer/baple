@@ -36,6 +36,7 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
         body={about1.body}
       />
       <About
+        reverse
         image={about2.image}
         body={about2.body}
       />
@@ -48,7 +49,7 @@ export default IndexTemplate;
 export const query = graphql`
   query($slug: String!, $layout: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
-      ...IndexFrontmatter
+      ...AboutFrontmatter
     }
     app: javascriptFrontmatter(fields: { slug: {eq: $layout} }) {
       ...AppFrontmatter
