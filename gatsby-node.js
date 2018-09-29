@@ -10,6 +10,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: 'slug',
       value: slug,
     });
+    createNodeField({
+      node,
+      name: 'layout',
+      value: getLayout(slug),
+    });
   }
 };
 
@@ -24,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
               fileAbsolutePath
               fields {
                 slug
+                layout
               }
               frontmatter {
                 layout
@@ -41,10 +47,23 @@ exports.createPages = ({ graphql, actions }) => {
             component: path.resolve(`./src/templates/${node.frontmatter.layout}.tsx`),
             context: {
               slug: node.fields.slug,
+              layout: node.fields.layout,
             }
           });
         });
       resolve();
     })
   });
+}
+
+function getLayout(slug) {
+  const layouts = [
+    { layout: '/app-plastics/', pattern: /^\/plastics\// },
+    { layout: '/app-energy/', pattern: /^\/energy\// },
+    { layout: '/app-engineerin/', pattern: /^\/engineerin\// },
+    { layout: '/app-metal-packaging/', pattern: /^\/metal-packaging\// },
+    { layout: '/app/', pattern: '/' },
+  ];
+
+  return layouts.find(l => slug.match(l.pattern)).layout;
 }

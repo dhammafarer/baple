@@ -21,6 +21,7 @@ interface Props {
 
 const IndexTemplate: React.SFC<Props> = (({ data }) => {
   const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
+  console.log(data.app);
   return (
     <Layout app={data.app}>
       {s.heading}
@@ -31,7 +32,7 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
 export default IndexTemplate;
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $layout: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
       frontmatter {
         sections {
@@ -41,7 +42,7 @@ export const query = graphql`
         }
       }
     }
-    app: javascriptFrontmatter(fileAbsolutePath: {regex: "/app.ts/"}) {
+    app: javascriptFrontmatter(fields: { slug: {eq: $layout} }) {
       ...AppFrontmatter
     }
   }

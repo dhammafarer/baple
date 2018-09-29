@@ -1,22 +1,22 @@
-import * as React from 'react';
-import classNames from 'classnames';
+import * as React from "react";
+import classNames from "classnames";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
-import FacebookIcon from 'mdi-material-ui/Facebook';
-import TwitterIcon from 'mdi-material-ui/Twitter';
-import YoutubeIcon from 'mdi-material-ui/Youtube';
-import InstagramIcon from 'mdi-material-ui/Instagram';
-import { Contact_2 } from '../../graphql';
-  
+import FacebookIcon from "mdi-material-ui/Facebook";
+import TwitterIcon from "mdi-material-ui/Twitter";
+import YoutubeIcon from "mdi-material-ui/Youtube";
+import InstagramIcon from "mdi-material-ui/Instagram";
+import { Contact_2 } from "../../graphql";
+
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from '../../styles/footer-styles';
+import styles from "../../styles/footer-styles";
 
 type Props = WithStyles<typeof styles> & {
   title: string
   logo?: string
-  contact: Array<Contact_2>
-}
+  contact: Contact_2[],
+};
 
 const Footer: React.SFC<Props> = ({ classes, contact, title, logo }) => (
   <footer className={classes.footer}>
