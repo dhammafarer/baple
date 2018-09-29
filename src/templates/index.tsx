@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layouts/layout";
+import App from "../components/layouts/App";
 
 interface Props {
   data: {
@@ -21,11 +21,10 @@ interface Props {
 
 const IndexTemplate: React.SFC<Props> = (({ data }) => {
   const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
-  console.log(data.app);
   return (
-    <Layout app={data.app}>
+    <App {...data.app.frontmatter}>
       {s.heading}
-    </Layout>
+    </App>
   );
 });
 

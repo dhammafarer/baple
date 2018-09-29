@@ -7,7 +7,7 @@ interface Props {
     javascriptFrontmatter: {
       frontmatter: {
         sections: {
-          welcome: {
+          notFound: {
             heading: string,
           },
         },
@@ -19,8 +19,8 @@ interface Props {
   };
 }
 
-const ContactTemplate: React.SFC<Props> = (({ data }) => {
-  const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
+const NotFound: React.SFC<Props> = (({ data }) => {
+  const s = data.javascriptFrontmatter.frontmatter.sections.notFound;
   return (
     <App {...data.app.frontmatter}>
       {s.heading}
@@ -28,14 +28,14 @@ const ContactTemplate: React.SFC<Props> = (({ data }) => {
   );
 });
 
-export default ContactTemplate;
+export default NotFound;
 
 export const query = graphql`
   query($slug: String!, $layout: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
       frontmatter {
         sections {
-          welcome {
+          notFound {
             heading
           }
         }

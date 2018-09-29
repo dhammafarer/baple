@@ -1,12 +1,13 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import Head from "./Head";
-import Header from "./Header";
-import Footer from "./Footer";
+import Head from "../structural/Head";
+import Header from "../structural/Header";
+import Footer from "../structural/Footer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
 import styles from "../../styles/layout-styles";
+import withRoot from "../../utils/withRoot";
 
 type Props = WithStyles<typeof styles> & {
   lang: Lang
@@ -28,4 +29,4 @@ const App: React.SFC<Props> = ({ title, logo, contact, children, nav, classes, l
   </div>
 );
 
-export default withStyles(styles)(App);
+export default withRoot(withStyles(styles)(App));

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layouts/layout";
+import App from "../components/layouts/App";
 
 interface Props {
   data: {
@@ -13,22 +13,25 @@ interface Props {
         },
       },
     },
+    app: {
+      frontmatter: any,
+    },
   };
 }
 
-const AboutTemplat: React.SFC<Props> = (({ data }) => {
+const AboutTemplate: React.SFC<Props> = (({ data }) => {
   const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
   return (
-    <Layout>
+    <App {...data.app.frontmatter}>
       {s.heading}
-    </Layout>
+    </App>
   );
 });
 
-export default AboutTemplat;
+export default AboutTemplate;
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $layout: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
       frontmatter {
         sections {
@@ -37,6 +40,9 @@ export const query = graphql`
           }
         }
       }
+    }
+    app: javascriptFrontmatter(fields: { slug: {eq: $layout} }) {
+      ...AppFrontmatter
     }
   }
 `;

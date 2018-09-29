@@ -15,6 +15,7 @@ type Lang = "en" | "zh";
 type SocialMedia = string;
 type Layout =
   "landing" |
+  "404" |
   "categories" |
   "category" |
   "about" |
@@ -115,6 +116,10 @@ interface ContactUs extends ImageSection {
   logo: Logo;
 }
 
+interface NotFound extends ImageSection {
+  logo: Logo;
+}
+
 interface ProductCards extends Section {
   productCards: Product[];
 }
@@ -128,6 +133,7 @@ type Sections =
   Advantages |
   TCS |
   QAS |
+  NotFound |
   ProductCards;
 
 // pages
@@ -135,6 +141,13 @@ interface Page {
   layout: Layout;
   sections: {
     [key: string]: Sections;
+  };
+}
+
+export interface NotFoundPage extends Page {
+  layout: "404";
+  sections: {
+    notFound: NotFound;
   };
 }
 
