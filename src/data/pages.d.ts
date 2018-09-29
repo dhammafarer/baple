@@ -100,6 +100,7 @@ interface More extends ImageSection {
 }
 
 interface Categories extends Section {
+  heading: Heading;
   categoryLinks: CategoryLink[];
 }
 

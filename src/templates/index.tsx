@@ -1,8 +1,10 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import App from "../components/layouts/App";
-import { Frontmatter_2, Welcome_2 } from "../graphql";
+import { Frontmatter_2, Welcome_2, Categories_2, More_2 } from "../graphql";
 import Welcome from "../components/sections/Welcome";
+import Categories from "../components/sections/Categories";
+import More from "../components/sections/More";
 
 interface Props {
   data: {
@@ -10,6 +12,8 @@ interface Props {
       frontmatter: {
         sections: {
           welcome: Welcome_2,
+          categories: Categories_2,
+          more: More_2,
         },
       },
     },
@@ -20,15 +24,18 @@ interface Props {
 }
 
 const IndexTemplate: React.SFC<Props> = (({ data }) => {
-  const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
-  console.log(s);
+  const { welcome, categories, more } = data.javascriptFrontmatter.frontmatter.sections;
   return (
     <App {...data.app.frontmatter}>
       <Welcome
-        heading={s.heading}
-        subheading={s.subheading}
-        logo={s.logo.childImageSharp.fluid.src}
-        image={s.image.childImageSharp.fluid.src}
+        heading={welcome.heading}
+        subheading={welcome.subheading}
+        logo={welcome.logo.childImageSharp.fluid.src}
+        image={welcome.image.childImageSharp.fluid.src}
+      />
+      <Categories
+        heading={categories.heading}
+        categoryLinks={categories.categoryLinks}
       />
     </App>
   );
