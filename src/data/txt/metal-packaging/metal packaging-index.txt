@@ -1,0 +1,40 @@
+﻿COMMENTARIES NOT TO INCLUDE ON THE WEBSITE. CHANGES
+Welcome. background with white color
+headings and subheadings with first letter capital and rest of them no capital.
+heading, soluciones de aerosol.... smaller
+categories. No bold, OPEN SANS LIGHT 300
+Quieres saber más de nosotros, smaller.
+
+welcome:
+  heading: "Because innovation sells packaging and packaging sells products"
+  subheading: "Porque innovación vende packaging y el packaging vende productos"
+  logo: "./img/logos/baple-metal-packaging-logo.png"
+  image: "./img/landing-background-3.jpg"
+  link:
+    label: Contáctanos!
+    to: /contact
+
+categories:
+  heading: Soluciones de Aerosol
+  items:
+    - heading: Botes de Aerosol
+      image: "./img/icons/aerosol tin cans icon.png"
+      link:
+        to: /metal-packaging/botes-de-aerosol
+    - heading: Válvulas de Aerosol
+      image: "./img/icons/aerosol valves icon.png"
+      link:
+        to: /metal-packaging/valvulas-de-aerosol
+    - heading: Tapas
+      image: "./img/icons/caps icon.png"
+      link:
+        to: /metal-packaging/valvulas-de-aerosol
+    
+
+more:
+  heading: Quieres saber más de nosotros?
+  image: './img/learn-more-2.jpg'
+  logo: './img/logos/baple-plastics-logo.png'
+  link:
+    label: Contáctanos!
+    to: /plastics/contact

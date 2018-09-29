@@ -1,0 +1,29 @@
+﻿
+
+about:
+  heading:
+  image: './img/Solar panel_Cube2.jpg'
+  text:
+    - “I´d put my money on the sun and solar energy, what a source of power. I hope we don´t have to wait until oil and coal run out, before we tackle that. ” Thomas Edison, 1931."
+    - "Pondría mi dinero en el sol y la energía solar, qué fuente de energía. Espero que no tengamos que esperar hasta que se agoten el petróleo y el carbón para abordar eso." Thomas Edison, 1931."
+
+intro:
+  heading: Da la bienvenida al futuro: transporte limpio y económico
+  image: './Solar panel_Cube2.jpg'
+  text:
+    - "Baple está especializado en proporcionar Sistemas de Baterías para Almacenamiento de Energía (BESS) de alto voltaje para plantas de generación de energía, plantas industriales, centros comerciales, edificios públicos, hospitales, ..."
+    
+Energy storage infographic:
+  heading: Energy storage infographic
+  image: './img/CubeThePower_Infographic-03.jpg'
+  text:
+
+more:
+  heading: Quieres saber más de nosotros?
+  mainImg: './img/learn-more.jpg'
+  logo: './img/logos/baple-energy-logo.png'
+  link:
+    label: Contáctanos!
+    to: /energy/contact
+
+

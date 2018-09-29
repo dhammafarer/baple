@@ -1,0 +1,21 @@
+title: Baple Group
+lang: es
+logo: './img/logos/baple-group-logo.png'
+nav:
+  home: '/'
+  links:
+    - to: /solutions
+      label: Solutions
+      links:
+        - to: /plastics
+          label: Baple Plastics
+        - to: /energy
+          label: Baple Energy
+        - to: /metal-packaging
+          label: Baple Metal Packaging
+        - to: /engineering
+          label: Baple Engineering
+    - to: /about
+      label: About
+    - to: /contact
+      label: Contact

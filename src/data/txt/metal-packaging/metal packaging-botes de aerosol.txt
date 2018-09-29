@@ -1,0 +1,38 @@
+﻿intro:
+  heading: Botes de Aerosol
+  image: './Aerosol Can.jpg'
+  text:
+    - "Baple dispone de la gran mayoría de soluciones demandadas por la industria. Adicionalmente, la incorporación de nuevas y modernas soluciones forma parte del trabajo rutinario para ofrecer siempre soluciones de valor añadido a nuestros partners."
+    - "Nuestro rango de soluciones para aerosol están disponibles en la mayoria de diametros y alturas demandadas por la industria, en materiales de aluminio y hojalata, y con un estricto cumplimiento con los estándares FEA (European Aerosol Federation)."
+  link:
+    to: /metal-packaging/contact
+    label: Contáctanos!
+
+welcome:
+  heading: "Because innovation sells packaging and packaging sells products"
+  subheading: "Porque innovación vende packaging y el packaging vende productos"
+  logo: "./img/logos/baple-metal-packaging-logo.png"
+  image: "./img/landing-background-3.jpg"
+  link:
+    label: Contáctanos!
+    to: /contact
+
+products:
+  - heading: Botes de aerosol - NECK IN y STRAIGHT
+    image: './img/Metal Packaging_Latas.jpg'
+    text:
+      - "¿Interesado en Botes de Aerosol?"
+      - "Por favor, contáctenos para poder ofrecerle un servicio personalizado, asesoramiento y catálogo completo."
+    link:
+      label: Contacta con nosotros!
+      to: /plastics/contact
+    spec:
+      - name: Especificaciones Generales
+        params:
+         - key: Diámetros
+           value: "Ø45mm-Ø70mm"
+         - key: Altura
+           value: "80 - 320 mm"
+         - key: Material
+           value: "Hojalata"
+

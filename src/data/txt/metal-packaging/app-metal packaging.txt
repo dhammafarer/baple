@@ -1,0 +1,19 @@
+﻿title: Baple metal packaging
+lang: es
+logo: './img/logos/baple-group-logo-no-text.png'
+nav:
+  home: /metal packaging
+  links:
+    - to: /metal packaging/products
+      label: Products
+      links:
+        - to: /metal-packaging/botes_de_aerosol
+          label: Botes de aerosol
+        - to: /metal-packaging/valvulas-de-aerosol
+          label: Válvulas de Aerosol
+        - to: /metal-packaging/tapas
+          label: Tapas
+    - to: /metal packaging/about
+      label: ¿Quienes somos?
+    - to: /metal packaging/contact
+      label: Contáctanos!

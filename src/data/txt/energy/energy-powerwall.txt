@@ -1,0 +1,60 @@
+﻿COMMENTARIES
+CONCEPT BES. Could you get it from the triptic pics?
+
+
+intro:
+  heading: Da la bienvenida al futuro: transporte limpio y económico
+  image: './Bable Energy_Wallpaper_0823.jpg'
+  text:
+    - "Lo que anteriormente fue un sueño, ahora es una realidad. Cada hogar debe tener la libertad de decidir sobre un aspecto de su vida tan importante como poder decidir exactamente cuánta energía consumirá y cómo suministrará de energía su casa, independientemente de las influencias externas.
+    - "Es por eso que tenemos la misión de ofrecer nuestra soluciones para hogar, un producto funcional y con la última tecnología.
+    - "La solución BES1 se convertirá en una parte esencial en su vida y le proporcionará una total independencia. BES1 es un sistema para de acumulación de energía eléctrica en su hogar.."
+    
+
+BES CONCEPT:
+  heading: "CONCEPTO BES"
+  image: "./img/BES CONCEPT.jpg"
+
+text:
+      - "Brillante: Una genial solución para crear su independencia de movilidad."
+      - "Economizador: Permite reducir la factura de transporte."
+      - "Sostebilidad: Medio de transporte libre de CO2"
+
+  link:
+    label: Contáctanos!
+    to: /contact
+
+BES1 Series:
+  heading: "BES1 Series - ¿Cómo funciona?"
+  image: "./img/Powerwall_Infographic-01.jpg"
+
+text:
+     - "Los dispositivos BES1 están diseñados para el almacenamiento de energía eléctrica (EES). Cuya función principal es almacenar energía proveniente de paneles fotovoltaicos, turbinas eólicas o de agua, un generador o la red eléctrica. O cualquier combinación de estos.
+
+     - "Cuando los dispositivos BES1 tienen carga, se pueden usar para alimentar los electrodomésticos de la misma forma que si fuesen alimentados directamentente desde la red eléctrica externa. 
+
+     - "Los dispositivos BES1 están disponibles con capacidad desde 5 kWh, y fabricados con baterías con tecnología LiFePO4 de última generación, ofreciendo muchas ventajas económicas a medio plazo a diferencia de las baterías clásicas de Pb. 
+
+  link:
+    label: Contáctanos!
+    to: /contact
+
+BES1 Series 2:
+  heading: "BES1 Series - ¿Cómo me permiten ahorrar en la factura?"
+  image: "./img/Powerwall_Infographic-02.jpg"
+
+text:
+      - "Cómo consumir, almacenar y suministrar electricidad de manera eficiente y económica son cuestiones que demuestran nuestra evolución a una sociedad más avanzada y concienciada con el medio ambiente. Cada uno de nosotros se enfrenta cada vez más a la cuestión de cómo consumir energía de manera ecológica y efectiva de una manera que también permita ahorrar dinero.
+      - "Los dispositivos BES1 es un concepto que responde a varias de estas preguntas. Es una solución para quienes desean abordar el consumo de electricidad de manera responsable e inteligente.
+      - "Puede imaginar los dispositivos BES1 como dispositivos compuestos de muchas baterías (y otros componentes como el cargador, etc.) que cumplen la función de un sistema híbrido. Gracias al uso de baterías de LiFePo4 y una durabilidad estimada de 5.000 ciclos, permitiría una vida útil superior a 10 años si contamos un ciclo de carga por día."
+  link:
+    label: Contáctanos!
+    to: /contact
+
+more:
+  heading: Quieres saber más de nosotros?
+  mainImg: './img/learn-more.jpg'
+  logo: './img/logos/baple-energy-logo.png'
+  link:
+    label: Contáctanos!
+    to: /energy/contact

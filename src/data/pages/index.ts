@@ -4,8 +4,8 @@ export const frontmatter: IndexPage = {
   welcome: {
     heading: "Controlnet",
     subheading: "the company",
-    image: "./img/logos/ctn-logo.jpg",
-    logo: "./img/logos/ctn-logo-square.jpg",
+    image: "./img/header/automation.jpg",
+    logo: "../img/logos/ctn-logo-square.jpg",
   },
   categories: {
     categoryLinks: [

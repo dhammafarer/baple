@@ -1,0 +1,36 @@
+﻿intro:
+  heading: Micropulverizadores
+  image: './img/caps icon.jpg'
+  text:
+    - "Baple dispone de la gran mayoría de soluciones demandadas por la industria. Adicionalmente, la incorporación de nuevas y modernas soluciones forma parte del trabajo rutinario para ofrecer siempre soluciones de valor añadido a nuestros partners."
+  link:
+    to: /metal-packaging/contact
+    label: Contáctanos!
+
+welcome:
+  heading: "Because innovation sells packaging and packaging sells products"
+  subheading: "Porque innovación vende packaging y el packaging vende productos"
+  logo: "./img/logos/baple-metal-packaging-logo.png"
+  image: "./img/landing-background-3.jpg"
+  link:
+    label: Contáctanos!
+    to: /contact
+
+products:
+  - heading: Tapas
+    image: './img/Metal Packaging_Tapas.jpg'
+    text:
+      - "¿Interesado en Tapas?"
+      - "Por favor, contáctenos para poder ofrecerle un servicio personalizado, asesoramiento y catálogo completo."
+    link:
+      label: Contacta con nosotros!
+      to: /metal-packaging/contact
+    spec:
+      - name: Especificaciones Generales
+        params:
+         - key: Diámetros
+           value: "Ø27 mm-70Ø mm"
+         - key: Diseño
+           value: "Rango completo de diseños"
+         - key: Color
+           value: "Rango completo de colores y combinaciones"
