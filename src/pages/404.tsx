@@ -1,11 +1,11 @@
-import * as React from 'react'
-import Layout from '../components/layouts/layout-en'
+import * as React from "react";
+import Layout from "../components/layouts/layout-en";
 
 const NotFoundPage = () => (
   <Layout>
     <h1>NOT FOUND</h1>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

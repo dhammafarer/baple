@@ -33,7 +33,7 @@ export default withStyles(styles)(IndexPage);
 
 export const query = graphql`
   query IndexQuery {
-    javascriptFrontmatter(fileAbsolutePath: {regex: "/index-en.ts/"}) {
+    javascriptFrontmatter(fileAbsolutePath: {regex: "/en/index.ts/"}) {
       frontmatter {
         welcome {
           heading
