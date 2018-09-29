@@ -21,7 +21,7 @@ interface Param {
 }
 
 interface Spec {
-  name: string;
+  heading: string;
   params: Param[];
 }
 interface Item {
@@ -74,19 +74,9 @@ const ProductsList: React.SFC<Props> = ({ categoryItems, classes }) => (
                 x.spec.map((s, j) =>
                   <div key={j} className={classes.spec}>
                     <Typography variant="subheading">
-                      {s.name}
+                      {s.heading}
                     </Typography>
                     <Table className={classes.table}>
-                      <TableHead>
-                        <TableRow>
-                          <TableCell>
-                            Parameter
-                          </TableCell>
-                          <TableCell>
-                            Value
-                          </TableCell>
-                        </TableRow>
-                      </TableHead>
                       <TableBody>
                         {
                           s.params.map((c, k) =>
