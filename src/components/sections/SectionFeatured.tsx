@@ -1,28 +1,28 @@
-import * as React from 'react';
+import * as React from "react";
 import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import classnames from 'classnames';
+import classnames from "classnames";
 
 const styles = (theme: Theme) => createStyles({
   section: {
-    paddingTop: '3em',
-    paddingBottom: '3em',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    paddingTop: "3em",
+    paddingBottom: "3em",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   fullHeight: {
-    minHeight: 'calc(100vh - 64px)',
+    minHeight: "calc(100vh - 64px)",
   },
   content: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
   },
   text: {},
   heading: {},
@@ -32,19 +32,21 @@ const styles = (theme: Theme) => createStyles({
 
 type Props = WithStyles<typeof styles> & {
   image: string
-  gradient?: string 
+  gradient?: string
   heading?: string
   subheading?: string
-  text?: Array<string>
+  text?: string[]
   before?: any
   after?: any
-  fullHeight?: boolean
-}
+  fullHeight?: boolean,
+};
 
-const SectionFeatured: React.SFC<Props> = ({classes, before, after, gradient, heading, subheading, text, image, fullHeight}) => (
+const SectionFeatured: React.SFC<Props> = ({
+  classes, before, after, gradient, heading, subheading, text, image, fullHeight,
+}) => (
   <section style={{
-    backgroundImage: `${gradient ? gradient + ",": ''}url( ${image ? image : ''}
-      )`
+    backgroundImage: `${gradient ? gradient + "," : ""}url( ${image ? image : ""}
+      )`,
     }}
     className={classnames(classes.section, (fullHeight && classes.fullHeight))}
   >
@@ -62,10 +64,10 @@ const SectionFeatured: React.SFC<Props> = ({classes, before, after, gradient, he
       }
       { text &&
         <div className={classes.text}>
-          {text.map((t,i) =>
+          {text.map((t, i) =>
             <Typography key={i} variant="body2" className={classes.paragraph}>
               {t}
-            </Typography>
+            </Typography>,
           )}
         </div>
       }

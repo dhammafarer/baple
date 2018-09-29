@@ -5,7 +5,7 @@ export const frontmatter: NotFoundPage = {
   sections: {
     notFound: {
       heading: "Not Found",
-      subheading: "Unfortunatel this page doesn't exist.",
+      subheading: "Unfortunately this page doesn't exist.",
       image: "./img/header/automation.jpg",
       logo: "../img/logos/ctn-logo-square.jpg",
     },

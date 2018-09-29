@@ -6,8 +6,8 @@ export const frontmatter: IndexPage = {
     welcome: {
       heading: "Sisiorek",
       subheading: "the company",
-      image: "./img/header/automation.jpg",
-      logo: "../img/logos/ctn-logo-square.jpg",
+      image: "../img/plastics/Products_Welcome.jpg",
+      logo: "../img/logos/baple-group-logo-no-text.png",
     },
     categories: {
       categoryLinks: [

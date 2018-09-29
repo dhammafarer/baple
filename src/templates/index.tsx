@@ -1,29 +1,35 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import App from "../components/layouts/App";
+import { Frontmatter_2, Welcome_2 } from "../graphql";
+import Welcome from "../components/sections/Welcome";
 
 interface Props {
   data: {
     javascriptFrontmatter: {
       frontmatter: {
         sections: {
-          welcome: {
-            heading: string,
-          },
+          welcome: Welcome_2,
         },
       },
     },
     app: {
-      frontmatter: any,
+      frontmatter: Frontmatter_2,
     },
   };
 }
 
 const IndexTemplate: React.SFC<Props> = (({ data }) => {
   const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
+  console.log(s);
   return (
     <App {...data.app.frontmatter}>
-      {s.heading}
+      <Welcome
+        heading={s.heading}
+        subheading={s.subheading}
+        logo={s.logo.childImageSharp.fluid.src}
+        image={s.image.childImageSharp.fluid.src}
+      />
     </App>
   );
 });
@@ -37,6 +43,21 @@ export const query = graphql`
         sections {
           welcome {
             heading
+            subheading
+            logo {
+              childImageSharp {
+                fluid(maxWidth: 200) {
+                  src
+                }
+              }
+            }
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  src
+                }
+              }
+            }
           }
         }
       }
