@@ -37,6 +37,12 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
         heading={categories.heading}
         categoryLinks={categories.categoryLinks}
       />
+      <More
+        heading={more.heading}
+        image={more.image}
+        logo={more.logo}
+        link={more.link}
+      />
     </App>
   );
 });

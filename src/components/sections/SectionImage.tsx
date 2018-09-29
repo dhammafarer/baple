@@ -1,28 +1,23 @@
-import * as React from 'react';
+import * as React from "react";
 import { createStyles, Theme, withStyles } from "@material-ui/core/styles";
-import HorizontalSplit from './layouts/HorizontalSplit';
+import HorizontalSplit from "../layouts/HorizontalSplit";
 import Typography from "@material-ui/core/Typography";
 
 const styles = (theme: Theme) => createStyles({
   image: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   content: {
     background: theme.palette.background.paper,
-    height: '100%',
-    width: '100%',
+    height: "100%",
+    width: "100%",
     paddingTop: theme.spacing.unit * 3,
     paddingBottom: theme.spacing.unit * 3,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    [theme.breakpoints.up('md')]: {
-      alignItems: 'flex-start',
-      paddingLeft: '25%',
-      paddingRight: '50px',
-    }
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   text: {},
   heading: {},
@@ -31,14 +26,14 @@ const styles = (theme: Theme) => createStyles({
 });
 
 interface Props {
-  classes: any
-  reverse?: boolean
-  image: string
-  heading?: string
-  subheading?: string
-  text?: Array<string>
-  before?: any
-  after?: any
+  classes: any;
+  reverse?: boolean;
+  image: string;
+  heading?: string;
+  subheading?: string;
+  text?: string[];
+  before?: any;
+  after?: any;
 }
 
 const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, heading, subheading, text, image}) => (
@@ -49,21 +44,21 @@ const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, headin
       <div className={classes.content}>
         {before && before}
         { heading &&
-          <Typography variant="headline" className={classes.heading}>
+          <Typography variant="display1" className={classes.heading} gutterBottom>
             {heading}
           </Typography>
         }
         { subheading &&
           <Typography variant="subheading" className={classes.subheading}>
-            {heading}
+            {subheading}
           </Typography>
         }
         { text &&
           <div className={classes.text}>
-            {text.map((t,i) =>
+            {text.map((t, i) =>
               <Typography key={i} variant="body2" className={classes.paragraph}>
                 {t}
-              </Typography>
+              </Typography>,
             )}
           </div>
         }
