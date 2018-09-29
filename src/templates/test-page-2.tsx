@@ -20,7 +20,7 @@ const TestPage: React.SFC<Props> = ({ data }) => {
   return (
     <Layout>
       <div>
-        Test Page
+        Test Page 2
       </div>
       {data.javascriptFrontmatter.frontmatter.sections.welcome.heading}
     </Layout>

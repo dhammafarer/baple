@@ -1,115 +1,115 @@
 // basic types
-type Heading = string
-type Subheading = string
-type Logo = string
-type Image = string
-type Paragraph = string
-type Body = Array<Paragraph>
-type Label = string
-type Advantage = string
-type ContactName = string
-type Phone = string
-type Email = string
-type Address = Array<string>
-type Lang = 'en' | 'zh'
-type SocialMedia = string
+type Heading = string;
+type Subheading = string;
+type Logo = string;
+type Image = string;
+type Paragraph = string;
+type Body = Paragraph[];
+type Label = string;
+type Advantage = string;
+type ContactName = string;
+type Phone = string;
+type Email = string;
+type Address = string[];
+type Lang = "en" | "zh";
+type SocialMedia = string;
 
 // compound types
 interface Link {
-  to: string
-  label: Label
+  to: string;
+  label: Label;
 }
 
 interface CategoryLink extends Link {
-  image: Image
+  image: Image;
 }
 
 interface NavLink extends Link {
-  links?: Array<Link>
+  links?: Link[];
 }
 
 interface Param {
-  key: string
-  value: string
+  key: string;
+  value: string;
 }
 
 interface Spec {
-  heading: Heading
-  params: Array<Param>
+  heading: Heading;
+  params: Param[];
 }
 
 interface Product {
-  heading: Heading
-  body: Body
-  link: Link
-  spec: Array<Spec>
+  heading: Heading;
+  body: Body;
+  link: Link;
+  spec: Spec[];
 }
 
 interface ContactDetails {
-  contactName: ContactName
-  phone: Phone
-  email: Email
-  address: Address
-  twitter?: SocialMedia
-  facebook?: SocialMedia
-  instagram?: SocialMedia
-  youtube?: SocialMedia
+  contactName: ContactName;
+  phone: Phone;
+  email: Email;
+  address: Address;
+  twitter?: SocialMedia;
+  facebook?: SocialMedia;
+  instagram?: SocialMedia;
+  youtube?: SocialMedia;
 }
 
-type Contact = Array<ContactDetails>
+type Contact = ContactDetails[];
 
 interface Nav {
-  home: string
-  navLinks: Array<NavLink>
+  home: string;
+  navLinks: NavLink[];
 }
 
 interface App {
-  title: string
-  lang: Lang
-  logo: Logo
-  nav: Nav
-  contact: Contact
+  title: string;
+  lang: Lang;
+  logo: Logo;
+  nav: Nav;
+  contact: Contact;
 }
 
-//sections
+// sections
 interface Section {
-  heading?: Heading
-  subheading?: Subheading
-  body?: Body
-  link?: Link
+  heading?: Heading;
+  subheading?: Subheading;
+  body?: Body;
+  link?: Link;
 }
 
 interface ImageSection extends Section {
-  image: Image
+  image: Image;
 }
 
-interface Welcome extends ImageSection{
-  logo: Logo
+interface Welcome extends ImageSection {
+  logo: Logo;
 }
 
 interface More extends ImageSection {
-  logo: Logo
+  logo: Logo;
 }
 
 interface Categories extends Section {
-  categoryLinks: Array<CategoryLink>
+  categoryLinks: CategoryLink[];
 }
 
 interface Advantages extends Section {
-  points: Array<Advantage>
+  points: Advantage[];
 }
 
-type TCS = ImageSection
-type QAS = ImageSection
-type About = ImageSection
-type Intro = ImageSection
+type TCS = ImageSection;
+type QAS = ImageSection;
+type About = ImageSection;
+type Intro = ImageSection;
 
 interface ContactUs extends ImageSection {
-  logo: Logo
+  logo: Logo;
 }
 
 interface ProductCards extends Section {
-  productCards: Array<Product>
+  productCards: Product[];
 }
 
 type Sections =
@@ -121,32 +121,43 @@ type Sections =
   Advantages |
   TCS |
   QAS |
-  ProductCards
+  ProductCards;
 
 // pages
 interface Page {
-  [key: string]: Sections
+  layout: string;
+  sections: {
+    [key: string]: Sections;
+  };
 }
 
 export interface IndexPage extends Page {
-  welcome: Welcome
-  categories: Categories
-  more: More
+  sections: {
+    welcome: Welcome;
+    categories: Categories;
+    more: More;
+  };
 }
 
 export interface CategoryPage extends Page {
-  intro: Intro
-  products: ProductCards
+  sections: {
+    intro: Intro;
+    products: ProductCards;
+  };
 }
 
 export interface ContactPage extends Page {
-  contactUs: ContactUs
+  sections: {
+    contactUs: ContactUs;
+  };
 }
 
 export interface AboutPage extends Page {
-  about: About
-  advantage: Advantages
-  tcs: TCS
-  qas: QAS
-  more: More
+  sections: {
+    about: About;
+    advantage: Advantages;
+    tcs: TCS;
+    qas: QAS;
+    more: More;
+  }
 }

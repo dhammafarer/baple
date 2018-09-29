@@ -1,7 +1,7 @@
 import { IndexPage } from "../../pages";
 
 export const frontmatter: IndexPage = {
-  layout: "test-page",
+  layout: "test-page-2",
   sections: {
     welcome: {
       heading: "Sisiorek",

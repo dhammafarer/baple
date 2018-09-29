@@ -25,6 +25,9 @@ exports.createPages = ({ graphql, actions }) => {
               fields {
                 slug
               }
+              frontmatter {
+                layout
+              }
             }
           }
         }
@@ -35,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
         .forEach(({ node }) => {
           createPage({
             path: node.fields.slug,
-            component: path.resolve('./src/templates/test-page.tsx'),
+            component: path.resolve(`./src/templates/${node.frontmatter.layout}.tsx`),
             context: {
               slug: node.fields.slug,
             }
