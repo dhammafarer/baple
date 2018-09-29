@@ -4,10 +4,10 @@ export const frontmatter: IndexPage = {
   layout: "index",
   sections: {
     welcome: {
-      heading: "Sisiorek",
-      subheading: "the company",
-      image: "../../img/plastics/Products_Welcome.jpg",
+      heading: "Because innovation sells packaging and packaging sells products",
+      subheading: "Porque innovación vende packaging y el packaging vende productos",
       logo: "../../img/logos/baple-group-logo-no-text.png",
+      image: "../../img/plastics/Products_Welcome.jpg",
     },
     categories: {
       categoryLinks: [

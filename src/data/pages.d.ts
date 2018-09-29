@@ -11,7 +11,7 @@ type ContactName = string;
 type Phone = string;
 type Email = string;
 type Address = string[];
-type Lang = "en" | "zh";
+type Lang = "es";
 type SocialMedia = string;
 type Layout =
   "landing" |

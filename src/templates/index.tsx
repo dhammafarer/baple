@@ -39,28 +39,7 @@ export default IndexTemplate;
 export const query = graphql`
   query($slug: String!, $layout: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        sections {
-          welcome {
-            heading
-            subheading
-            logo {
-              childImageSharp {
-                fluid(maxWidth: 200) {
-                  src
-                }
-              }
-            }
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1200) {
-                  src
-                }
-              }
-            }
-          }
-        }
-      }
+      ...IndexFrontmatter
     }
     app: javascriptFrontmatter(fields: { slug: {eq: $layout} }) {
       ...AppFrontmatter

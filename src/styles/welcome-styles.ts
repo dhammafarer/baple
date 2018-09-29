@@ -14,8 +14,8 @@ const welcomeStyles = (theme: Theme) => createStyles({
     },
   },
   logo: {
-    width: 250,
-    height: 250,
+    width: 300,
+    height: 300,
   },
   text: {
     margin: "2em 0.6em",
