@@ -111,11 +111,14 @@ interface Advantages extends Section {
 
 type TCS = ImageSection;
 type QAS = ImageSection;
-type About = ImageSection;
 type Intro = ImageSection;
 
 interface ContactUs extends ImageSection {
   logo: Logo;
+}
+
+interface About extends ImageSection {
+  logo?: Logo;
 }
 
 interface NotFound extends ImageSection {
@@ -187,10 +190,10 @@ export interface ContactPage extends Page {
 export interface AboutPage extends Page {
   layout: "about";
   sections: {
-    about: About;
-    advantage: Advantages;
+    about1: About;
+    about2: About;
+    advantages: Advantages;
     tcs: TCS;
     qas: QAS;
-    more: More;
   };
 }

@@ -55,7 +55,7 @@ export const frontmatter: App = {
       },
       {
         label: "About",
-        to: "/about",
+        to: "/plastics/about",
       },
     ],
   },
