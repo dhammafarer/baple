@@ -2,7 +2,7 @@ import { IndexPage } from "../pages";
 
 export const frontmatter: IndexPage = {
   welcome: {
-    heading: "Controlnet",
+    heading: "Sisiorek",
     subheading: "the company",
     image: "./img/header/automation.jpg",
     logo: "../img/logos/ctn-logo-square.jpg",
