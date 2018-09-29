@@ -10,8 +10,8 @@ import SectionImage from "./SectionImage";
 type Props = WithStyles<typeof styles> & {
   heading: string;
   link?: {
-    to: string
-    label: string,
+    to?: string
+    label?: string,
   };
   image: any;
   logo: any;

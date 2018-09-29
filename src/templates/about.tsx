@@ -45,6 +45,14 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
         body={advantages.body}
         points={advantages.points}
       />
+      <Tcs
+        heading={tcs.heading}
+        image={tcs.image}
+      />
+      <Tcs
+        heading={qas.heading}
+        image={qas.image}
+      />
     </App>
   );
 });

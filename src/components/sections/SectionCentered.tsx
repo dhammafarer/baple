@@ -45,7 +45,7 @@ const SectionCentered: React.SFC<Props> = ({classes, before, after, gradient, he
     <div className={classes.content}>
       {before && before}
       { heading &&
-        <Typography variant="headline" className={classes.heading}>
+        <Typography variant="display1" className={classes.heading}>
           {heading}
         </Typography>
       }
