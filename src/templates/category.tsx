@@ -1,45 +1,50 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import App from "../components/layouts/App";
+import { Frontmatter_2, Intro_2, CategoryList_2 } from "../graphql";
+import Intro from "../components/sections/Intro";
+import CategoryList from "../components/sections/CategoryList";
 
 interface Props {
   data: {
     javascriptFrontmatter: {
       frontmatter: {
         sections: {
-          welcome: {
-            heading: string,
-          },
+          intro: Intro_2,
+          categoryList: CategoryList_2,
         },
       },
     },
     app: {
-      frontmatter: any,
+      frontmatter: Frontmatter_2,
     },
   };
 }
 
-const CategoryTemplate: React.SFC<Props> = (({ data }) => {
-  const s = data.javascriptFrontmatter.frontmatter.sections.welcome;
+const IndexTemplate: React.SFC<Props> = (({ data }) => {
+  const { intro, categoryList } = data.javascriptFrontmatter.frontmatter.sections;
   return (
     <App {...data.app.frontmatter}>
-      {s.heading}
+      <Intro
+        heading={intro.heading}
+        image={intro.image}
+        body={intro.body}
+        link={intro.link}
+      />
+      <CategoryList
+        heading={intro.heading}
+        categoryItems={categoryList.categoryItems}
+      />
     </App>
   );
 });
 
-export default CategoryTemplate;
+export default IndexTemplate;
 
 export const query = graphql`
   query($slug: String!, $layout: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        sections {
-          welcome {
-            heading
-          }
-        }
-      }
+      ...CategoryFrontmatter
     }
     app: javascriptFrontmatter(fields: { slug: {eq: $layout} }) {
       ...AppFrontmatter

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { withStyles } from "@material-ui/core/styles";
-import styles from '../styles/products-styles';
+import * as React from "react";
+import { WithStyles, withStyles } from "@material-ui/core/styles";
+import styles from "../../styles/category-list-styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -13,44 +13,43 @@ import TableBody from "@material-ui/core/TableBody";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import Button from "@material-ui/core/Button";
-import Link from 'gatsby-link';
+import { Link } from "gatsby";
 
 interface Param {
-  key: string
-  value: string
+  key: string;
+  value: string;
 }
 
 interface Spec {
-  name: string
-  params: Array<Param>
+  name: string;
+  params: Param[];
 }
-interface Product {
-  classes: any
-  heading: string
-  text: Array<string>
-  mainImg: Image
-  spec: Array<Spec>
+interface Item {
+  classes: any;
+  heading: string;
+  body: string[];
+  image: any;
+  spec: Spec[];
   link: {
     to: string
-    label: string
-  }
+    label: string,
+  };
 }
 
-interface Props {
-  classes: any
-  products: Array<Product>
-}
+type Props = WithStyles<typeof styles> & {
+  heading: string;
+  categoryItems: Item[];
+};
 
-
-const ProductsList: React.SFC<Props> = ({ products, classes }) => (
+const ProductsList: React.SFC<Props> = ({ categoryItems, classes }) => (
   <section className={classes.section}>
     <Grid container spacing={32}>
       {
-        products.map(x =>
+        categoryItems.map((x) =>
         <Grid key={x.heading} item xs={12} md={6}>
           <Card key={x.heading} className={classes.card}>
             <CardContent className={classes.cardContent}>
-              <img className={classes.media} src={x.mainImg.childImageSharp.sizes.src}/>
+              <img className={classes.media} src={x.image.childImageSharp.fluid.src}/>
 
               <div className={classes.header}>
                 <Typography variant="title" className={classes.heading}>
@@ -58,10 +57,10 @@ const ProductsList: React.SFC<Props> = ({ products, classes }) => (
                 </Typography>
 
                 <div className={classes.text}>
-                  {x.text.map((t,n) =>
+                  {x.body.map((t, n) =>
                     <Typography key={n} variant="body2" className={classes.paragraph}>
                       {t}
-                    </Typography>
+                    </Typography>,
                   )}
                 </div>
                 <Link to={x.link.to}>

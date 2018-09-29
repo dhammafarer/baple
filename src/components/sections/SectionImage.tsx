@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createStyles, Theme, withStyles } from "@material-ui/core/styles";
+import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
 import HorizontalSplit from "../layouts/HorizontalSplit";
 import Typography from "@material-ui/core/Typography";
 
@@ -14,29 +14,33 @@ const styles = (theme: Theme) => createStyles({
     width: "100%",
     paddingTop: theme.spacing.unit * 3,
     paddingBottom: theme.spacing.unit * 3,
+    paddingLeft: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
   },
-  text: {},
+  body: {
+    marginBottom: "1em",
+  },
   heading: {},
   subheading: {},
   paragraph: {},
 });
 
-interface Props {
-  classes: any;
+type Props = WithStyles<typeof styles> & {
   reverse?: boolean;
   image: string;
   heading?: string;
   subheading?: string;
-  text?: string[];
+  body?: string[];
   before?: any;
   after?: any;
-}
+};
 
-const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, heading, subheading, text, image}) => (
+const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, heading, subheading, body, image}) => (
   <HorizontalSplit
     reverse={reverse}
     left={<img className={classes.image} src={image}/>}
@@ -53,9 +57,9 @@ const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, headin
             {subheading}
           </Typography>
         }
-        { text &&
-          <div className={classes.text}>
-            {text.map((t, i) =>
+        { body &&
+          <div className={classes.body}>
+            {body.map((t, i) =>
               <Typography key={i} variant="body2" className={classes.paragraph}>
                 {t}
               </Typography>,

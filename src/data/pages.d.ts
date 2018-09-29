@@ -46,8 +46,9 @@ interface Spec {
   params: Param[];
 }
 
-interface Product {
+interface CategoryItem {
   heading: Heading;
+  image: Image;
   body: Body;
   link: Link;
   spec: Spec[];
@@ -121,8 +122,8 @@ interface NotFound extends ImageSection {
   logo: Logo;
 }
 
-interface ProductCards extends Section {
-  productCards: Product[];
+interface CategoryList extends Section {
+  categoryItems: CategoryItem[];
 }
 
 type Sections =
@@ -135,7 +136,7 @@ type Sections =
   TCS |
   QAS |
   NotFound |
-  ProductCards;
+  CategoryList;
 
 // pages
 interface Page {
@@ -165,14 +166,14 @@ export interface CategoryPage extends Page {
   layout: "category";
   sections: {
     intro: Intro;
-    products: ProductCards;
+    categoryList: CategoryList;
   };
 }
 
 export interface CategoriesPage extends Page {
   layout: "categories";
   sections: {
-    products: ProductCards;
+    categories: Categories;
   };
 }
 
