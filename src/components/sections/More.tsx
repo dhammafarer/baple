@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { Link } from "gatsby";
-import SectionImage from "./SectionImage";
+import SectionCentered from "./SectionCentered";
 
 type Props = WithStyles<typeof styles> & {
   heading: string;
@@ -18,14 +18,14 @@ type Props = WithStyles<typeof styles> & {
 };
 
 const More: React.SFC<Props> = ({ heading, image, logo, link, classes }) => (
-  <SectionImage
+  <SectionCentered
     image={image}
     heading={heading}
     before={
       logo && <img className={classes.logo} src={logo.childImageSharp.fluid.src}/>
     }
   after={
-    <Button className={classes.button} variant="contained" color="primary" size="large">
+    <Button className={classes.button} variant="outlined" color="primary" size="large">
       <Link to={link.to}>
         {link.label}
       </Link>

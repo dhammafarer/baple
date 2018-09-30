@@ -17,15 +17,23 @@ const styles = (theme: Theme) => createStyles({
     minHeight: "calc(100vh - 64px)",
   },
   content: {
+    width: "100%",
     height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
+    paddingLeft: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3,
   },
   text: {},
-  heading: {},
+  header: {
+    marginBottom: "1em",
+  },
+  heading: {
+    paddingBottom: theme.spacing.unit * 3,
+  },
   subheading: {},
   paragraph: {},
 });
@@ -52,16 +60,18 @@ const SectionFeatured: React.SFC<Props> = ({
   >
     <div className={classes.content}>
       {before && before}
-      { heading &&
-        <Typography variant="display3" className={classes.heading}>
-          {heading}
-        </Typography>
-      }
-      { subheading &&
-        <Typography variant="display1" className={classes.subheading}>
-          {subheading}
-        </Typography>
-      }
+      <div className={classes.header}>
+        { heading &&
+          <Typography variant="display2" className={classes.heading}>
+            {heading}
+          </Typography>
+        }
+        { subheading &&
+          <Typography variant="title" className={classes.subheading}>
+            {subheading}
+          </Typography>
+        }
+      </div>
       { text &&
         <div className={classes.text}>
           {text.map((t, i) =>

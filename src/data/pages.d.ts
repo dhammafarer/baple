@@ -114,7 +114,7 @@ interface More extends ImageSection {
   logo: Logo;
 }
 
-interface Categories extends Section {
+interface Categories extends ImageSection {
   categoryLinks: CategoryLink[];
 }
 

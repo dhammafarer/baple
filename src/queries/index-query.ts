@@ -23,6 +23,14 @@ export const IndexFragment = graphql`
         }
         categories {
           heading
+          subheading
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1200) {
+                src
+              }
+            }
+          }
           categoryLinks {
             label
             image {

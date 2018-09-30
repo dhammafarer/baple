@@ -11,6 +11,9 @@ const categoriesStyles = (theme: Theme) => createStyles({
   heading: {
     marginBottom: "1.2em",
   },
+  cards: {
+    padding: "1em 0",
+  },
   card: {
     display: "flex",
     height: "100%",
