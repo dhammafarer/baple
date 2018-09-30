@@ -31,7 +31,7 @@ const styles = (theme: Theme) => createStyles({
 });
 
 type Props = WithStyles<typeof styles> & {
-  image: string
+  image?: string
   gradient?: string
   heading?: string
   subheading?: string

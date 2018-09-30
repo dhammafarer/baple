@@ -9,17 +9,17 @@ import SectionFeatured from "../sections/SectionFeatured";
 type Props = WithStyles<typeof styles> & {
   heading: string,
   subheading: string,
-  logo: string,
-  image: string,
+  logo: any,
+  image: any,
 };
 
 const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes }) => (
   <SectionFeatured
     fullHeight
-    image={image}
+    image={image && image.childImageSharp.fluid.src}
     before={
       <div className={classes.section}>
-        <img src={logo}/>
+        {logo && <img src={logo.childImageSharp.fluid.src}/>}
         <div className={classes.text}>
           <Typography
             className={classes.heading}

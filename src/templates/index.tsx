@@ -30,8 +30,8 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
       <Welcome
         heading={welcome.heading}
         subheading={welcome.subheading}
-        logo={welcome.logo.childImageSharp.fluid.src}
-        image={welcome.image.childImageSharp.fluid.src}
+        logo={welcome.logo}
+        image={welcome.image}
       />
       <Categories
         heading={categories.heading}

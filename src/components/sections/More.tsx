@@ -19,10 +19,10 @@ type Props = WithStyles<typeof styles> & {
 
 const More: React.SFC<Props> = ({ heading, image, logo, link, classes }) => (
   <SectionImage
-    image={image.childImageSharp.fluid.src}
+    image={image}
     heading={heading}
     before={
-      <img className={classes.logo} src={logo.childImageSharp.fluid.src}/>
+      logo && <img className={classes.logo} src={logo.childImageSharp.fluid.src}/>
     }
   after={
     <Button className={classes.button} variant="contained" color="primary" size="large">

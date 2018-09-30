@@ -1,0 +1,19 @@
+﻿title: Baple energy
+lang: es
+logo: './img/logos/baple-group-logo-no-text.png'
+nav:
+  home: /energy
+  links:
+    - to: /energy/products
+      label: Products
+      links:
+        - to: /energy/Powerwall
+          label: Powerwall
+        - to: /energy/energy storage
+          label: Energy Storage
+        - to: /energy/e-scooter
+          label: e-scooter
+    - to: /energy/about
+      label: ¿Quienes somos?
+    - to: /energy/contact
+      label: Contáctanos!

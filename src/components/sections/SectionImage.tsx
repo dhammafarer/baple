@@ -32,7 +32,7 @@ const styles = (theme: Theme) => createStyles({
 
 type Props = WithStyles<typeof styles> & {
   reverse?: boolean;
-  image: string;
+  image?: any;
   heading?: string;
   subheading?: string;
   body?: string[];
@@ -43,7 +43,7 @@ type Props = WithStyles<typeof styles> & {
 const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, heading, subheading, body, image}) => (
   <HorizontalSplit
     reverse={reverse}
-    left={<img className={classes.image} src={image}/>}
+    left={image && <img className={classes.image} src={image.childImageSharp.fluid.src}/>}
     right={
       <div className={classes.content}>
         {before && before}

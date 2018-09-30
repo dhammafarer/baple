@@ -41,7 +41,7 @@ const Advantages: React.SFC<Props> = ({ heading, body, points, classes }) => (
   right={
     <div className={classes.pane}>
       {points.map((p) =>
-      <Paper className={classes.point}>
+      <Paper className={classes.point} key={p}>
         <Typography
           color="inherit"
           variant="title"

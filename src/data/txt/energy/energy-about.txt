@@ -1,0 +1,59 @@
+﻿COMMENTARIES NOT TO INCLUDE ON THE WEBSITE. CHANGES
+categories. No bold, OPEN SANS LIGHT 300
+metal energy logo.jpg. You already have it. Please include it as a image. big logo to use have screen.
+
+
+about:
+  heading:
+  image: './img/Solar panel_Cube2.jpg'
+  text:
+    - “I´d put my money on the sun and solar energy, what a source of power. I hope we don´t have to wait until oil and coal run out, before we tackle that. ” Thomas Edison, 1931."
+    - "Pondría mi dinero en el sol y la energía solar, qué fuente de energía. Espero que no tengamos que esperar hasta que se agoten el petróleo y el carbón para abordar eso." Thomas Edison, 1931."
+ about:
+  heading: 
+  image: './metal packaging logo.jpg'
+  text:
+    - "VISIÓN: Ayudar a los hogares españoles a mejorar su calidad de vida con las tecnologias más modernas y beneficiosas para el medio ambiente."
+    - "MISIÓN: Ayudar a instaladores locales a aportar soluciones que permitar mejorar la calidad de vida de los hogares, al mismo tiempo que se ayuda al planeta."
+    
+  link:
+    to: /energy/contact
+    label: Contáctanos!
+
+advantages (grey color background to distinguish with the TCS AND QAS):
+  heading: Advantages of Baple Plastics
+  points:
+    - Innovacción y Tecnología
+    - Servicio Personalizado
+    - Baple TCS System
+  text:
+    - "Innovación y Tecnología es la base para poder suministrar productos con los niveles de calidad exigidos por el mercado internacional, ofreciendo soluciones cada vez más modernas y más personalizadas a nuestros partners."
+    - "Debido a los múltiples centros de fabricación, tenemos la capacidad de ofrecer una gran flexibilidad en la personalización de productos y servicios adicionales que aporten valor añadido al consumidor."
+
+tcs:
+  heading: Baple TCS System
+  image: './img/Baple_Company_TCS_system.jpg'
+  text:
+    
+advantages (grey color background to distinguish with the TCS AND QAS):
+  heading: Advantages of Baple Plastics
+  points:
+    - Innovacción y Tecnología
+    - Servicio Personalizado
+    - Baple TCS System
+  text:
+        - "Debido a los múltiples centros de fabricación, tenemos la capacidad de ofrecer una gran flexibilidad en la personalización de productos y servicios adicionales que aporten valor añadido al consumidor."
+
+tcs:
+  heading: Baple Quality Assurance
+  image: './img/Baple_Company_QA_system.jpg'
+  text:
+   
+
+more:
+  heading: Quieres saber más de nosotros?
+  mainImg: './img/learn-more.jpg'
+  logo: './img/logos/baple-plastics-logo.png'
+  link:
+    label: Contáctanos!
+    to: /metal packaging/contact
