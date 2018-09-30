@@ -25,7 +25,6 @@ interface Spec {
   params: Param[];
 }
 interface Item {
-  classes: any;
   heading: string;
   body: string[];
   image: any;

@@ -18,7 +18,7 @@ type Props = WithStyles<typeof styles> & {
 
 const Intro: React.SFC<Props> = ({ heading, body, image, link, classes }) => (
   <SectionImage
-    image={image.childImageSharp.fluid.src}
+    image={image}
     heading={heading}
     body={body}
     after={

@@ -48,19 +48,31 @@ const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, headin
       <div className={classes.content}>
         {before && before}
         { heading &&
-          <Typography variant="display1" className={classes.heading} gutterBottom>
+          <Typography
+            variant="display1"
+            className={classes.heading}
+            gutterBottom
+          >
             {heading}
           </Typography>
         }
         { subheading &&
-          <Typography variant="subheading" className={classes.subheading}>
+          <Typography
+            variant="subheading"
+            className={classes.subheading}
+          >
             {subheading}
           </Typography>
         }
         { body &&
           <div className={classes.body}>
             {body.map((t, i) =>
-              <Typography key={i} variant="body2" className={classes.paragraph}>
+            <Typography
+              key={i}
+              variant="body2"
+              className={classes.paragraph}
+              gutterBottom
+            >
                 {t}
               </Typography>,
             )}
