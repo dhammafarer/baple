@@ -356,7 +356,7 @@ export interface Node_2 {
   internal?: Internal_13 | null
   sourceInstanceName?: string | null
   absolutePath?: string | null
-  relativePath?: File | null
+  relativePath?: string | null
   extension?: string | null
   size?: number | null
   prettySize?: string | null
@@ -410,51 +410,30 @@ export interface FieldOwners_2 {
 }
 
 export interface Frontmatter_2 {
+  layout?: string | null
+  sections?: Sections_2 | null
+  error?: boolean | null
   title?: string | null
-  contact?: (Contact_2 | null)[] | null
+  contact?: (Contact_4 | null)[] | null
   lang?: string | null
   logo?: File | null
   nav?: Nav_2 | null
-  error?: boolean | null
-  layout?: string | null
-  sections?: Sections_2 | null
-}
-
-export interface Contact_2 {
-  address?: (string | null)[] | null
-  contactName?: string | null
-  email?: string | null
-  facebook?: string | null
-  instagram?: string | null
-  phone?: string | null
-  twitter?: string | null
-  youtube?: string | null
-}
-
-export interface Nav_2 {
-  home?: string | null
-  navLinks?: (NavLinks_2 | null)[] | null
-}
-
-export interface NavLinks_2 {
-  label?: string | null
-  links?: (Links_2 | null)[] | null
-  to?: string | null
-}
-
-export interface Links_2 {
-  label?: string | null
-  to?: string | null
 }
 
 export interface Sections_2 {
   notFound?: NotFound_2 | null
   intro?: Intro_2 | null
   categoryList?: CategoryList_2 | null
-  contactUs?: ContactUs_2 | null
   welcome?: Welcome_2 | null
   categories?: Categories_2 | null
   more?: More_2 | null
+  about1?: About1_2 | null
+  about2?: About2_2 | null
+  advantages?: Advantages_2 | null
+  tcs?: Tcs_2 | null
+  qas?: Qas_2 | null
+  contactUs?: ContactUs_2 | null
+  contactDetails?: ContactDetails_2 | null
 }
 
 export interface NotFound_2 {
@@ -503,12 +482,6 @@ export interface Link_5 {
   label?: string | null
 }
 
-export interface ContactUs_2 {
-  logo?: File | null
-  image?: File | null
-  heading?: string | null
-}
-
 export interface Welcome_2 {
   heading?: string | null
   subheading?: string | null
@@ -537,6 +510,82 @@ export interface More_2 {
 export interface Link_6 {
   to?: string | null
   label?: string | null
+}
+
+export interface About1_2 {
+  logo?: File | null
+  image?: File | null
+  heading?: string | null
+  body?: (string | null)[] | null
+}
+
+export interface About2_2 {
+  image?: File | null
+  body?: (string | null)[] | null
+}
+
+export interface Advantages_2 {
+  heading?: string | null
+  body?: (string | null)[] | null
+  points?: (string | null)[] | null
+}
+
+export interface Tcs_2 {
+  heading?: string | null
+  image?: File | null
+}
+
+export interface Qas_2 {
+  heading?: string | null
+  image?: File | null
+}
+
+export interface ContactUs_2 {
+  logo?: File | null
+  image?: File | null
+  heading?: string | null
+}
+
+export interface ContactDetails_2 {
+  contact?: (Contact_3 | null)[] | null
+}
+
+export interface Contact_3 {
+  address?: (string | null)[] | null
+  contactName?: string | null
+  email?: string | null
+  facebook?: string | null
+  instagram?: string | null
+  phone?: string | null
+  twitter?: string | null
+  youtube?: string | null
+}
+
+export interface Contact_4 {
+  address?: (string | null)[] | null
+  contactName?: string | null
+  email?: string | null
+  facebook?: string | null
+  instagram?: string | null
+  phone?: string | null
+  twitter?: string | null
+  youtube?: string | null
+}
+
+export interface Nav_2 {
+  home?: string | null
+  navLinks?: (NavLinks_2 | null)[] | null
+}
+
+export interface NavLinks_2 {
+  label?: string | null
+  links?: (Links_2 | null)[] | null
+  to?: string | null
+}
+
+export interface Links_2 {
+  label?: string | null
+  to?: string | null
 }
 
 export interface Fields_2 {
@@ -3669,204 +3718,14 @@ export interface JavascriptFrontmatterConnectionInternalFieldOwnersLayoutQuerySt
 }
 
 export interface JavascriptFrontmatterConnectionFrontmatterInputObject_2 {
+  layout?: JavascriptFrontmatterConnectionFrontmatterLayoutQueryString_2 | null
+  sections?: JavascriptFrontmatterConnectionFrontmatterSectionsInputObject_2 | null
+  error?: JavascriptFrontmatterConnectionFrontmatterErrorQueryBoolean_2 | null
   title?: JavascriptFrontmatterConnectionFrontmatterTitleQueryString_2 | null
   contact?: JavascriptFrontmatterConnectionFrontmatterContactQueryList_2 | null
   lang?: JavascriptFrontmatterConnectionFrontmatterLangQueryString_2 | null
   logo?: JavascriptFrontmatterConnectionFrontmatterLogoQueryString_2 | null
   nav?: JavascriptFrontmatterConnectionFrontmatterNavInputObject_2 | null
-  error?: JavascriptFrontmatterConnectionFrontmatterErrorQueryBoolean_2 | null
-  layout?: JavascriptFrontmatterConnectionFrontmatterLayoutQueryString_2 | null
-  sections?: JavascriptFrontmatterConnectionFrontmatterSectionsInputObject_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterTitleQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactQueryList_2 {
-  elemMatch?: JavascriptFrontmatterConnectionFrontmatterContactInputObject_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactInputObject_2 {
-  address?: JavascriptFrontmatterConnectionFrontmatterContactAddressQueryList_2 | null
-  contactName?: JavascriptFrontmatterConnectionFrontmatterContactContactNameQueryString_2 | null
-  email?: JavascriptFrontmatterConnectionFrontmatterContactEmailQueryString_2 | null
-  facebook?: JavascriptFrontmatterConnectionFrontmatterContactFacebookQueryString_2 | null
-  instagram?: JavascriptFrontmatterConnectionFrontmatterContactInstagramQueryString_2 | null
-  phone?: JavascriptFrontmatterConnectionFrontmatterContactPhoneQueryString_2 | null
-  twitter?: JavascriptFrontmatterConnectionFrontmatterContactTwitterQueryString_2 | null
-  youtube?: JavascriptFrontmatterConnectionFrontmatterContactYoutubeQueryString_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactAddressQueryList_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactContactNameQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactEmailQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactFacebookQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactInstagramQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactPhoneQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactTwitterQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterContactYoutubeQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterLangQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterLogoQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavInputObject_2 {
-  home?: JavascriptFrontmatterConnectionFrontmatterNavHomeQueryString_2 | null
-  navLinks?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksQueryList_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavHomeQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksQueryList_2 {
-  elemMatch?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksInputObject_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksInputObject_2 {
-  label?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLabelQueryString_2 | null
-  links?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksQueryList_2 | null
-  to?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksToQueryString_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLabelQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksQueryList_2 {
-  elemMatch?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksInputObject_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksInputObject_2 {
-  label?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksLabelQueryString_2 | null
-  to?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksToQueryString_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksLabelQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksToQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksToQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterErrorQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: (boolean | null)[] | null
-  nin?: (boolean | null)[] | null
 }
 
 export interface JavascriptFrontmatterConnectionFrontmatterLayoutQueryString_2 {
@@ -3882,10 +3741,16 @@ export interface JavascriptFrontmatterConnectionFrontmatterSectionsInputObject_2
   notFound?: JavascriptFrontmatterConnectionFrontmatterSectionsNotFoundInputObject_2 | null
   intro?: JavascriptFrontmatterConnectionFrontmatterSectionsIntroInputObject_2 | null
   categoryList?: JavascriptFrontmatterConnectionFrontmatterSectionsCategoryListInputObject_2 | null
-  contactUs?: JavascriptFrontmatterConnectionFrontmatterSectionsContactUsInputObject_2 | null
   welcome?: JavascriptFrontmatterConnectionFrontmatterSectionsWelcomeInputObject_2 | null
   categories?: JavascriptFrontmatterConnectionFrontmatterSectionsCategoriesInputObject_2 | null
   more?: JavascriptFrontmatterConnectionFrontmatterSectionsMoreInputObject_2 | null
+  about1?: JavascriptFrontmatterConnectionFrontmatterSectionsAbout1InputObject_2 | null
+  about2?: JavascriptFrontmatterConnectionFrontmatterSectionsAbout2InputObject_2 | null
+  advantages?: JavascriptFrontmatterConnectionFrontmatterSectionsAdvantagesInputObject_2 | null
+  tcs?: JavascriptFrontmatterConnectionFrontmatterSectionsTcsInputObject_2 | null
+  qas?: JavascriptFrontmatterConnectionFrontmatterSectionsQasInputObject_2 | null
+  contactUs?: JavascriptFrontmatterConnectionFrontmatterSectionsContactUsInputObject_2 | null
+  contactDetails?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsInputObject_2 | null
 }
 
 export interface JavascriptFrontmatterConnectionFrontmatterSectionsNotFoundInputObject_2 {
@@ -4099,39 +3964,6 @@ export interface JavascriptFrontmatterConnectionFrontmatterSectionsCategoryListC
   nin?: (string | null)[] | null
 }
 
-export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactUsInputObject_2 {
-  logo?: JavascriptFrontmatterConnectionFrontmatterSectionsContactUsLogoQueryString_2 | null
-  image?: JavascriptFrontmatterConnectionFrontmatterSectionsContactUsImageQueryString_2 | null
-  heading?: JavascriptFrontmatterConnectionFrontmatterSectionsContactUsHeadingQueryString_2 | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactUsLogoQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactUsImageQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactUsHeadingQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
 export interface JavascriptFrontmatterConnectionFrontmatterSectionsWelcomeInputObject_2 {
   heading?: JavascriptFrontmatterConnectionFrontmatterSectionsWelcomeHeadingQueryString_2 | null
   subheading?: JavascriptFrontmatterConnectionFrontmatterSectionsWelcomeSubheadingQueryString_2 | null
@@ -4275,6 +4107,465 @@ export interface JavascriptFrontmatterConnectionFrontmatterSectionsMoreLinkToQue
 }
 
 export interface JavascriptFrontmatterConnectionFrontmatterSectionsMoreLinkLabelQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAbout1InputObject_2 {
+  logo?: JavascriptFrontmatterConnectionFrontmatterSectionsAbout1LogoQueryString_2 | null
+  image?: JavascriptFrontmatterConnectionFrontmatterSectionsAbout1ImageQueryString_2 | null
+  heading?: JavascriptFrontmatterConnectionFrontmatterSectionsAbout1HeadingQueryString_2 | null
+  body?: JavascriptFrontmatterConnectionFrontmatterSectionsAbout1BodyQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAbout1LogoQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAbout1ImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAbout1HeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAbout1BodyQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAbout2InputObject_2 {
+  image?: JavascriptFrontmatterConnectionFrontmatterSectionsAbout2ImageQueryString_2 | null
+  body?: JavascriptFrontmatterConnectionFrontmatterSectionsAbout2BodyQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAbout2ImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAbout2BodyQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAdvantagesInputObject_2 {
+  heading?: JavascriptFrontmatterConnectionFrontmatterSectionsAdvantagesHeadingQueryString_2 | null
+  body?: JavascriptFrontmatterConnectionFrontmatterSectionsAdvantagesBodyQueryList_2 | null
+  points?: JavascriptFrontmatterConnectionFrontmatterSectionsAdvantagesPointsQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAdvantagesHeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAdvantagesBodyQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsAdvantagesPointsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsTcsInputObject_2 {
+  heading?: JavascriptFrontmatterConnectionFrontmatterSectionsTcsHeadingQueryString_2 | null
+  image?: JavascriptFrontmatterConnectionFrontmatterSectionsTcsImageQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsTcsHeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsTcsImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsQasInputObject_2 {
+  heading?: JavascriptFrontmatterConnectionFrontmatterSectionsQasHeadingQueryString_2 | null
+  image?: JavascriptFrontmatterConnectionFrontmatterSectionsQasImageQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsQasHeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsQasImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactUsInputObject_2 {
+  logo?: JavascriptFrontmatterConnectionFrontmatterSectionsContactUsLogoQueryString_2 | null
+  image?: JavascriptFrontmatterConnectionFrontmatterSectionsContactUsImageQueryString_2 | null
+  heading?: JavascriptFrontmatterConnectionFrontmatterSectionsContactUsHeadingQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactUsLogoQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactUsImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactUsHeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsInputObject_2 {
+  contact?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactQueryList_2 {
+  elemMatch?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactInputObject_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactInputObject_2 {
+  address?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactAddressQueryList_2 | null
+  contactName?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactContactNameQueryString_2 | null
+  email?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactEmailQueryString_2 | null
+  facebook?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactFacebookQueryString_2 | null
+  instagram?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactInstagramQueryString_2 | null
+  phone?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactPhoneQueryString_2 | null
+  twitter?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactTwitterQueryString_2 | null
+  youtube?: JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactYoutubeQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactAddressQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactContactNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactEmailQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactFacebookQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactInstagramQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactPhoneQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactTwitterQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterSectionsContactDetailsContactYoutubeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterErrorQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: (boolean | null)[] | null
+  nin?: (boolean | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterTitleQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactQueryList_2 {
+  elemMatch?: JavascriptFrontmatterConnectionFrontmatterContactInputObject_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactInputObject_2 {
+  address?: JavascriptFrontmatterConnectionFrontmatterContactAddressQueryList_2 | null
+  contactName?: JavascriptFrontmatterConnectionFrontmatterContactContactNameQueryString_2 | null
+  email?: JavascriptFrontmatterConnectionFrontmatterContactEmailQueryString_2 | null
+  facebook?: JavascriptFrontmatterConnectionFrontmatterContactFacebookQueryString_2 | null
+  instagram?: JavascriptFrontmatterConnectionFrontmatterContactInstagramQueryString_2 | null
+  phone?: JavascriptFrontmatterConnectionFrontmatterContactPhoneQueryString_2 | null
+  twitter?: JavascriptFrontmatterConnectionFrontmatterContactTwitterQueryString_2 | null
+  youtube?: JavascriptFrontmatterConnectionFrontmatterContactYoutubeQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactAddressQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactContactNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactEmailQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactFacebookQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactInstagramQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactPhoneQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactTwitterQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterContactYoutubeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterLangQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterLogoQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavInputObject_2 {
+  home?: JavascriptFrontmatterConnectionFrontmatterNavHomeQueryString_2 | null
+  navLinks?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavHomeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksQueryList_2 {
+  elemMatch?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksInputObject_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksInputObject_2 {
+  label?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLabelQueryString_2 | null
+  links?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksQueryList_2 | null
+  to?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksToQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLabelQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksQueryList_2 {
+  elemMatch?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksInputObject_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksInputObject_2 {
+  label?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksLabelQueryString_2 | null
+  to?: JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksToQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksLabelQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksLinksToQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterConnectionFrontmatterNavNavLinksToQueryString_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -7170,204 +7461,14 @@ export interface JavascriptFrontmatterInternalFieldOwnersLayoutQueryString_2 {
 }
 
 export interface JavascriptFrontmatterFrontmatterInputObject_2 {
+  layout?: JavascriptFrontmatterFrontmatterLayoutQueryString_2 | null
+  sections?: JavascriptFrontmatterFrontmatterSectionsInputObject_2 | null
+  error?: JavascriptFrontmatterFrontmatterErrorQueryBoolean_2 | null
   title?: JavascriptFrontmatterFrontmatterTitleQueryString_2 | null
   contact?: JavascriptFrontmatterFrontmatterContactQueryList_2 | null
   lang?: JavascriptFrontmatterFrontmatterLangQueryString_2 | null
   logo?: JavascriptFrontmatterFrontmatterLogoQueryString_2 | null
   nav?: JavascriptFrontmatterFrontmatterNavInputObject_2 | null
-  error?: JavascriptFrontmatterFrontmatterErrorQueryBoolean_2 | null
-  layout?: JavascriptFrontmatterFrontmatterLayoutQueryString_2 | null
-  sections?: JavascriptFrontmatterFrontmatterSectionsInputObject_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterTitleQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactQueryList_2 {
-  elemMatch?: JavascriptFrontmatterFrontmatterContactInputObject_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactInputObject_2 {
-  address?: JavascriptFrontmatterFrontmatterContactAddressQueryList_2 | null
-  contactName?: JavascriptFrontmatterFrontmatterContactContactNameQueryString_2 | null
-  email?: JavascriptFrontmatterFrontmatterContactEmailQueryString_2 | null
-  facebook?: JavascriptFrontmatterFrontmatterContactFacebookQueryString_2 | null
-  instagram?: JavascriptFrontmatterFrontmatterContactInstagramQueryString_2 | null
-  phone?: JavascriptFrontmatterFrontmatterContactPhoneQueryString_2 | null
-  twitter?: JavascriptFrontmatterFrontmatterContactTwitterQueryString_2 | null
-  youtube?: JavascriptFrontmatterFrontmatterContactYoutubeQueryString_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactAddressQueryList_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactContactNameQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactEmailQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactFacebookQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactInstagramQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactPhoneQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactTwitterQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterContactYoutubeQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterLangQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterLogoQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavInputObject_2 {
-  home?: JavascriptFrontmatterFrontmatterNavHomeQueryString_2 | null
-  navLinks?: JavascriptFrontmatterFrontmatterNavNavLinksQueryList_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavHomeQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavNavLinksQueryList_2 {
-  elemMatch?: JavascriptFrontmatterFrontmatterNavNavLinksInputObject_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavNavLinksInputObject_2 {
-  label?: JavascriptFrontmatterFrontmatterNavNavLinksLabelQueryString_2 | null
-  links?: JavascriptFrontmatterFrontmatterNavNavLinksLinksQueryList_2 | null
-  to?: JavascriptFrontmatterFrontmatterNavNavLinksToQueryString_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavNavLinksLabelQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavNavLinksLinksQueryList_2 {
-  elemMatch?: JavascriptFrontmatterFrontmatterNavNavLinksLinksInputObject_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavNavLinksLinksInputObject_2 {
-  label?: JavascriptFrontmatterFrontmatterNavNavLinksLinksLabelQueryString_2 | null
-  to?: JavascriptFrontmatterFrontmatterNavNavLinksLinksToQueryString_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavNavLinksLinksLabelQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavNavLinksLinksToQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterNavNavLinksToQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterErrorQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: (boolean | null)[] | null
-  nin?: (boolean | null)[] | null
 }
 
 export interface JavascriptFrontmatterFrontmatterLayoutQueryString_2 {
@@ -7383,10 +7484,16 @@ export interface JavascriptFrontmatterFrontmatterSectionsInputObject_2 {
   notFound?: JavascriptFrontmatterFrontmatterSectionsNotFoundInputObject_2 | null
   intro?: JavascriptFrontmatterFrontmatterSectionsIntroInputObject_2 | null
   categoryList?: JavascriptFrontmatterFrontmatterSectionsCategoryListInputObject_2 | null
-  contactUs?: JavascriptFrontmatterFrontmatterSectionsContactUsInputObject_2 | null
   welcome?: JavascriptFrontmatterFrontmatterSectionsWelcomeInputObject_2 | null
   categories?: JavascriptFrontmatterFrontmatterSectionsCategoriesInputObject_2 | null
   more?: JavascriptFrontmatterFrontmatterSectionsMoreInputObject_2 | null
+  about1?: JavascriptFrontmatterFrontmatterSectionsAbout1InputObject_2 | null
+  about2?: JavascriptFrontmatterFrontmatterSectionsAbout2InputObject_2 | null
+  advantages?: JavascriptFrontmatterFrontmatterSectionsAdvantagesInputObject_2 | null
+  tcs?: JavascriptFrontmatterFrontmatterSectionsTcsInputObject_2 | null
+  qas?: JavascriptFrontmatterFrontmatterSectionsQasInputObject_2 | null
+  contactUs?: JavascriptFrontmatterFrontmatterSectionsContactUsInputObject_2 | null
+  contactDetails?: JavascriptFrontmatterFrontmatterSectionsContactDetailsInputObject_2 | null
 }
 
 export interface JavascriptFrontmatterFrontmatterSectionsNotFoundInputObject_2 {
@@ -7600,39 +7707,6 @@ export interface JavascriptFrontmatterFrontmatterSectionsCategoryListCategoryIte
   nin?: (string | null)[] | null
 }
 
-export interface JavascriptFrontmatterFrontmatterSectionsContactUsInputObject_2 {
-  logo?: JavascriptFrontmatterFrontmatterSectionsContactUsLogoQueryString_2 | null
-  image?: JavascriptFrontmatterFrontmatterSectionsContactUsImageQueryString_2 | null
-  heading?: JavascriptFrontmatterFrontmatterSectionsContactUsHeadingQueryString_2 | null
-}
-
-export interface JavascriptFrontmatterFrontmatterSectionsContactUsLogoQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterSectionsContactUsImageQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
-export interface JavascriptFrontmatterFrontmatterSectionsContactUsHeadingQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: (string | null)[] | null
-  nin?: (string | null)[] | null
-}
-
 export interface JavascriptFrontmatterFrontmatterSectionsWelcomeInputObject_2 {
   heading?: JavascriptFrontmatterFrontmatterSectionsWelcomeHeadingQueryString_2 | null
   subheading?: JavascriptFrontmatterFrontmatterSectionsWelcomeSubheadingQueryString_2 | null
@@ -7776,6 +7850,465 @@ export interface JavascriptFrontmatterFrontmatterSectionsMoreLinkToQueryString_2
 }
 
 export interface JavascriptFrontmatterFrontmatterSectionsMoreLinkLabelQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAbout1InputObject_2 {
+  logo?: JavascriptFrontmatterFrontmatterSectionsAbout1LogoQueryString_2 | null
+  image?: JavascriptFrontmatterFrontmatterSectionsAbout1ImageQueryString_2 | null
+  heading?: JavascriptFrontmatterFrontmatterSectionsAbout1HeadingQueryString_2 | null
+  body?: JavascriptFrontmatterFrontmatterSectionsAbout1BodyQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAbout1LogoQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAbout1ImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAbout1HeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAbout1BodyQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAbout2InputObject_2 {
+  image?: JavascriptFrontmatterFrontmatterSectionsAbout2ImageQueryString_2 | null
+  body?: JavascriptFrontmatterFrontmatterSectionsAbout2BodyQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAbout2ImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAbout2BodyQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAdvantagesInputObject_2 {
+  heading?: JavascriptFrontmatterFrontmatterSectionsAdvantagesHeadingQueryString_2 | null
+  body?: JavascriptFrontmatterFrontmatterSectionsAdvantagesBodyQueryList_2 | null
+  points?: JavascriptFrontmatterFrontmatterSectionsAdvantagesPointsQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAdvantagesHeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAdvantagesBodyQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsAdvantagesPointsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsTcsInputObject_2 {
+  heading?: JavascriptFrontmatterFrontmatterSectionsTcsHeadingQueryString_2 | null
+  image?: JavascriptFrontmatterFrontmatterSectionsTcsImageQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsTcsHeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsTcsImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsQasInputObject_2 {
+  heading?: JavascriptFrontmatterFrontmatterSectionsQasHeadingQueryString_2 | null
+  image?: JavascriptFrontmatterFrontmatterSectionsQasImageQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsQasHeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsQasImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactUsInputObject_2 {
+  logo?: JavascriptFrontmatterFrontmatterSectionsContactUsLogoQueryString_2 | null
+  image?: JavascriptFrontmatterFrontmatterSectionsContactUsImageQueryString_2 | null
+  heading?: JavascriptFrontmatterFrontmatterSectionsContactUsHeadingQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactUsLogoQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactUsImageQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactUsHeadingQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsInputObject_2 {
+  contact?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactQueryList_2 {
+  elemMatch?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactInputObject_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactInputObject_2 {
+  address?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactAddressQueryList_2 | null
+  contactName?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactContactNameQueryString_2 | null
+  email?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactEmailQueryString_2 | null
+  facebook?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactFacebookQueryString_2 | null
+  instagram?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactInstagramQueryString_2 | null
+  phone?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactPhoneQueryString_2 | null
+  twitter?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactTwitterQueryString_2 | null
+  youtube?: JavascriptFrontmatterFrontmatterSectionsContactDetailsContactYoutubeQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactAddressQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactContactNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactEmailQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactFacebookQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactInstagramQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactPhoneQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactTwitterQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterSectionsContactDetailsContactYoutubeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterErrorQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: (boolean | null)[] | null
+  nin?: (boolean | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterTitleQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactQueryList_2 {
+  elemMatch?: JavascriptFrontmatterFrontmatterContactInputObject_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactInputObject_2 {
+  address?: JavascriptFrontmatterFrontmatterContactAddressQueryList_2 | null
+  contactName?: JavascriptFrontmatterFrontmatterContactContactNameQueryString_2 | null
+  email?: JavascriptFrontmatterFrontmatterContactEmailQueryString_2 | null
+  facebook?: JavascriptFrontmatterFrontmatterContactFacebookQueryString_2 | null
+  instagram?: JavascriptFrontmatterFrontmatterContactInstagramQueryString_2 | null
+  phone?: JavascriptFrontmatterFrontmatterContactPhoneQueryString_2 | null
+  twitter?: JavascriptFrontmatterFrontmatterContactTwitterQueryString_2 | null
+  youtube?: JavascriptFrontmatterFrontmatterContactYoutubeQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactAddressQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactContactNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactEmailQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactFacebookQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactInstagramQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactPhoneQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactTwitterQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterContactYoutubeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterLangQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterLogoQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavInputObject_2 {
+  home?: JavascriptFrontmatterFrontmatterNavHomeQueryString_2 | null
+  navLinks?: JavascriptFrontmatterFrontmatterNavNavLinksQueryList_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavHomeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavNavLinksQueryList_2 {
+  elemMatch?: JavascriptFrontmatterFrontmatterNavNavLinksInputObject_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavNavLinksInputObject_2 {
+  label?: JavascriptFrontmatterFrontmatterNavNavLinksLabelQueryString_2 | null
+  links?: JavascriptFrontmatterFrontmatterNavNavLinksLinksQueryList_2 | null
+  to?: JavascriptFrontmatterFrontmatterNavNavLinksToQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavNavLinksLabelQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavNavLinksLinksQueryList_2 {
+  elemMatch?: JavascriptFrontmatterFrontmatterNavNavLinksLinksInputObject_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavNavLinksLinksInputObject_2 {
+  label?: JavascriptFrontmatterFrontmatterNavNavLinksLinksLabelQueryString_2 | null
+  to?: JavascriptFrontmatterFrontmatterNavNavLinksLinksToQueryString_2 | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavNavLinksLinksLabelQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavNavLinksLinksToQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface JavascriptFrontmatterFrontmatterNavNavLinksToQueryString_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -9056,21 +9589,27 @@ export enum JavascriptFrontmatterConnectionSortByFieldsEnum {
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   internal___fieldOwners___layout = 'internal___fieldOwners___layout',
+  frontmatter___layout = 'frontmatter___layout',
+  frontmatter___sections___notFound = 'frontmatter___sections___notFound',
+  frontmatter___sections___intro = 'frontmatter___sections___intro',
+  frontmatter___sections___categoryList = 'frontmatter___sections___categoryList',
+  frontmatter___sections___welcome = 'frontmatter___sections___welcome',
+  frontmatter___sections___categories = 'frontmatter___sections___categories',
+  frontmatter___sections___more = 'frontmatter___sections___more',
+  frontmatter___sections___about1 = 'frontmatter___sections___about1',
+  frontmatter___sections___about2 = 'frontmatter___sections___about2',
+  frontmatter___sections___advantages = 'frontmatter___sections___advantages',
+  frontmatter___sections___tcs = 'frontmatter___sections___tcs',
+  frontmatter___sections___qas = 'frontmatter___sections___qas',
+  frontmatter___sections___contactUs = 'frontmatter___sections___contactUs',
+  frontmatter___sections___contactDetails = 'frontmatter___sections___contactDetails',
+  frontmatter___error = 'frontmatter___error',
   frontmatter___title = 'frontmatter___title',
   frontmatter___contact = 'frontmatter___contact',
   frontmatter___lang = 'frontmatter___lang',
   frontmatter___logo = 'frontmatter___logo',
   frontmatter___nav___home = 'frontmatter___nav___home',
   frontmatter___nav___navLinks = 'frontmatter___nav___navLinks',
-  frontmatter___error = 'frontmatter___error',
-  frontmatter___layout = 'frontmatter___layout',
-  frontmatter___sections___notFound = 'frontmatter___sections___notFound',
-  frontmatter___sections___intro = 'frontmatter___sections___intro',
-  frontmatter___sections___categoryList = 'frontmatter___sections___categoryList',
-  frontmatter___sections___contactUs = 'frontmatter___sections___contactUs',
-  frontmatter___sections___welcome = 'frontmatter___sections___welcome',
-  frontmatter___sections___categories = 'frontmatter___sections___categories',
-  frontmatter___sections___more = 'frontmatter___sections___more',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
   fields___layout = 'fields___layout',
@@ -9130,21 +9669,27 @@ export enum JavascriptFrontmatterDistinctEnum {
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   internal___fieldOwners___layout = 'internal___fieldOwners___layout',
+  frontmatter___layout = 'frontmatter___layout',
+  frontmatter___sections___notFound = 'frontmatter___sections___notFound',
+  frontmatter___sections___intro = 'frontmatter___sections___intro',
+  frontmatter___sections___categoryList = 'frontmatter___sections___categoryList',
+  frontmatter___sections___welcome = 'frontmatter___sections___welcome',
+  frontmatter___sections___categories = 'frontmatter___sections___categories',
+  frontmatter___sections___more = 'frontmatter___sections___more',
+  frontmatter___sections___about1 = 'frontmatter___sections___about1',
+  frontmatter___sections___about2 = 'frontmatter___sections___about2',
+  frontmatter___sections___advantages = 'frontmatter___sections___advantages',
+  frontmatter___sections___tcs = 'frontmatter___sections___tcs',
+  frontmatter___sections___qas = 'frontmatter___sections___qas',
+  frontmatter___sections___contactUs = 'frontmatter___sections___contactUs',
+  frontmatter___sections___contactDetails = 'frontmatter___sections___contactDetails',
+  frontmatter___error = 'frontmatter___error',
   frontmatter___title = 'frontmatter___title',
   frontmatter___contact = 'frontmatter___contact',
   frontmatter___lang = 'frontmatter___lang',
   frontmatter___logo = 'frontmatter___logo',
   frontmatter___nav___home = 'frontmatter___nav___home',
   frontmatter___nav___navLinks = 'frontmatter___nav___navLinks',
-  frontmatter___error = 'frontmatter___error',
-  frontmatter___layout = 'frontmatter___layout',
-  frontmatter___sections___notFound = 'frontmatter___sections___notFound',
-  frontmatter___sections___intro = 'frontmatter___sections___intro',
-  frontmatter___sections___categoryList = 'frontmatter___sections___categoryList',
-  frontmatter___sections___contactUs = 'frontmatter___sections___contactUs',
-  frontmatter___sections___welcome = 'frontmatter___sections___welcome',
-  frontmatter___sections___categories = 'frontmatter___sections___categories',
-  frontmatter___sections___more = 'frontmatter___sections___more',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
   fields___layout = 'fields___layout',
@@ -9199,21 +9744,27 @@ export enum JavascriptFrontmatterGroupEnum {
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   internal___fieldOwners___layout = 'internal___fieldOwners___layout',
+  frontmatter___layout = 'frontmatter___layout',
+  frontmatter___sections___notFound = 'frontmatter___sections___notFound',
+  frontmatter___sections___intro = 'frontmatter___sections___intro',
+  frontmatter___sections___categoryList = 'frontmatter___sections___categoryList',
+  frontmatter___sections___welcome = 'frontmatter___sections___welcome',
+  frontmatter___sections___categories = 'frontmatter___sections___categories',
+  frontmatter___sections___more = 'frontmatter___sections___more',
+  frontmatter___sections___about1 = 'frontmatter___sections___about1',
+  frontmatter___sections___about2 = 'frontmatter___sections___about2',
+  frontmatter___sections___advantages = 'frontmatter___sections___advantages',
+  frontmatter___sections___tcs = 'frontmatter___sections___tcs',
+  frontmatter___sections___qas = 'frontmatter___sections___qas',
+  frontmatter___sections___contactUs = 'frontmatter___sections___contactUs',
+  frontmatter___sections___contactDetails = 'frontmatter___sections___contactDetails',
+  frontmatter___error = 'frontmatter___error',
   frontmatter___title = 'frontmatter___title',
   frontmatter___contact = 'frontmatter___contact',
   frontmatter___lang = 'frontmatter___lang',
   frontmatter___logo = 'frontmatter___logo',
   frontmatter___nav___home = 'frontmatter___nav___home',
   frontmatter___nav___navLinks = 'frontmatter___nav___navLinks',
-  frontmatter___error = 'frontmatter___error',
-  frontmatter___layout = 'frontmatter___layout',
-  frontmatter___sections___notFound = 'frontmatter___sections___notFound',
-  frontmatter___sections___intro = 'frontmatter___sections___intro',
-  frontmatter___sections___categoryList = 'frontmatter___sections___categoryList',
-  frontmatter___sections___contactUs = 'frontmatter___sections___contactUs',
-  frontmatter___sections___welcome = 'frontmatter___sections___welcome',
-  frontmatter___sections___categories = 'frontmatter___sections___categories',
-  frontmatter___sections___more = 'frontmatter___sections___more',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
   fields___layout = 'fields___layout',
@@ -11423,7 +11974,7 @@ export namespace Node_2Resolvers {
     internal?: InternalResolver<Internal_13 | null, any, Context>
     sourceInstanceName?: SourceInstanceNameResolver<string | null, any, Context>
     absolutePath?: AbsolutePathResolver<string | null, any, Context>
-    relativePath?: RelativePathResolver<File | null, any, Context>
+    relativePath?: RelativePathResolver<string | null, any, Context>
     extension?: ExtensionResolver<string | null, any, Context>
     size?: SizeResolver<number | null, any, Context>
     prettySize?: PrettySizeResolver<string | null, any, Context>
@@ -11487,7 +12038,7 @@ export namespace Node_2Resolvers {
     Context = any
   > = Resolver<R, Parent, Context>
   export type RelativePathResolver<
-    R = File | null,
+    R = string | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -11848,23 +12399,38 @@ export namespace FieldOwners_2Resolvers {
 
 export namespace Frontmatter_2Resolvers {
   export interface Resolvers<Context = any> {
+    layout?: LayoutResolver<string | null, any, Context>
+    sections?: SectionsResolver<Sections_2 | null, any, Context>
+    error?: ErrorResolver<boolean | null, any, Context>
     title?: TitleResolver<string | null, any, Context>
-    contact?: ContactResolver<(Contact_2 | null)[] | null, any, Context>
+    contact?: ContactResolver<(Contact_4 | null)[] | null, any, Context>
     lang?: LangResolver<string | null, any, Context>
     logo?: LogoResolver<File | null, any, Context>
     nav?: NavResolver<Nav_2 | null, any, Context>
-    error?: ErrorResolver<boolean | null, any, Context>
-    layout?: LayoutResolver<string | null, any, Context>
-    sections?: SectionsResolver<Sections_2 | null, any, Context>
   }
 
+  export type LayoutResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type SectionsResolver<
+    R = Sections_2 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ErrorResolver<
+    R = boolean | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
   export type TitleResolver<
     R = string | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
   export type ContactResolver<
-    R = (Contact_2 | null)[] | null,
+    R = (Contact_4 | null)[] | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -11883,135 +12449,6 @@ export namespace Frontmatter_2Resolvers {
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
-  export type ErrorResolver<
-    R = boolean | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type LayoutResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type SectionsResolver<
-    R = Sections_2 | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-}
-
-export namespace Contact_2Resolvers {
-  export interface Resolvers<Context = any> {
-    address?: AddressResolver<(string | null)[] | null, any, Context>
-    contactName?: ContactNameResolver<string | null, any, Context>
-    email?: EmailResolver<string | null, any, Context>
-    facebook?: FacebookResolver<string | null, any, Context>
-    instagram?: InstagramResolver<string | null, any, Context>
-    phone?: PhoneResolver<string | null, any, Context>
-    twitter?: TwitterResolver<string | null, any, Context>
-    youtube?: YoutubeResolver<string | null, any, Context>
-  }
-
-  export type AddressResolver<
-    R = (string | null)[] | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type ContactNameResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type EmailResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type FacebookResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type InstagramResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type PhoneResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type TwitterResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type YoutubeResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-}
-
-export namespace Nav_2Resolvers {
-  export interface Resolvers<Context = any> {
-    home?: HomeResolver<string | null, any, Context>
-    navLinks?: NavLinksResolver<(NavLinks_2 | null)[] | null, any, Context>
-  }
-
-  export type HomeResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type NavLinksResolver<
-    R = (NavLinks_2 | null)[] | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-}
-
-export namespace NavLinks_2Resolvers {
-  export interface Resolvers<Context = any> {
-    label?: LabelResolver<string | null, any, Context>
-    links?: LinksResolver<(Links_2 | null)[] | null, any, Context>
-    to?: ToResolver<string | null, any, Context>
-  }
-
-  export type LabelResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type LinksResolver<
-    R = (Links_2 | null)[] | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type ToResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-}
-
-export namespace Links_2Resolvers {
-  export interface Resolvers<Context = any> {
-    label?: LabelResolver<string | null, any, Context>
-    to?: ToResolver<string | null, any, Context>
-  }
-
-  export type LabelResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type ToResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
 }
 
 export namespace Sections_2Resolvers {
@@ -12019,10 +12456,20 @@ export namespace Sections_2Resolvers {
     notFound?: NotFoundResolver<NotFound_2 | null, any, Context>
     intro?: IntroResolver<Intro_2 | null, any, Context>
     categoryList?: CategoryListResolver<CategoryList_2 | null, any, Context>
-    contactUs?: ContactUsResolver<ContactUs_2 | null, any, Context>
     welcome?: WelcomeResolver<Welcome_2 | null, any, Context>
     categories?: CategoriesResolver<Categories_2 | null, any, Context>
     more?: MoreResolver<More_2 | null, any, Context>
+    about1?: About1Resolver<About1_2 | null, any, Context>
+    about2?: About2Resolver<About2_2 | null, any, Context>
+    advantages?: AdvantagesResolver<Advantages_2 | null, any, Context>
+    tcs?: TcsResolver<Tcs_2 | null, any, Context>
+    qas?: QasResolver<Qas_2 | null, any, Context>
+    contactUs?: ContactUsResolver<ContactUs_2 | null, any, Context>
+    contactDetails?: ContactDetailsResolver<
+      ContactDetails_2 | null,
+      any,
+      Context
+    >
   }
 
   export type NotFoundResolver<
@@ -12040,11 +12487,6 @@ export namespace Sections_2Resolvers {
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
-  export type ContactUsResolver<
-    R = ContactUs_2 | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
   export type WelcomeResolver<
     R = Welcome_2 | null,
     Parent = any,
@@ -12057,6 +12499,41 @@ export namespace Sections_2Resolvers {
   > = Resolver<R, Parent, Context>
   export type MoreResolver<
     R = More_2 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type About1Resolver<
+    R = About1_2 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type About2Resolver<
+    R = About2_2 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type AdvantagesResolver<
+    R = Advantages_2 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type TcsResolver<
+    R = Tcs_2 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type QasResolver<
+    R = Qas_2 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ContactUsResolver<
+    R = ContactUs_2 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ContactDetailsResolver<
+    R = ContactDetails_2 | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -12246,30 +12723,6 @@ export namespace Link_5Resolvers {
   > = Resolver<R, Parent, Context>
 }
 
-export namespace ContactUs_2Resolvers {
-  export interface Resolvers<Context = any> {
-    logo?: LogoResolver<File | null, any, Context>
-    image?: ImageResolver<File | null, any, Context>
-    heading?: HeadingResolver<string | null, any, Context>
-  }
-
-  export type LogoResolver<
-    R = File | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type ImageResolver<
-    R = File | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-  export type HeadingResolver<
-    R = string | null,
-    Parent = any,
-    Context = any
-  > = Resolver<R, Parent, Context>
-}
-
 export namespace Welcome_2Resolvers {
   export interface Resolvers<Context = any> {
     heading?: HeadingResolver<string | null, any, Context>
@@ -12388,6 +12841,318 @@ export namespace Link_6Resolvers {
     Context = any
   > = Resolver<R, Parent, Context>
   export type LabelResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace About1_2Resolvers {
+  export interface Resolvers<Context = any> {
+    logo?: LogoResolver<File | null, any, Context>
+    image?: ImageResolver<File | null, any, Context>
+    heading?: HeadingResolver<string | null, any, Context>
+    body?: BodyResolver<(string | null)[] | null, any, Context>
+  }
+
+  export type LogoResolver<
+    R = File | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ImageResolver<
+    R = File | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type HeadingResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type BodyResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace About2_2Resolvers {
+  export interface Resolvers<Context = any> {
+    image?: ImageResolver<File | null, any, Context>
+    body?: BodyResolver<(string | null)[] | null, any, Context>
+  }
+
+  export type ImageResolver<
+    R = File | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type BodyResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Advantages_2Resolvers {
+  export interface Resolvers<Context = any> {
+    heading?: HeadingResolver<string | null, any, Context>
+    body?: BodyResolver<(string | null)[] | null, any, Context>
+    points?: PointsResolver<(string | null)[] | null, any, Context>
+  }
+
+  export type HeadingResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type BodyResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type PointsResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Tcs_2Resolvers {
+  export interface Resolvers<Context = any> {
+    heading?: HeadingResolver<string | null, any, Context>
+    image?: ImageResolver<File | null, any, Context>
+  }
+
+  export type HeadingResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ImageResolver<
+    R = File | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Qas_2Resolvers {
+  export interface Resolvers<Context = any> {
+    heading?: HeadingResolver<string | null, any, Context>
+    image?: ImageResolver<File | null, any, Context>
+  }
+
+  export type HeadingResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ImageResolver<
+    R = File | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace ContactUs_2Resolvers {
+  export interface Resolvers<Context = any> {
+    logo?: LogoResolver<File | null, any, Context>
+    image?: ImageResolver<File | null, any, Context>
+    heading?: HeadingResolver<string | null, any, Context>
+  }
+
+  export type LogoResolver<
+    R = File | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ImageResolver<
+    R = File | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type HeadingResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace ContactDetails_2Resolvers {
+  export interface Resolvers<Context = any> {
+    contact?: ContactResolver<(Contact_3 | null)[] | null, any, Context>
+  }
+
+  export type ContactResolver<
+    R = (Contact_3 | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Contact_3Resolvers {
+  export interface Resolvers<Context = any> {
+    address?: AddressResolver<(string | null)[] | null, any, Context>
+    contactName?: ContactNameResolver<string | null, any, Context>
+    email?: EmailResolver<string | null, any, Context>
+    facebook?: FacebookResolver<string | null, any, Context>
+    instagram?: InstagramResolver<string | null, any, Context>
+    phone?: PhoneResolver<string | null, any, Context>
+    twitter?: TwitterResolver<string | null, any, Context>
+    youtube?: YoutubeResolver<string | null, any, Context>
+  }
+
+  export type AddressResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ContactNameResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type EmailResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type FacebookResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type InstagramResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type PhoneResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type TwitterResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type YoutubeResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Contact_4Resolvers {
+  export interface Resolvers<Context = any> {
+    address?: AddressResolver<(string | null)[] | null, any, Context>
+    contactName?: ContactNameResolver<string | null, any, Context>
+    email?: EmailResolver<string | null, any, Context>
+    facebook?: FacebookResolver<string | null, any, Context>
+    instagram?: InstagramResolver<string | null, any, Context>
+    phone?: PhoneResolver<string | null, any, Context>
+    twitter?: TwitterResolver<string | null, any, Context>
+    youtube?: YoutubeResolver<string | null, any, Context>
+  }
+
+  export type AddressResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ContactNameResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type EmailResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type FacebookResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type InstagramResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type PhoneResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type TwitterResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type YoutubeResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Nav_2Resolvers {
+  export interface Resolvers<Context = any> {
+    home?: HomeResolver<string | null, any, Context>
+    navLinks?: NavLinksResolver<(NavLinks_2 | null)[] | null, any, Context>
+  }
+
+  export type HomeResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type NavLinksResolver<
+    R = (NavLinks_2 | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace NavLinks_2Resolvers {
+  export interface Resolvers<Context = any> {
+    label?: LabelResolver<string | null, any, Context>
+    links?: LinksResolver<(Links_2 | null)[] | null, any, Context>
+    to?: ToResolver<string | null, any, Context>
+  }
+
+  export type LabelResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type LinksResolver<
+    R = (Links_2 | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ToResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Links_2Resolvers {
+  export interface Resolvers<Context = any> {
+    label?: LabelResolver<string | null, any, Context>
+    to?: ToResolver<string | null, any, Context>
+  }
+
+  export type LabelResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ToResolver<
     R = string | null,
     Parent = any,
     Context = any

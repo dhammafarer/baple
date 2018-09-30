@@ -24,7 +24,8 @@ export const frontmatter: App = {
     home: "/plastics/",
     navLinks: [
       {
-        label: "Solutions",
+        label: "Products",
+        to: "/plastics/products",
         links: [
           {
             label: "Pulverizadores",
@@ -47,15 +48,14 @@ export const frontmatter: App = {
             to: "/plastics/tapones",
           },
         ],
-        to: "/solutions",
-      },
-      {
-        label: "Contact",
-        to: "/contact",
       },
       {
         label: "About",
         to: "/plastics/about",
+      },
+      {
+        label: "Contact",
+        to: "/plastics/contact",
       },
     ],
   },

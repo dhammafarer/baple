@@ -54,7 +54,7 @@ interface CategoryItem {
   spec: Spec[];
 }
 
-interface ContactDetails {
+interface ContactGroup {
   contactName: ContactName;
   phone: Phone;
   email: Email;
@@ -65,7 +65,7 @@ interface ContactDetails {
   youtube?: SocialMedia;
 }
 
-type Contact = ContactDetails[];
+type Contact = ContactGroup[];
 
 interface Nav {
   home: string;
@@ -117,6 +117,10 @@ interface ContactUs extends ImageSection {
   logo: Logo;
 }
 
+interface ContactDetails extends Section {
+  contact: Contact;
+}
+
 interface About extends ImageSection {
   logo?: Logo;
 }
@@ -133,6 +137,7 @@ type Sections =
   Welcome |
   About |
   ContactUs |
+  ContactDetails |
   Categories |
   More |
   Advantages |
@@ -184,6 +189,7 @@ export interface ContactPage extends Page {
   layout: "contact";
   sections: {
     contactUs: ContactUs;
+    contactDetails: ContactDetails;
   };
 }
 
