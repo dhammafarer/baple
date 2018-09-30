@@ -6,8 +6,11 @@ import classnames from "classnames";
 
 const styles = (theme: Theme) => createStyles({
   section: {
+    height: "100%",
     display: "flex",
+    flex: 1,
     flexDirection: "column",
+    justifyContent: "center",
   },
   content: {
     padding: theme.spacing.unit * 3,

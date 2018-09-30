@@ -1,0 +1,20 @@
+heading: Bienvenido a Baple Group
+subheading: Please select a division
+background: './img/landing-background-2.jpg'
+divisions:
+  - logo: './img/logos/baple-plastics-logo.png'
+    link:
+      to: /plastics
+      label: Baple Plastics
+  - logo: './img/logos/baple-energy-logo.png'
+    link:
+      to: /energy
+      label: Baple Energy
+  - logo: './img/logos/baple-metal-packaging-logo.png'
+    link:
+      to: /metal-packaging
+      label: Baple Metal Packaging
+  - logo: './img/logos/baple-engineering-logo.png'
+    link:
+      to: /engineering
+      label: Baple Engineering

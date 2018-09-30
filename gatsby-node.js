@@ -15,6 +15,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: 'layout',
       value: getLayout(slug),
     });
+    createNodeField({
+      node,
+      name: 'underConstruction',
+      value: Boolean(node.frontmatter.underConstruction),
+    });
   }
 };
 
@@ -30,10 +35,10 @@ exports.createPages = ({ graphql, actions }) => {
               fields {
                 slug
                 layout
+                underConstruction
               }
               frontmatter {
                 layout
-                underConstruction
               }
             }
           }
@@ -45,7 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
         .forEach(({ node }) => {
           createPage({
             path: node.fields.slug,
-            component: path.resolve(`./src/templates/${node.frontmatter.underConstruction ? "under-construction" : node.frontmatter.layout}.tsx`),
+            component: path.resolve(`./src/templates/${node.fields.underConstruction ? "under-construction" : node.frontmatter.layout}.tsx`),
             context: {
               slug: node.fields.slug,
               layout: node.fields.layout,
