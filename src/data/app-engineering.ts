@@ -24,14 +24,8 @@ export const frontmatter: App = {
     home: "/engineering/",
     navLinks: [
       {
-        label: "Soluciones",
-        to: "/engineering/solutions",
-        links: [
-          {
-            label: "Pulverizadores",
-            to: "/engineering/pulverizadores",
-          },
-        ],
+        label: "Home",
+        to: "/engineering",
       },
       {
         label: "About",

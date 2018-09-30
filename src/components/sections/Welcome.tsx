@@ -7,13 +7,14 @@ import { Welcome_2 } from "../../graphql";
 import SectionFeatured from "../sections/SectionFeatured";
 
 type Props = WithStyles<typeof styles> & {
-  heading: string,
-  subheading: string,
-  logo: any,
-  image: any,
+  heading?: string,
+  subheading?: string,
+  logo?: any,
+  image?: any,
+  quotes?: Array<{quote: string, author: string}>,
 };
 
-const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes }) => (
+const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes, quotes }) => (
   <SectionFeatured
     fullHeight
     image={image && image.childImageSharp.fluid.src}
@@ -21,18 +22,43 @@ const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes }
       <div className={classes.section}>
         {logo && <img src={logo.childImageSharp.fluid.src}/>}
         <div className={classes.text}>
-          <Typography
-            className={classes.heading}
-            variant="display2"
-          >
-            {heading}
-          </Typography>
-          <Typography
-            className={classes.subheading}
-            variant="display1"
-          >
-            {heading}
-          </Typography>
+          { heading &&
+            <Typography
+              className={classes.heading}
+              variant="display2"
+            >
+              {heading}
+            </Typography>
+
+          }
+          { subheading &&
+            <Typography
+              className={classes.subheading}
+              variant="display1"
+            >
+              {subheading}
+            </Typography>
+          }
+          { quotes &&
+            <div className={classes.quotes}>
+              {quotes.map((q, i) =>
+                <blockquote key={i} className={classes.blockquote}>
+                  <Typography
+                    variant="headline"
+                    className={classes.quote}
+                  >
+                    {q.quote}
+                  </Typography>
+                  <Typography
+                    className={classes.author}
+                    variant="subheading"
+                  >
+                    {q.author}
+                  </Typography>
+                </blockquote>
+              )}
+            </div>
+          }
         </div>
       </div>
     }

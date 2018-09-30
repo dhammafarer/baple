@@ -31,6 +31,18 @@ const welcomeStyles = (theme: Theme) => createStyles({
     color: theme.palette.grey[900],
     fontWeight: 300,
   },
+  quotes: {
+    maxWidth: 600,
+  },
+  blockquote: {
+    marginBottom: "0.2em",
+  },
+  quote: {
+    fontStyle: "italic",
+    marginBottom: "0.4em",
+  },
+  author: {
+  },
 });
 
 export default welcomeStyles;

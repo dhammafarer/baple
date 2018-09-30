@@ -13,6 +13,7 @@ type Email = string;
 type Address = string[];
 type Lang = "es";
 type SocialMedia = string;
+
 type Layout =
   "landing" |
   "404" |
@@ -21,6 +22,11 @@ type Layout =
   "about" |
   "index" |
   "contact";
+
+interface Quote {
+  quote: string;
+  author: string;
+}
 
 // compound types
 interface Link {
@@ -93,7 +99,8 @@ interface ImageSection extends Section {
 }
 
 interface Welcome extends ImageSection {
-  logo: Logo;
+  logo?: Logo;
+  quotes?: Quote[];
 }
 
 interface More extends ImageSection {

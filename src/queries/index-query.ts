@@ -42,6 +42,10 @@ export const IndexFragment = graphql`
         welcome {
           heading
           subheading
+          quotes {
+            quote
+            author
+          }
           logo {
             childImageSharp {
               fluid(maxWidth: 300) {

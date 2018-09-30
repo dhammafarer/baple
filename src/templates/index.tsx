@@ -11,9 +11,9 @@ interface Props {
     javascriptFrontmatter: {
       frontmatter: {
         sections: {
-          welcome: Welcome_2,
-          categories: Categories_2,
-          more: More_2,
+          welcome?: Welcome_2,
+          categories?: Categories_2,
+          more?: More_2,
         },
       },
     },
@@ -27,22 +27,29 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
   const { welcome, categories, more } = data.javascriptFrontmatter.frontmatter.sections;
   return (
     <App {...data.app.frontmatter}>
-      <Welcome
-        heading={welcome.heading}
-        subheading={welcome.subheading}
-        logo={welcome.logo}
-        image={welcome.image}
-      />
-      <Categories
-        heading={categories.heading}
-        categoryLinks={categories.categoryLinks}
-      />
-      <More
-        heading={more.heading}
-        image={more.image}
-        logo={more.logo}
-        link={more.link}
-      />
+      { welcome &&
+        <Welcome
+          heading={welcome.heading}
+          subheading={welcome.subheading}
+          logo={welcome.logo}
+          image={welcome.image}
+          quotes={welcome.quotes}
+        />
+      }
+      { categories &&
+        <Categories
+          heading={categories.heading}
+          categoryLinks={categories.categoryLinks}
+        />
+      }
+      { more &&
+        <More
+          heading={more.heading}
+          image={more.image}
+          logo={more.logo}
+          link={more.link}
+        />
+      }
     </App>
   );
 });
