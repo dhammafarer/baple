@@ -1,7 +1,7 @@
 import { App } from "./pages";
 
 export const frontmatter: App = {
-  title: "Baple Plastics",
+  title: "Baple Engineering",
   lang: "es",
   logo: "./img/logos/baple-group-logo-no-text.png",
   contact: [
@@ -21,41 +21,25 @@ export const frontmatter: App = {
     },
   ],
   nav: {
-    home: "/plastics/",
+    home: "/engineering/",
     navLinks: [
       {
         label: "Soluciones",
-        to: "/plastics/products",
+        to: "/engineering/solutions",
         links: [
           {
             label: "Pulverizadores",
-            to: "/plastics/pulverizadores",
-          },
-          {
-            label: "Bombas de loción",
-            to: "/plastics/bombas-de-locion",
-          },
-          {
-            label: "Micropulverizadores",
-            to: "/plastics/micropulverizadores",
-          },
-          {
-            label: "Botellas",
-            to: "/plastics/botellas",
-          },
-          {
-            label: "Tapones",
-            to: "/plastics/tapones",
+            to: "/engineering/pulverizadores",
           },
         ],
       },
       {
         label: "About",
-        to: "/plastics/about",
+        to: "/engineering/about",
       },
       {
         label: "Contact",
-        to: "/plastics/contact",
+        to: "/engineering/contact",
       },
     ],
   },

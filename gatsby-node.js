@@ -33,6 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 layout
+                underConstruction
               }
             }
           }
@@ -44,7 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
         .forEach(({ node }) => {
           createPage({
             path: node.fields.slug,
-            component: path.resolve(`./src/templates/${node.frontmatter.layout}.tsx`),
+            component: path.resolve(`./src/templates/${node.frontmatter.underConstruction ? "under-construction" : node.frontmatter.layout}.tsx`),
             context: {
               slug: node.fields.slug,
               layout: node.fields.layout,

@@ -149,6 +149,7 @@ type Sections =
 // pages
 interface Page {
   layout: Layout;
+  underConstruction?: boolean;
   sections: {
     [key: string]: Sections;
   };
@@ -164,9 +165,9 @@ export interface NotFoundPage extends Page {
 export interface IndexPage extends Page {
   layout: "index";
   sections: {
-    welcome: Welcome;
-    categories: Categories;
-    more: More;
+    welcome?: Welcome;
+    categories?: Categories;
+    more?: More;
   };
 }
 

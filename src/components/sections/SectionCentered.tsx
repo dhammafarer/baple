@@ -52,7 +52,7 @@ const SectionCentered: React.SFC<Props> = ({
       }
       { subheading &&
         <Typography variant="subheading" className={classes.subheading}>
-          {heading}
+          {subheading}
         </Typography>
       }
       { text &&
