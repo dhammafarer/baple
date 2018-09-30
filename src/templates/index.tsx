@@ -40,7 +40,7 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
       }
       { categories &&
         <Categories
-          gradient="linear-gradient(to left, rgba(255,255,55,0.3), rgba(255,55,255,0.8))"
+          gradient="linear-gradient(to left, #0575E6, #021B79)"
           heading={categories.heading}
           subheading={categories.subheading}
           image={categories.image}

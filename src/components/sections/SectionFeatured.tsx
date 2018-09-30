@@ -5,18 +5,26 @@ import classnames from "classnames";
 
 const styles = (theme: Theme) => createStyles({
   section: {
+    position: "relative",
     paddingTop: "3em",
     paddingBottom: "3em",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  },
+  overlay: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    opacity: 0.2,
   },
   fullHeight: {
     minHeight: "calc(100vh - 64px)",
   },
   content: {
+    zIndex: 1,
     width: "100%",
     height: "100%",
     display: "flex",
@@ -53,11 +61,15 @@ const SectionFeatured: React.SFC<Props> = ({
   classes, before, after, gradient, heading, subheading, text, image, fullHeight,
 }) => (
   <section style={{
-    backgroundImage: `${gradient ? gradient + "," : ""}url( ${image ? image : ""}
+    backgroundImage: `url(${image ? image : ""}
       )`,
     }}
     className={classnames(classes.section, (fullHeight && classes.fullHeight))}
   >
+    <div style={{
+      background: `${gradient ? gradient : ""}` }}
+      className={classes.overlay}
+    />
     <div className={classes.content}>
       {before && before}
       <div className={classes.header}>
