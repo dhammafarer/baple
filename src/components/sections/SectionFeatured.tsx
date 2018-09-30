@@ -18,7 +18,7 @@ const styles = (theme: Theme) => createStyles({
     position: "absolute",
     width: "100%",
     height: "100%",
-    opacity: 0.2,
+    opacity: 0.6,
   },
   fullHeight: {
     minHeight: "calc(100vh - 64px)",
@@ -87,7 +87,7 @@ const SectionFeatured: React.SFC<Props> = ({
       { text &&
         <div className={classes.text}>
           {text.map((t, i) =>
-            <Typography key={i} variant="body2" className={classes.paragraph}>
+            <Typography key={i} variant="body2" color="inherit" className={classes.paragraph}>
               {t}
             </Typography>,
           )}

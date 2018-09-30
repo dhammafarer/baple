@@ -26,7 +26,7 @@ export const frontmatter: IndexPage = {
             "El despertar del futuro, vamos a por él!",
           ],
           link: {
-            to: "/energy/e-scooters",
+            to: "/energy/e-scooter",
             label: "Learn More",
           },
         },

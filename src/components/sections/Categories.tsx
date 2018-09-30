@@ -19,7 +19,7 @@ type Props = WithStyles<typeof styles> & {
 
 const Categories: React.SFC<Props> = ({ classes, image, gradient, heading, subheading, categoryLinks }) => (
   <SectionFeatured
-    image={image.childImageSharp.fluid.src}
+    image={image && image.childImageSharp.fluid.src}
     gradient={gradient}
     fullHeight
     heading={heading}

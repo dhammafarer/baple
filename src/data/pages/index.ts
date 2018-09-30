@@ -5,8 +5,7 @@ export const frontmatter: IndexPage = {
   sections: {
     categories: {
       heading: "Bienvenido a Baple Group",
-      image: "../img/contact-us-1.jpg",
-      subheading: "Select a division",
+      image: "../img/plastics/Products_Welcome.jpg",
       categoryLinks: [
         {
           label: "Baple Plastics",
