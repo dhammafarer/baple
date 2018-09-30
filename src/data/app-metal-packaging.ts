@@ -1,7 +1,7 @@
 import { App } from "./pages";
 
 export const frontmatter: App = {
-  title: "Baple metal-packaging",
+  title: "Baple Metal Packaging",
   contact: [
     {
       address: [

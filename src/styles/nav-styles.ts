@@ -1,19 +1,19 @@
 import { createStyles, Theme } from "@material-ui/core/styles";
 
-const navStyles = (theme:Theme) => createStyles({
+const navStyles = (theme: Theme) => createStyles({
  nav: {
-    height: '100%',
+    height: "100%",
     width: 300,
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'center',
-    marginTop: '1.5em',
-    alignItems: 'center',
-    paddingTop: '1em',
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+    marginTop: "1.5em",
+    alignItems: "center",
+    paddingTop: "1em",
   },
   close: {
-    alignSelf: 'flex-end',
-    position: 'absolute',
+    alignSelf: "flex-end",
+    position: "absolute",
     top: 4,
     right: 4,
   },
@@ -23,26 +23,25 @@ const navStyles = (theme:Theme) => createStyles({
     marginBottom: 20,
   },
   title: {
-    textTransform: 'uppercase',
     color: theme.palette.primary.main,
-    margin: '0.4em 0',
+    margin: "0.4em 0",
   },
   list: {
     flexGrow: 1,
-    width: '100%',
+    width: "100%",
   },
   listItem: {
     padding: 0,
-    width: '100%',
-    textAlign: 'center',
+    width: "100%",
+    textAlign: "center",
   },
   link: {
-    width: '100%',
-    padding: '0.6em',
+    width: "100%",
+    padding: "0.6em",
   },
   linkNested: {
-    width: '100%',
-    padding: '0.6em',
+    width: "100%",
+    padding: "0.6em",
   },
   linkText: {
     color: theme.palette.grey[700],
@@ -54,29 +53,29 @@ const navStyles = (theme:Theme) => createStyles({
   contact: {
     flexShrink: 0,
     padding: theme.spacing.unit * 3,
-    width: '100%',
+    width: "100%",
     background: theme.palette.primary.main,
     color: theme.palette.common.white,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   details: {
-    width: '80%',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    '&:last-child': {
-      marginTop: '0.4em'
-    }
+    "width": "80%",
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "space-between",
+    "&:last-child": {
+      marginTop: "0.4em",
+    },
   },
   icon: {
-    marginRight: '0.4em'
+    marginRight: "0.4em",
   },
   nestedItem: {
-    flexDirection: 'column',
-  }
+    flexDirection: "column",
+  },
 });
 
 export default navStyles;

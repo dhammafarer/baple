@@ -26,8 +26,8 @@ type Props = WithStyles<typeof styles> & {
 const ContactDetails: React.SFC<Props> = ({ contact, classes }) => (
   <section className={classes.section}>
     <div className={classes.details}>
-      { contact.map((x) =>
-        <Grid container spacing={32}>
+      { contact.map((x, i) =>
+        <Grid container spacing={32} key={i}>
           <Grid item md={4} xs={12}>
             <Paper className={classes.detailPane}>
               <PhoneIcon className={classes.icon}/>
