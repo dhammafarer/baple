@@ -60,7 +60,7 @@ function getLayout(slug) {
   const layouts = [
     { layout: '/app-plastics/', pattern: /^\/plastics\// },
     { layout: '/app-energy/', pattern: /^\/energy\// },
-    { layout: '/app-engineerin/', pattern: /^\/engineerin\// },
+    { layout: '/app-engineering/', pattern: /^\/engineering\// },
     { layout: '/app-metal-packaging/', pattern: /^\/metal-packaging\// },
     { layout: '/app/', pattern: '/' },
   ];

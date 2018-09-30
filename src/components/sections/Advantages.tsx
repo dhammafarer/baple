@@ -27,6 +27,7 @@ const Advantages: React.SFC<Props> = ({ heading, body, points, classes }) => (
         <div className={classes.text}>
           {body.map((t, i) =>
           <Typography
+            key={i}
             variant="body2"
             className={classes.paragraph}
             color="inherit"
