@@ -60,6 +60,13 @@ interface CategoryItem {
   spec: Spec[];
 }
 
+interface ProductListItem {
+  heading: Heading;
+  image: Image;
+  body: Body;
+  link: Link;
+}
+
 interface ContactGroup {
   contactName: ContactName;
   phone: Phone;
@@ -95,7 +102,7 @@ interface Section {
 }
 
 interface ImageSection extends Section {
-  image: Image;
+  image?: Image;
 }
 
 interface Welcome extends ImageSection {
@@ -108,8 +115,11 @@ interface More extends ImageSection {
 }
 
 interface Categories extends Section {
-  heading: Heading;
   categoryLinks: CategoryLink[];
+}
+
+interface Products extends Section {
+  productList: ProductListItem[];
 }
 
 interface Advantages extends Section {
@@ -174,6 +184,7 @@ export interface IndexPage extends Page {
   sections: {
     welcome?: Welcome;
     categories?: Categories;
+    products?: Products;
     more?: More;
   };
 }
@@ -189,7 +200,8 @@ export interface CategoryPage extends Page {
 export interface CategoriesPage extends Page {
   layout: "categories";
   sections: {
-    categories: Categories;
+    categories?: Categories;
+    products?: Products;
   };
 }
 
@@ -204,10 +216,10 @@ export interface ContactPage extends Page {
 export interface AboutPage extends Page {
   layout: "about";
   sections: {
-    about1: About;
-    about2: About;
-    advantages: Advantages;
-    tcs: TCS;
-    qas: QAS;
+    about1?: About;
+    about2?: About;
+    advantages?: Advantages;
+    tcs?: TCS;
+    qas?: QAS;
   };
 }

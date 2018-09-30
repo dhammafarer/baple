@@ -1,7 +1,7 @@
 import { App } from "./pages";
 
 export const frontmatter: App = {
-  title: "Baple Plastics",
+  title: "Baple Energy",
   contact: [
     {
       address: [
@@ -19,43 +19,39 @@ export const frontmatter: App = {
     },
   ],
   lang: "es",
-  logo: "./img/logos/baple-group-logo-no-text.png",
+  logo: "./img/logos/baple-energy-logo.png",
   nav: {
-    home: "/plastics/",
+    home: "/energy/",
     navLinks: [
       {
+        label: "Home",
+        to: "/energy",
+      },
+      {
         label: "Soluciones",
-        to: "/plastics/products",
+        to: "/energy/solutions",
         links: [
           {
-            label: "Pulverizadores",
-            to: "/plastics/pulverizadores",
+            label: "E-Scooter",
+            to: "/energy/e-scooter",
           },
           {
-            label: "Bombas de loción",
-            to: "/plastics/bombas-de-locion",
+            label: "Powerwall",
+            to: "/energy/powerwall",
           },
           {
-            label: "Micropulverizadores",
-            to: "/plastics/micropulverizadores",
-          },
-          {
-            label: "Botellas",
-            to: "/plastics/botellas",
-          },
-          {
-            label: "Tapones",
-            to: "/plastics/tapones",
+            label: "Energy Storage",
+            to: "/energy/energy-storage",
           },
         ],
       },
       {
         label: "About",
-        to: "/plastics/about",
+        to: "/energy/about",
       },
       {
         label: "Contact",
-        to: "/plastics/contact",
+        to: "/energy/contact",
       },
     ],
   },

@@ -1,8 +1,9 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import App from "../components/layouts/App";
-import { Frontmatter_2, Categories_2 } from "../graphql";
+import { Frontmatter_2, Categories_2, Products_2 } from "../graphql";
 import Categories from "../components/sections/Categories";
+import Products from "../components/sections/Products";
 
 interface Props {
   data: {
@@ -10,6 +11,7 @@ interface Props {
       frontmatter: {
         sections: {
           categories: Categories_2,
+          products: Products_2,
         },
       },
     },
@@ -20,13 +22,20 @@ interface Props {
 }
 
 const CategoriesTemplate: React.SFC<Props> = (({ data }) => {
-  const { categories } = data.javascriptFrontmatter.frontmatter.sections;
+  const { categories, products } = data.javascriptFrontmatter.frontmatter.sections;
   return (
     <App {...data.app.frontmatter}>
-      <Categories
-        heading={categories.heading}
-        categoryLinks={categories.categoryLinks}
-      />
+      { categories &&
+        <Categories
+          heading={categories.heading}
+          categoryLinks={categories.categoryLinks}
+        />
+      }
+      { products &&
+        <Products
+          products={products.productList}
+        />
+      }
     </App>
   );
 });

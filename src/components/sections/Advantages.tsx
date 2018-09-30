@@ -18,7 +18,6 @@ const Advantages: React.SFC<Props> = ({ heading, body, points, classes }) => (
     left={
       <div className={classes.pane}>
         <Typography
-          color="inherit"
           className={classes.heading}
           variant="display1"
         >

@@ -27,6 +27,7 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
     <App {...data.app.frontmatter}>
       <Intro
         heading={intro.heading}
+        subheading={intro.subheading}
         image={intro.image}
         body={intro.body}
         link={intro.link}

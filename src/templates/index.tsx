@@ -4,6 +4,7 @@ import App from "../components/layouts/App";
 import { Frontmatter_2, Welcome_2, Categories_2, More_2 } from "../graphql";
 import Welcome from "../components/sections/Welcome";
 import Categories from "../components/sections/Categories";
+import Products from "../components/sections/Products";
 import More from "../components/sections/More";
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
         sections: {
           welcome?: Welcome_2,
           categories?: Categories_2,
+          products?: any,
           more?: More_2,
         },
       },
@@ -24,7 +26,7 @@ interface Props {
 }
 
 const IndexTemplate: React.SFC<Props> = (({ data }) => {
-  const { welcome, categories, more } = data.javascriptFrontmatter.frontmatter.sections;
+  const { welcome, categories, products, more } = data.javascriptFrontmatter.frontmatter.sections;
   return (
     <App {...data.app.frontmatter}>
       { welcome &&
@@ -40,6 +42,11 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
         <Categories
           heading={categories.heading}
           categoryLinks={categories.categoryLinks}
+        />
+      }
+      { products &&
+        <Products
+          products={products.productList}
         />
       }
       { more &&

@@ -19,7 +19,6 @@ const welcomeStyles = (theme: Theme) => createStyles({
   },
   text: {
     margin: "2em 0.6em",
-    maxWidth: 400,
     textAlign: "center",
   },
   heading: {

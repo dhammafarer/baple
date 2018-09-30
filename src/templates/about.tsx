@@ -11,11 +11,11 @@ interface Props {
     javascriptFrontmatter: {
       frontmatter: {
         sections: {
-          about1: any
-          about2: any
-          advantages: any
-          tcs: any
-          qas: any,
+          about1?: any
+          about2?: any
+          advantages?: any
+          tcs?: any
+          qas?: any,
         },
       },
     },
@@ -29,17 +29,21 @@ const IndexTemplate: React.SFC<Props> = (({ data }) => {
   const { about1, about2, advantages, tcs, qas } = data.javascriptFrontmatter.frontmatter.sections;
   return (
     <App {...data.app.frontmatter}>
-      <About
-        image={about1.image}
-        logo={about1.logo}
-        heading={about1.heading}
-        body={about1.body}
-      />
-      <About
-        reverse
-        image={about2.image}
-        body={about2.body}
-      />
+      { about1 &&
+        <About
+          image={about1.image}
+          logo={about1.logo}
+          heading={about1.heading}
+          body={about1.body}
+        />
+      }
+      { about2 &&
+        <About
+          reverse
+          image={about2.image}
+          body={about2.body}
+        />
+      }
       <Advantages
         heading={advantages.heading}
         body={advantages.body}

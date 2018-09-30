@@ -6,6 +6,7 @@ export const CategoryFragment = graphql`
       sections {
         intro {
           heading
+          subheading
           body
           image {
             childImageSharp {

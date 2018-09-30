@@ -7,7 +7,8 @@ import SectionImage from "./SectionImage";
 import { Link } from "gatsby";
 
 type Props = WithStyles<typeof styles> & {
-  heading: string;
+  heading?: string;
+  subheading?: string;
   body: string[];
   image: any;
   link: {
@@ -16,10 +17,11 @@ type Props = WithStyles<typeof styles> & {
   };
 };
 
-const Intro: React.SFC<Props> = ({ heading, body, image, link, classes }) => (
+const Intro: React.SFC<Props> = ({ heading, subheading, body, image, link, classes }) => (
   <SectionImage
     image={image}
     heading={heading}
+    subheading={subheading}
     body={body}
     after={
       <Link to={link.to}>

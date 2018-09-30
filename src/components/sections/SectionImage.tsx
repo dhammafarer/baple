@@ -23,11 +23,16 @@ const styles = (theme: Theme) => createStyles({
     textAlign: "center",
   },
   body: {
-    marginBottom: "1em",
+    margin: "1.4em 0",
   },
   heading: {},
   subheading: {},
-  paragraph: {},
+  paragraph: {
+    marginBottom: "0.4em",
+    ["&:last-child"]: {
+      marginBottom: 0,
+    },
+  },
 });
 
 type Props = WithStyles<typeof styles> & {
@@ -58,7 +63,7 @@ const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, headin
         }
         { subheading &&
           <Typography
-            variant="subheading"
+            variant="headline"
             className={classes.subheading}
           >
             {subheading}
@@ -71,7 +76,6 @@ const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, headin
               key={i}
               variant="body2"
               className={classes.paragraph}
-              gutterBottom
             >
                 {t}
               </Typography>,
