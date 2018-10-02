@@ -15,7 +15,7 @@ export const CategoriesFragment = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 800) {
-                  src
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -27,8 +27,8 @@ export const CategoriesFragment = graphql`
             label
             image {
               childImageSharp {
-                fluid(maxWidth: 250) {
-                  src
+                fixed(width: 250) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }

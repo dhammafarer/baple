@@ -1,6 +1,6 @@
 import * as React from "react";
 import { WithStyles, withStyles } from "@material-ui/core/styles";
-import styles from "../../styles/category-list-styles";
+import styles from "../../styles/components/category-list-styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -14,6 +14,7 @@ import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import Button from "@material-ui/core/Button";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 interface Param {
   key: string;
@@ -40,7 +41,7 @@ type Props = WithStyles<typeof styles> & {
   categoryItems: Item[];
 };
 
-const ProductsList: React.SFC<Props> = ({ categoryItems, classes }) => (
+const CategoryList: React.SFC<Props> = ({ categoryItems, classes }) => (
   <section className={classes.section}>
     <Grid container spacing={32}>
       {
@@ -48,7 +49,7 @@ const ProductsList: React.SFC<Props> = ({ categoryItems, classes }) => (
         <Grid key={x.heading} item xs={12} md={6}>
           <Card key={x.heading} className={classes.card}>
             <CardContent className={classes.cardContent}>
-              <img className={classes.media} src={x.image.childImageSharp.fluid.src}/>
+              <Img className={classes.media} fluid={x.image.childImageSharp.fluid}/>
 
               <div className={classes.header}>
                 <Typography variant="title" className={classes.heading}>
@@ -103,4 +104,4 @@ const ProductsList: React.SFC<Props> = ({ categoryItems, classes }) => (
   </section>
 );
 
-export default withStyles(styles)(ProductsList);
+export default withStyles(styles)(CategoryList);

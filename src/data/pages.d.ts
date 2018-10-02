@@ -89,7 +89,7 @@ interface App {
   title: string;
   lang: Lang;
   logo: Logo;
-  nav: Nav;
+  navLinks: NavLink[];
   contact: Contact;
 }
 

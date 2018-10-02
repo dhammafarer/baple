@@ -15,7 +15,7 @@ export const IndexFragment = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 800) {
-                  src
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -23,11 +23,10 @@ export const IndexFragment = graphql`
         }
         categories {
           heading
-          subheading
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -35,8 +34,8 @@ export const IndexFragment = graphql`
             label
             image {
               childImageSharp {
-                fluid(maxWidth: 250) {
-                  src
+                fixed(width: 250) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
@@ -47,15 +46,15 @@ export const IndexFragment = graphql`
           heading
           logo {
             childImageSharp {
-              fluid(maxWidth: 200) {
-                src
+              fixed(width: 200) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -73,15 +72,15 @@ export const IndexFragment = graphql`
           }
           logo {
             childImageSharp {
-              fluid(maxWidth: 300) {
-                src
+              fixed(width: 300) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }

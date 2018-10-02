@@ -1,11 +1,11 @@
 import * as React from "react";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/advantages-styles";
+import styles from "../../styles/components/advantages-styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "gatsby";
-import HorizontalSplit from "../layouts/HorizontalSplit";
+import HorizontalSplit from "./HorizontalSplit";
 
 type Props = WithStyles<typeof styles> & {
   heading: string,

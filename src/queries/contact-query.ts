@@ -9,14 +9,14 @@ export const ContactFragment = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
           logo {
             childImageSharp {
-              fluid(maxWidth: 250) {
-                src
+              fixed(width: 250) {
+                ...GatsbyImageSharpFixed
               }
             }
           }

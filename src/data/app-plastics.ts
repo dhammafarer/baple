@@ -20,43 +20,40 @@ export const frontmatter: App = {
       youtube: "https://www.facebook.com/groups/292056241330760/",
     },
   ],
-  nav: {
-    home: "/plastics/",
-    navLinks: [
-      {
-        label: "Soluciones",
-        to: "/plastics/products",
-        links: [
-          {
-            label: "Pulverizadores",
-            to: "/plastics/pulverizadores",
-          },
-          {
-            label: "Bombas de loción",
-            to: "/plastics/bombas-de-locion",
-          },
-          {
-            label: "Micropulverizadores",
-            to: "/plastics/micropulverizadores",
-          },
-          {
-            label: "Botellas",
-            to: "/plastics/botellas",
-          },
-          {
-            label: "Tapones",
-            to: "/plastics/tapones",
-          },
-        ],
-      },
-      {
-        label: "About",
-        to: "/plastics/about",
-      },
-      {
-        label: "Contact",
-        to: "/plastics/contact",
-      },
-    ],
-  },
+  navLinks: [
+    {
+      label: "Soluciones",
+      to: "/plastics/products",
+      links: [
+        {
+          label: "Pulverizadores",
+          to: "/plastics/pulverizadores",
+        },
+        {
+          label: "Bombas de loción",
+          to: "/plastics/bombas-de-locion",
+        },
+        {
+          label: "Micropulverizadores",
+          to: "/plastics/micropulverizadores",
+        },
+        {
+          label: "Botellas",
+          to: "/plastics/botellas",
+        },
+        {
+          label: "Tapones",
+          to: "/plastics/tapones",
+        },
+      ],
+    },
+    {
+      label: "About",
+      to: "/plastics/about",
+    },
+    {
+      label: "Contact",
+      to: "/plastics/contact",
+    },
+  ],
 };

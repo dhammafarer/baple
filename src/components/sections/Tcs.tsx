@@ -1,6 +1,6 @@
 import * as React from "react";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/tcs-styles";
+import styles from "../../styles/components/tcs-styles";
 import Typography from "@material-ui/core/Typography";
 import SectionCentered from "./SectionCentered";
 
@@ -11,7 +11,7 @@ type Props = WithStyles<typeof styles> & {
 
 const Tcs: React.SFC<Props> = ({ image, heading, classes }) => (
   <SectionCentered
-    image={image.childImageSharp.fluid.src}
+    image={image}
     heading={heading}
   />
 );

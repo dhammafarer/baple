@@ -8,23 +8,35 @@ import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/nav-styles";
+import styles from "../../styles/components/nav-styles";
 import Link from "gatsby-link";
 import CloseIcon from "@material-ui/icons/Close";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
-import { Nav_2, Contact_2 } from "../../graphql";
 
-type Props = WithStyles<typeof styles> & {
-  handleClose: any
-  open: any
-  logo: string
-  title: string
-  nav: Nav_2
-  contact?: Contact_2[],
-};
+export interface NavLink {
+  to: string;
+  label: string;
+  links: Array<{to: string, label: string}>;
+}
 
-const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title, contact}) => (
+export interface ContactGroup {
+  contactName: string;
+  phone: string;
+  email: string;
+}
+
+export interface NavProps  {
+  handleClose: any;
+  open: any;
+  logo: any;
+  title: string;
+  navLinks: NavLink[];
+  contact?: ContactGroup[];
+}
+
+const Nav: React.SFC<NavProps & WithStyles<typeof styles>> = ({
+  open, handleClose, navLinks, classes, logo, title, contact}) => (
   <Drawer anchor="right" open={open} onClose={handleClose}>
     <div
       tabIndex={0}
@@ -36,16 +48,14 @@ const Nav: React.SFC<Props> = ({ open, handleClose, nav, classes, logo, title, c
       <IconButton className={classes.close}>
         <CloseIcon color="secondary"/>
       </IconButton>
-      <Link to={nav.home}>
-        <img className={classes.logo} src={logo}/>
-        <Typography variant="title" className={classes.title}>
-          {title}
-        </Typography>
-      </Link>
+      <img className={classes.logo} src={logo.childImageSharp.fixed.src}/>
+      <Typography variant="title" className={classes.title}>
+        {title}
+      </Typography>
       <List className={classes.list}>
         <Divider/>
         {
-          nav.navLinks.map((x: any) => {
+          navLinks.map((x: any) => {
             return (
               x.links ?
               <ListItem key={x.to} divider className={classes.listItem}>

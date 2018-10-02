@@ -2,6 +2,7 @@ import * as React from "react";
 import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import classnames from "classnames";
+import Img from "gatsby-image";
 
 const styles = (theme: Theme) => createStyles({
   section: {
@@ -13,6 +14,16 @@ const styles = (theme: Theme) => createStyles({
     alignItems: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+  },
+  image: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    border: "1px solid green",
+  },
+  img: {
+    width: "100%",
+    height: "100%",
   },
   overlay: {
     position: "absolute",
@@ -46,26 +57,28 @@ const styles = (theme: Theme) => createStyles({
   paragraph: {},
 });
 
-type Props = WithStyles<typeof styles> & {
-  image?: string
-  gradient?: string
-  heading?: string
-  subheading?: string
-  text?: string[]
-  before?: any
-  after?: any
-  fullHeight?: boolean,
-};
+export interface SectionFeaturedProps {
+  image?: any;
+  gradient?: string;
+  heading?: string;
+  subheading?: string;
+  text?: string[];
+  before?: any;
+  after?: any;
+  fullHeight?: boolean;
+}
+
+type Props = WithStyles<typeof styles> & SectionFeaturedProps;
 
 const SectionFeatured: React.SFC<Props> = ({
   classes, before, after, gradient, heading, subheading, text, image, fullHeight,
 }) => (
-  <section style={{
-    backgroundImage: `url(${image ? image : ""}
-      )`,
-    }}
+  <section
     className={classnames(classes.section, (fullHeight && classes.fullHeight))}
   >
+    <div className={classes.image}>
+      {image && <Img className={classes.img} fluid={image.childImageSharp.fluid}/>}
+    </div>
     <div style={{
       background: `${gradient ? gradient : ""}` }}
       className={classes.overlay}

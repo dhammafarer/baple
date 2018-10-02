@@ -20,35 +20,32 @@ export const frontmatter: App = {
   ],
   lang: "es",
   logo: "./img/logos/baple-group-logo-no-text.png",
-  nav: {
-    home: "/metal-packaging/",
-    navLinks: [
-      {
-        label: "Soluciones",
-        to: "/metal-packaging/products",
-        links: [
-          {
-            label: "Botes de Aerosol",
-            to: "/metal-packaging/botes-de-aerosol",
-          },
-          {
-            label: "Válvulas de Aerosol",
-            to: "/metal-packaging/valvulas-de-aerosol",
-          },
-          {
-            label: "Tapas",
-            to: "/metal-packaging/tapas",
-          },
-          ],
+  navLinks: [
+    {
+      label: "Soluciones",
+      to: "/metal-packaging/products",
+      links: [
+        {
+          label: "Botes de Aerosol",
+          to: "/metal-packaging/botes-de-aerosol",
         },
         {
-          label: "About",
-          to: "/metal-packaging/about",
+          label: "Válvulas de Aerosol",
+          to: "/metal-packaging/valvulas-de-aerosol",
         },
-      {
-        label: "Contact",
-        to: "/metal-packaging/contact",
+        {
+          label: "Tapas",
+          to: "/metal-packaging/tapas",
+        },
+        ],
       },
-    ],
-  },
+      {
+        label: "About",
+        to: "/metal-packaging/about",
+      },
+    {
+      label: "Contact",
+      to: "/metal-packaging/contact",
+    },
+  ],
 };

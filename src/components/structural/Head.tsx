@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 
 interface Props {
   title: string;
-  lang: Lang;
+  lang: string;
 }
 
 const Head: React.SFC<Props> = ({ lang, title }) => (

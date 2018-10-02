@@ -42,7 +42,7 @@ export const frontmatter: IndexPage = {
     more: {
       logo: "../../img/logos/baple-group-logo-no-text.png",
       heading: "Quieres saber más de nosotros?",
-      image: "../../img/plastics/Products_Welcome.jpg",
+      image: "../../img/contact-us-1.jpg",
       link: {
         to: "/contact",
         label: "Contáctanos!",

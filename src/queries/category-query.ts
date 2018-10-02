@@ -6,12 +6,11 @@ export const CategoryFragment = graphql`
       sections {
         intro {
           heading
-          subheading
           body
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -27,7 +26,7 @@ export const CategoryFragment = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 960) {
-                  src
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

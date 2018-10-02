@@ -7,8 +7,8 @@ export const AppFragment = graphql`
       lang
       logo {
         childImageSharp {
-          fluid(maxWidth: 200) {
-            src
+          fixed(width: 200) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -22,16 +22,12 @@ export const AppFragment = graphql`
         youtube
         instagram
       }
-      nav {
-        home
-        navLinks {
+      navLinks {
+        to
+        label
+        links {
           to
           label
-          links
-            {
-              to
-              label
-            }
         }
       }
     }

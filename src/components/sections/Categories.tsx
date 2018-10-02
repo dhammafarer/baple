@@ -1,6 +1,6 @@
 import * as React from "react";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/categories-styles";
+import styles from "../../styles/components/categories-styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import { Link } from "gatsby";
 import SectionFeatured from "./SectionFeatured";
+import Img from "gatsby-image";
 
 type Props = WithStyles<typeof styles> & {
   heading: string;
@@ -19,7 +20,7 @@ type Props = WithStyles<typeof styles> & {
 
 const Categories: React.SFC<Props> = ({ classes, image, gradient, heading, subheading, categoryLinks }) => (
   <SectionFeatured
-    image={image && image.childImageSharp.fluid.src}
+    image={image && image}
     gradient={gradient}
     fullHeight
     heading={heading}
@@ -32,7 +33,7 @@ const Categories: React.SFC<Props> = ({ classes, image, gradient, heading, subhe
               <CardActionArea className={classes.cardAction}>
                 <Link to={x.to}>
                   <CardContent className={classes.content}>
-                    <img className={classes.image} src={x.image.childImageSharp.fluid.src}/>
+                    <Img className={classes.image} fixed={x.image.childImageSharp.fixed}/>
                     <Typography
                       color="inherit"
                       className={classes.label}

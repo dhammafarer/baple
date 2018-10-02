@@ -1,6 +1,6 @@
 import * as React from "react";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/intro-styles";
+import styles from "../../styles/components/intro-styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import SectionImage from "./SectionImage";

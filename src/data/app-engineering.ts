@@ -20,21 +20,18 @@ export const frontmatter: App = {
       youtube: "https://www.facebook.com/groups/292056241330760/",
     },
   ],
-  nav: {
-    home: "/engineering/",
-    navLinks: [
-      {
-        label: "Home",
-        to: "/engineering",
-      },
-      {
-        label: "About",
-        to: "/engineering/about",
-      },
-      {
-        label: "Contact",
-        to: "/engineering/contact",
-      },
-    ],
-  },
+  navLinks: [
+    {
+      label: "Home",
+      to: "/engineering",
+    },
+    {
+      label: "About",
+      to: "/engineering/about",
+    },
+    {
+      label: "Contact",
+      to: "/engineering/contact",
+    },
+  ],
 };

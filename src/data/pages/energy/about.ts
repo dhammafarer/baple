@@ -4,7 +4,7 @@ export const frontmatter: AboutPage = {
   layout: "about",
   sections: {
     about1: {
-      logo: "../../img/logos/baple-energy",
+      logo: "../../img/logos/baple-energy-logo.png",
       image: "../../img/energy/Solar panel_Cube2.jpg",
       heading: "Baple Energy",
       body: [

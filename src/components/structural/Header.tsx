@@ -1,21 +1,21 @@
-import * as React from 'react';
-import HeaderBar from './HeaderBar';
+import * as React from "react";
+import HeaderBar from "./HeaderBar";
 
-interface Props {
-  logo: string
-  title: string
-  nav: any
-  contact?: any
+export interface HeaderProps {
+  logo: string;
+  title: string;
+  navLinks: any;
+  contact?: any;
 }
 
 interface State {
-  menu: boolean
+  menu: boolean;
 }
 
-class Header extends React.Component<Props, State> {
-  state:State = {
-    menu: false
-  }
+class Header extends React.Component<HeaderProps, State> {
+  state: State = {
+    menu: false,
+  };
 
   toggleMenu = () => {
     this.setState({menu: !this.state.menu});
@@ -25,12 +25,12 @@ class Header extends React.Component<Props, State> {
     this.setState({menu: false});
   }
 
-  render () {
-    const { nav, logo, title, contact } = this.props;
+  render() {
+    const { navLinks, logo, title, contact } = this.props;
 
     return (
       <HeaderBar
-        nav={nav}
+        navLinks={navLinks}
         title={title}
         logo={logo}
         contact={contact}
@@ -40,6 +40,6 @@ class Header extends React.Component<Props, State> {
       />
     );
   }
-};
+}
 
 export default Header;

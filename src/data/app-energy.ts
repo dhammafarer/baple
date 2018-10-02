@@ -20,39 +20,36 @@ export const frontmatter: App = {
   ],
   lang: "es",
   logo: "./img/logos/baple-energy-logo.png",
-  nav: {
-    home: "/energy/",
-    navLinks: [
-      {
-        label: "Home",
-        to: "/energy",
-      },
-      {
-        label: "Soluciones",
-        to: "/energy/solutions",
-        links: [
-          {
-            label: "E-Scooter",
-            to: "/energy/e-scooter",
-          },
-          {
-            label: "Powerwall",
-            to: "/energy/powerwall",
-          },
-          {
-            label: "Energy Storage",
-            to: "/energy/energy-storage",
-          },
-        ],
-      },
-      {
-        label: "About",
-        to: "/energy/about",
-      },
-      {
-        label: "Contact",
-        to: "/energy/contact",
-      },
-    ],
-  },
+  navLinks: [
+    {
+      label: "Home",
+      to: "/energy",
+    },
+    {
+      label: "Soluciones",
+      to: "/energy/solutions",
+      links: [
+        {
+          label: "E-Scooter",
+          to: "/energy/e-scooter",
+        },
+        {
+          label: "Powerwall",
+          to: "/energy/powerwall",
+        },
+        {
+          label: "Energy Storage",
+          to: "/energy/energy-storage",
+        },
+      ],
+    },
+    {
+      label: "About",
+      to: "/energy/about",
+    },
+    {
+      label: "Contact",
+      to: "/energy/contact",
+    },
+  ],
 };

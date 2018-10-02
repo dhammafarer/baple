@@ -7,15 +7,15 @@ export const AboutFragment = graphql`
         about1 {
           logo {
             childImageSharp {
-              fluid(maxWidth: 250) {
-                src
+              fixed(width: 250) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -26,7 +26,7 @@ export const AboutFragment = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -42,7 +42,7 @@ export const AboutFragment = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -52,7 +52,7 @@ export const AboutFragment = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 1200) {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }

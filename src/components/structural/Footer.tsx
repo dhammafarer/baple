@@ -7,21 +7,20 @@ import FacebookIcon from "mdi-material-ui/Facebook";
 import TwitterIcon from "mdi-material-ui/Twitter";
 import YoutubeIcon from "mdi-material-ui/Youtube";
 import InstagramIcon from "mdi-material-ui/Instagram";
-import { Contact_2 } from "../../graphql";
 
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/footer-styles";
+import styles from "../../styles/components/footer-styles";
 
 type Props = WithStyles<typeof styles> & {
   title: string
-  logo?: string
-  contact: Contact_2[],
+  logo?: any;
+  contact: any;
 };
 
 const Footer: React.SFC<Props> = ({ classes, contact, title, logo }) => (
   <footer className={classes.footer}>
     <div className={classNames(classes.footerAddress, classes.layout)}>
-      {logo && <img className={classes.logo} src={logo}/>}
+      {logo && <img className={classes.logo} src={logo.childImageSharp.fixed.src}/>}
       <div className={classes.contact}>
         <Typography variant="title" color="inherit" gutterBottom>
           {title}

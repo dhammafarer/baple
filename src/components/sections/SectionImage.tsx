@@ -1,12 +1,12 @@
 import * as React from "react";
 import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
-import HorizontalSplit from "../layouts/HorizontalSplit";
+import HorizontalSplit from "./HorizontalSplit";
 import Typography from "@material-ui/core/Typography";
+import Img from "gatsby-image";
 
 const styles = (theme: Theme) => createStyles({
   image: {
     width: "100%",
-    height: "100%",
   },
   content: {
     background: theme.palette.background.paper,
@@ -35,7 +35,7 @@ const styles = (theme: Theme) => createStyles({
   },
 });
 
-type Props = WithStyles<typeof styles> & {
+export interface SectionImageProps {
   reverse?: boolean;
   image?: any;
   heading?: string;
@@ -43,12 +43,15 @@ type Props = WithStyles<typeof styles> & {
   body?: string[];
   before?: any;
   after?: any;
-};
+}
 
-const SectionImage: React.SFC<Props> = ({classes, before, after, reverse, heading, subheading, body, image}) => (
+type Props = SectionImageProps & WithStyles<typeof styles>;
+
+const SectionImage: React.SFC<Props> = ({
+  classes, before, after, reverse, heading, subheading, body, image}) => (
   <HorizontalSplit
     reverse={reverse}
-    left={image && <img className={classes.image} src={image.childImageSharp.fluid.src}/>}
+    left={image && <Img className={classes.image} fluid={image.childImageSharp.fluid}/>}
     right={
       <div className={classes.content}>
         {before && before}

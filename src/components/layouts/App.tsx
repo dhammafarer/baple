@@ -6,26 +6,27 @@ import Header from "../structural/Header";
 import Footer from "../structural/Footer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/layout-styles";
+import styles from "../../styles/components/layout-styles";
 import withRoot from "../../utils/withRoot";
 
-type Props = WithStyles<typeof styles> & {
-  lang: Lang
-  title: string
-  logo: any
-  nav: any
-  contact: any,
-};
+export interface AppProps {
+  title: string;
+  logo: any;
+  lang: string;
+  navLinks: any;
+  contact: any;
+}
 
-const App: React.SFC<Props> = ({ title, logo, contact, children, nav, classes, lang }) => (
+const App: React.SFC<AppProps & WithStyles<typeof styles>> = ({
+  title, logo, contact, children, navLinks, classes, lang }) => (
   <div className={classes.layout}>
     <CssBaseline/>
     <Head title={title} lang={lang}/>
-    <Header title={title} logo={logo.childImageSharp.fluid.src} nav={nav} contact={contact}/>
+    <Header title={title} logo={logo} navLinks={navLinks} contact={contact}/>
     <main className={classes.main}>
       {children}
     </main>
-    <Footer logo={logo.childImageSharp.fluid.src} contact={contact} title={title}/>
+    <Footer logo={logo} contact={contact} title={title}/>
   </div>
 );
 

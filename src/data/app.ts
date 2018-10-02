@@ -20,43 +20,40 @@ export const frontmatter: App = {
   ],
   lang: "es",
   logo: "./img/logos/baple-group-logo-no-text.png",
-  nav: {
-    home: "/plastics/",
-    navLinks: [
-      {
-        label: "Solutions",
-        links: [
-          {
-            label: "Pulverizadores",
-            to: "/plastics/pulverizadores",
-          },
-          {
-            label: "Bombas de loción",
-            to: "/plastics/bombas-de-locion",
-          },
-          {
-            label: "Micropulverizadores",
-            to: "/plastics/micropulverizadores",
-          },
-          {
-            label: "Botellas",
-            to: "/plastics/botellas",
-          },
-          {
-            label: "Tapones",
-            to: "/plastics/tapones",
-          },
-        ],
-        to: "/solutions",
-      },
-      {
-        label: "Contact",
-        to: "/contact",
-      },
-      {
-        label: "About",
-        to: "/about",
-      },
-    ],
-  },
+  navLinks: [
+    {
+      label: "Solutions",
+      links: [
+        {
+          label: "Pulverizadores",
+          to: "/plastics/pulverizadores",
+        },
+        {
+          label: "Bombas de loción",
+          to: "/plastics/bombas-de-locion",
+        },
+        {
+          label: "Micropulverizadores",
+          to: "/plastics/micropulverizadores",
+        },
+        {
+          label: "Botellas",
+          to: "/plastics/botellas",
+        },
+        {
+          label: "Tapones",
+          to: "/plastics/tapones",
+        },
+      ],
+      to: "/solutions",
+    },
+    {
+      label: "Contact",
+      to: "/contact",
+    },
+    {
+      label: "About",
+      to: "/about",
+    },
+  ],
 };

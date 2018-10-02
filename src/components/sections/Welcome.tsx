@@ -1,10 +1,11 @@
 import * as React from "react";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/welcome-styles";
+import styles from "../../styles/components/welcome-styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { Welcome_2 } from "../../graphql";
 import SectionFeatured from "../sections/SectionFeatured";
+import Img from "gatsby-image";
 
 type Props = WithStyles<typeof styles> & {
   heading?: string,
@@ -12,15 +13,17 @@ type Props = WithStyles<typeof styles> & {
   logo?: any,
   image?: any,
   quotes?: Array<{quote: string, author: string}>,
+  gradient?: string,
 };
 
-const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes, quotes }) => (
+const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes, quotes, gradient }) => (
   <SectionFeatured
     fullHeight
-    image={image && image.childImageSharp.fluid.src}
+    gradient={gradient && gradient}
+    image={image && image}
     before={
       <div className={classes.section}>
-        {logo && <img src={logo.childImageSharp.fluid.src}/>}
+        {logo && <Img fixed={logo.childImageSharp.fixed}/>}
         <div className={classes.text}>
           { heading &&
             <Typography

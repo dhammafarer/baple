@@ -32,7 +32,7 @@ export const frontmatter: IndexPage = {
     more: {
       logo: "../../img/logos/baple-metal-packaging-logo.png",
       heading: "Quieres saber más de nosotros?",
-      image: "",
+      image: "../../img/contact-us-1.jpg",
       link: {
         to: "/contact",
         label: "Contáctanos!",

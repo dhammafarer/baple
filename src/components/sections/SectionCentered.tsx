@@ -2,7 +2,7 @@ import * as React from "react";
 import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import classnames from "classnames";
+import Img from "gatsby-image";
 
 const styles = (theme: Theme) => createStyles({
   section: {
@@ -32,16 +32,18 @@ const styles = (theme: Theme) => createStyles({
   },
 });
 
-type Props = WithStyles<typeof styles> & {
-  reverse?: boolean
-  image?: string
-  gradient?: string
-  heading?: string
-  subheading?: string
-  text?: string[]
-  before?: any
-  after?: any,
-};
+export interface SectionCenteredProps {
+  reverse?: boolean;
+  image?: any;
+  gradient?: string;
+  heading?: string;
+  subheading?: string;
+  text?: string[];
+  before?: any;
+  after?: any;
+}
+
+type Props = WithStyles<typeof styles> & SectionCenteredProps;
 
 const SectionCentered: React.SFC<Props> = ({
   classes, before, after, gradient, heading, subheading, text, image, reverse}) => (
@@ -70,7 +72,7 @@ const SectionCentered: React.SFC<Props> = ({
       {after && after}
     </div>
     { image &&
-      <img src={image} className={classes.image}/>
+      <Img fluid={image.childImageSharp.fluid} className={classes.image}/>
     }
   </section>
 );
