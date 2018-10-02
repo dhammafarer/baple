@@ -3,7 +3,6 @@ import { withStyles, WithStyles } from "@material-ui/core/styles";
 import styles from "../../styles/components/advantages-styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import { Link } from "gatsby";
 import HorizontalSplit from "./HorizontalSplit";
 
@@ -40,7 +39,7 @@ const Advantages: React.SFC<Props> = ({ heading, body, points, classes }) => (
   right={
     <div className={classes.pane}>
       {points.map((p) =>
-      <Paper className={classes.point} key={p}>
+      <div className={classes.point} key={p}>
         <Typography
           color="inherit"
           variant="title"
@@ -48,7 +47,7 @@ const Advantages: React.SFC<Props> = ({ heading, body, points, classes }) => (
         >
           {p}
         </Typography>
-      </Paper>,
+      </div>,
       )}
     </div>
   }

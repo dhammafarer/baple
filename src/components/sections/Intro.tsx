@@ -7,6 +7,7 @@ import SectionImage from "./SectionImage";
 import { Link } from "gatsby";
 
 type Props = WithStyles<typeof styles> & {
+  reverse?: boolean;
   heading?: string;
   subheading?: string;
   body?: string[];
@@ -17,8 +18,9 @@ type Props = WithStyles<typeof styles> & {
   };
 };
 
-const Intro: React.SFC<Props> = ({ heading, subheading, body, image, link, classes }) => (
+const Intro: React.SFC<Props> = ({ reverse, heading, subheading, body, image, link, classes }) => (
   <SectionImage
+    reverse={reverse}
     image={image}
     heading={heading}
     subheading={subheading}

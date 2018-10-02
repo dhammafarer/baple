@@ -19,7 +19,7 @@ type Props = WithStyles<typeof styles> & {
 const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes, quotes, gradient }) => (
   <SectionFeatured
     fullHeight
-    gradient={gradient && gradient}
+    gradient={"linear-gradient(60deg, #ded, #eee)"}
     image={image && image}
     before={
       <div className={classes.section}>

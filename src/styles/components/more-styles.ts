@@ -19,6 +19,7 @@ const moreStyles = (theme: Theme) => createStyles({
   logo: {
     width: 200,
     height: 200,
+    marginTop: "2em",
     marginBottom: "1em",
   },
   button: {

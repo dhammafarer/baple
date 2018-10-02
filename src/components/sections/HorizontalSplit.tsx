@@ -1,10 +1,11 @@
 import * as React from "react";
 import Grid from "@material-ui/core/Grid";
-import { createStyles, withStyles, WithStyles } from "@material-ui/core/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@material-ui/core/styles";
 
-const styles = createStyles({
+const styles = (theme: Theme) => createStyles({
   container: {
     width: "100%",
+    background: theme.palette.common.white,
   },
   item: {
     width: "100%",

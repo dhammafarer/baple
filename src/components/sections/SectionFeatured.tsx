@@ -7,8 +7,7 @@ import Img from "gatsby-image";
 const styles = (theme: Theme) => createStyles({
   section: {
     position: "relative",
-    paddingTop: "3em",
-    paddingBottom: "3em",
+    padding: "3em",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

@@ -6,6 +6,9 @@ const tcsStyles = (theme:Theme) => createStyles({
     margin: '0 auto',
     maxWidth: 800,
   },
+  divider: {
+    marginBottom: theme.spacing.unit * 3,
+  },
   header: {
     backgroundColor: theme.palette.primary.light,
     color: '#fff',

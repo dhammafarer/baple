@@ -33,7 +33,7 @@ const Categories: React.SFC<Props> = ({ classes, image, gradient, heading, subhe
               <CardActionArea className={classes.cardAction}>
                 <Link to={x.to}>
                   <CardContent className={classes.content}>
-                    <Img className={classes.image} fluid={x.image.childImageSharp.fluid}/>
+                    <img className={classes.image} src={x.image.childImageSharp.fluid.src}/>
                     <Typography
                       color="inherit"
                       className={classes.label}

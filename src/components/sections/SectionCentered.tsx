@@ -11,6 +11,14 @@ const styles = (theme: Theme) => createStyles({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
+    background: theme.palette.common.white,
+  },
+  before: {
+    width: "100%",
+  },
+  after: {
+    width: "100%",
+    marginTop: "1em",
   },
   content: {
     padding: theme.spacing.unit * 3,
@@ -49,7 +57,7 @@ const SectionCentered: React.SFC<Props> = ({
   classes, before, after, gradient, heading, subheading, text, image, reverse}) => (
   <section className={classes.section}>
     <div className={classes.content}>
-      {before && before}
+      {before && <div className={classes.before}>{before}</div>}
       { heading &&
         <Typography variant="display1" className={classes.heading}>
           {heading}
@@ -69,7 +77,7 @@ const SectionCentered: React.SFC<Props> = ({
           )}
         </div>
       }
-      {after && after}
+      {after && <div className={classes.after}>{after}</div>}
     </div>
     { image &&
       <Img fluid={image.childImageSharp.fluid} className={classes.image}/>

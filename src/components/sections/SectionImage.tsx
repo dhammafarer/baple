@@ -7,28 +7,38 @@ import Img from "gatsby-image";
 const styles = (theme: Theme) => createStyles({
   image: {
     width: "100%",
+    height: "100%",
   },
   content: {
     background: theme.palette.background.paper,
     height: "100%",
     width: "100%",
-    paddingTop: theme.spacing.unit * 3,
-    paddingBottom: theme.spacing.unit * 3,
-    paddingLeft: theme.spacing.unit * 3,
-    paddingRight: theme.spacing.unit * 3,
+    paddingTop: theme.spacing.unit * 6,
+    paddingBottom: theme.spacing.unit * 6,
+    paddingLeft: theme.spacing.unit * 6,
+    paddingRight: theme.spacing.unit * 6,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
   },
-  body: {
-    margin: "1.4em 0",
+  before: {
+    width: "100%",
   },
-  heading: {},
-  subheading: {},
-  paragraph: {
+  after: {
+    width: "100%",
+    marginTop: "1em",
+  },
+  body: {},
+  heading: {
     marginBottom: "0.4em",
+  },
+  subheading: {
+    marginBottom: "1em",
+  },
+  paragraph: {
+    marginBottom: "1em",
     ["&:last-child"]: {
       marginBottom: 0,
     },
@@ -54,12 +64,11 @@ const SectionImage: React.SFC<Props> = ({
     left={image && <Img className={classes.image} fluid={image.childImageSharp.fluid}/>}
     right={
       <div className={classes.content}>
-        {before && before}
+        {before && <div className={classes.before}>{before}</div>}
         { heading &&
           <Typography
             variant="display1"
             className={classes.heading}
-            gutterBottom
           >
             {heading}
           </Typography>
@@ -85,7 +94,7 @@ const SectionImage: React.SFC<Props> = ({
             )}
           </div>
         }
-        {after && after}
+        {after && <div className={classes.after}>{after}</div>}
       </div>
     }
   />
