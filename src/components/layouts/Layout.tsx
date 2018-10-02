@@ -29,6 +29,7 @@ interface ContactData {
 }
 
 interface Data {
+  [key: string]: any;
   site: {
     siteMetadata: {
       domains: AppData[];
