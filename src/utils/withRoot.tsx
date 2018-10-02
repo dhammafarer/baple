@@ -4,8 +4,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from './getPageContext';
 
-function withRoot(Component) {
-  class WithRoot extends React.Component {
+const withRoot = <P extends object>(Component: React.ComponentType<P>) => {
+    class WithRoot extends React.Component<P> {
     muiPageContext = null;
 
     constructor(props) {

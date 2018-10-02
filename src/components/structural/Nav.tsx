@@ -21,7 +21,7 @@ export interface NavLink {
 }
 
 export interface ContactGroup {
-  contactName: string;
+  name: string;
   phone: string;
   email: string;
 }
@@ -32,7 +32,7 @@ export interface NavProps  {
   logo: any;
   title: string;
   navLinks: NavLink[];
-  contact?: ContactGroup[];
+  contact?: ContactGroup;
 }
 
 const Nav: React.SFC<NavProps & WithStyles<typeof styles>> = ({
@@ -107,13 +107,13 @@ const Nav: React.SFC<NavProps & WithStyles<typeof styles>> = ({
           <div className={classes.details}>
             <PhoneIcon className={classes.icon}/>
             <Typography color="inherit" gutterBottom>
-              {contact[0].phone}
+              {contact.phone}
             </Typography>
           </div>
           <div className={classes.details}>
             <EmailIcon className={classes.icon}/>
             <Typography color="inherit">
-              {contact[0].email}
+              {contact.email}
             </Typography>
           </div>
         </div>

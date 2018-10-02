@@ -7,7 +7,6 @@ import Footer from "../structural/Footer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
 import styles from "../../styles/components/layout-styles";
-import withRoot from "../../utils/withRoot";
 
 export interface AppProps {
   title: string;
@@ -30,4 +29,4 @@ const App: React.SFC<AppProps & WithStyles<typeof styles>> = ({
   </div>
 );
 
-export default withRoot(withStyles(styles)(App));
+export default withStyles(styles)(App);

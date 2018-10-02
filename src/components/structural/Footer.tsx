@@ -26,19 +26,19 @@ const Footer: React.SFC<Props> = ({ classes, contact, title, logo }) => (
           {title}
         </Typography>
         <Typography variant="subheading" color="inherit" gutterBottom>
-          {contact[0].contactName}
+          {contact.name}
         </Typography>
         <Typography variant="caption" color="inherit">
-          {contact[0].phone}
+          {contact.phone}
         </Typography>
         <Typography variant="caption" color="inherit">
-          {contact[0].email}
+          {contact.email}
         </Typography>
       </div>
     </div>
     <div className={classNames(classes.footerSocial, classes.layout)}>
-      {contact[0].facebook &&
-        <a href={contact[0].facebook}>
+      {contact.socialMedia.facebook &&
+        <a href={contact.socialMedia.facebook}>
           <IconButton><FacebookIcon/></IconButton>
         </a>
       }
