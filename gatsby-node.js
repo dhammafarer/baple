@@ -46,7 +46,6 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       result.data.allJavascriptFrontmatter.edges
         .filter(({ node }) => node.fileAbsolutePath.match(/\/pages\//))
-        .filter(({node}) => node.frontmatter.layout === "index")
         .forEach(({ node }) => {
           createPage({
             path: node.fields.slug,

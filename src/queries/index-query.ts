@@ -2,6 +2,9 @@ import { graphql } from "gatsby";
 
 export const IndexFragment = graphql`
   fragment IndexFrontmatter on JavascriptFrontmatter {
+    fields {
+      domain
+    }
     frontmatter {
       sections {
         products {

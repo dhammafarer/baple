@@ -2,6 +2,9 @@ import { graphql } from "gatsby";
 
 export const AboutFragment = graphql`
   fragment AboutFrontmatter on JavascriptFrontmatter {
+    fields {
+      domain
+    }
     frontmatter {
       sections {
         about1 {

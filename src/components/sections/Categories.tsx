@@ -12,7 +12,7 @@ import Img from "gatsby-image";
 
 type Props = WithStyles<typeof styles> & {
   heading: string;
-  subheading: string;
+  subheading?: string;
   categoryLinks: Array<{label?: string, image?: any, to?: string}>;
   image?: any;
   gradient?: string;

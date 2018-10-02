@@ -19,7 +19,6 @@ const styles = (theme: Theme) => createStyles({
     position: "absolute",
     width: "100%",
     height: "100%",
-    border: "1px solid green",
   },
   img: {
     width: "100%",

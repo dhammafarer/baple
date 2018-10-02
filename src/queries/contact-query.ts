@@ -2,6 +2,9 @@ import { graphql } from "gatsby";
 
 export const ContactFragment = graphql`
   fragment ContactFrontmatter on JavascriptFrontmatter {
+    fields {
+      domain
+    }
     frontmatter {
       sections {
         contactUs {
@@ -19,18 +22,6 @@ export const ContactFragment = graphql`
                 ...GatsbyImageSharpFixed
               }
             }
-          }
-        }
-        contactDetails {
-          contact {
-            contactName
-            phone
-            email
-            address
-            facebook
-            twitter
-            youtube
-            instagram
           }
         }
       }

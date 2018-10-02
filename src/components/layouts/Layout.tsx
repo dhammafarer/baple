@@ -108,10 +108,11 @@ const Layout: React.SFC<LayoutProps> = ({ children, domain }) => (
   render={(data: Data) => {
     const sm = data.site.siteMetadata;
     const d = sm.domains.find((x) => x.name === domain);
+    const logo = data[domain + "Logo"];
     return (
       <App
         title={d.title}
-        logo={data[domain + "Logo"]}
+        logo={logo}
         navLinks={d.navLinks}
         lang={"es"}
         contact={sm.contact}

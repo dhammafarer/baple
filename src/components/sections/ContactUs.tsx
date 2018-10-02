@@ -10,12 +10,12 @@ type Props = WithStyles<typeof styles> & {
   image: any;
 };
 
-const Contact: React.SFC<Props> = ({ heading, logo, image, classes }) => (
+const ContactUs: React.SFC<Props> = ({ heading, logo, image, classes }) => (
   <SectionFeatured
     image={image}
     heading={heading}
-    before={<Img fluid={logo.childImageSharp.fluid} className={classes.logo}/>}
+    before={<Img fluid={logo.childImageSharp.fixed} className={classes.logo}/>}
   />
 );
 
-export default withStyles(styles)(Contact);
+export default withStyles(styles)(ContactUs);

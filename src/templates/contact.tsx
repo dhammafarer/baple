@@ -1,51 +1,66 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import App from "../components/layouts/App";
-import { Frontmatter_2, ContactUs_2, ContactDetails_2 } from "../graphql";
+import Layout from "../components/layouts/Layout";
 import ContactUs from "../components/sections/ContactUs";
 import ContactDetails from "../components/sections/ContactDetails";
+import { Domain } from "../components/layouts/Layout";
 
 interface Props {
   data: {
     javascriptFrontmatter: {
+      fields: {
+        domain: Domain,
+      },
       frontmatter: {
         sections: {
-          contactUs: ContactUs_2;
-          contactDetails: ContactDetails_2;
+          contactUs: any,
         },
       },
     },
-    app: {
-      frontmatter: Frontmatter_2,
+    site: {
+      siteMetadata: {
+        contact: any,
+      },
     },
   };
 }
 
 const ContactTemplate: React.SFC<Props> = (({ data }) => {
-  const { contactUs, contactDetails } = data.javascriptFrontmatter.frontmatter.sections;
+  const { contactUs } = data.javascriptFrontmatter.frontmatter.sections;
   return (
-    <App {...data.app.frontmatter}>
+    <Layout domain={data.javascriptFrontmatter.fields.domain}>
       <ContactUs
         heading={contactUs.heading}
         logo={contactUs.logo}
         image={contactUs.image}
       />
       <ContactDetails
-        contact={contactDetails.contact}
+        contact={data.site.siteMetadata.contact}
       />
-    </App>
+    </Layout>
   );
 });
 
 export default ContactTemplate;
 
 export const query = graphql`
-  query($slug: String!, $layout: String!) {
+  query($slug: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
       ...ContactFrontmatter
     }
-    app: javascriptFrontmatter(fields: { slug: {eq: $layout} }) {
-      ...AppFrontmatter
+    site {
+      siteMetadata {
+        contact {
+          email
+          phone
+          address
+          socialMedia {
+            facebook
+            instagram
+            twitter
+          }
+        }
+      }
     }
   }
 `;

@@ -1,22 +1,22 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import App from "../components/layouts/App";
-import { Frontmatter_2, Categories_2, Products_2 } from "../graphql";
+import Layout from "../components/layouts/Layout";
 import Categories from "../components/sections/Categories";
 import Products from "../components/sections/Products";
+import { Domain } from "../components/layouts/Layout";
 
 interface Props {
   data: {
     javascriptFrontmatter: {
+      fields: {
+        domain: Domain,
+      },
       frontmatter: {
         sections: {
-          categories: Categories_2,
-          products: Products_2,
+          categories: any,
+          products: any,
         },
       },
-    },
-    app: {
-      frontmatter: Frontmatter_2,
     },
   };
 }
@@ -24,7 +24,7 @@ interface Props {
 const CategoriesTemplate: React.SFC<Props> = (({ data }) => {
   const { categories, products } = data.javascriptFrontmatter.frontmatter.sections;
   return (
-    <App {...data.app.frontmatter}>
+    <Layout domain={data.javascriptFrontmatter.fields.domain}>
       { categories &&
         <Categories
           heading={categories.heading}
@@ -36,19 +36,16 @@ const CategoriesTemplate: React.SFC<Props> = (({ data }) => {
           products={products.productList}
         />
       }
-    </App>
+    </Layout>
   );
 });
 
 export default CategoriesTemplate;
 
 export const query = graphql`
-  query($slug: String!, $layout: String!) {
+  query($slug: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
       ...CategoriesFrontmatter
-    }
-    app: javascriptFrontmatter(fields: { slug: {eq: $layout} }) {
-      ...AppFrontmatter
     }
   }
 `;

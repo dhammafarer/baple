@@ -70,9 +70,6 @@ export default IndexTemplate;
 export const query = graphql`
   query($slug: String!) {
     javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
-      fields {
-        domain
-      }
       ...IndexFrontmatter
     }
   }

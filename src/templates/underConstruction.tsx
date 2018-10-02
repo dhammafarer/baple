@@ -1,34 +1,38 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import App from "../components/layouts/App";
-import { Frontmatter_2 } from "../graphql";
+import Layout from "../components/layouts/Layout";
 import SectionCentered from "../components/sections/SectionCentered";
+import { Domain } from "../components/layouts/Layout";
 
 interface Props {
   data: {
-    app: {
-      frontmatter: Frontmatter_2,
+    javascriptFrontmatter: {
+      fields: {
+        domain: Domain,
+      },
     },
   };
 }
 
 const UnderConstructionTemplate: React.SFC<Props> = (({ data }) => {
   return (
-    <App {...data.app.frontmatter}>
+    <Layout domain={data.javascriptFrontmatter.fields.domain}>
       <SectionCentered
         heading={"Under Construction"}
         subheading={"This page will be available soon."}
       />
-    </App>
+    </Layout>
   );
 });
 
 export default UnderConstructionTemplate;
 
 export const query = graphql`
-  query($layout: String!) {
-    app: javascriptFrontmatter(fields: { slug: {eq: $layout} }) {
-      ...AppFrontmatter
+  query($slug: String!) {
+    javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
+      fields {
+        domain
+      }
     }
   }
 `;
