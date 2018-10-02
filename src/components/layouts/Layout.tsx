@@ -11,8 +11,8 @@ export interface LayoutProps {
 }
 
 interface AppData {
+  name: Domain;
   title: string;
-  logo: any;
   navLinks: any;
 }
 
@@ -31,7 +31,7 @@ interface ContactData {
 interface Data {
   site: {
     siteMetadata: {
-      domains: { [k in Domain]: AppData },
+      domains: AppData[];
       contact: ContactData;
     },
   };
@@ -45,15 +45,14 @@ const Layout: React.SFC<LayoutProps> = ({ children, domain }) => (
         site {
           siteMetadata {
             domains {
-              group {
-                title
-                navLinks {
+              name
+              title
+              navLinks {
+                to
+                label
+                links {
                   to
                   label
-                  links {
-                    to
-                    label
-                  }
                 }
               }
             }
@@ -69,7 +68,35 @@ const Layout: React.SFC<LayoutProps> = ({ children, domain }) => (
             }
           }
         }
-        logo: file(relativePath: {eq: "logos/baple-group-logo-no-text.png"}) {
+        groupLogo: file(relativePath: {eq: "logos/baple-group-logo-no-text.png"}) {
+          childImageSharp {
+            fixed(width: 250) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        plasticsLogo: file(relativePath: {eq: "logos/baple-plastics-logo.png"}) {
+          childImageSharp {
+            fixed(width: 250) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        energyLogo: file(relativePath: {eq: "logos/baple-energy-logo.png"}) {
+          childImageSharp {
+            fixed(width: 250) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        metalPackagingLogo: file(relativePath: {eq: "logos/baple-metal-packaging-logo.png"}) {
+          childImageSharp {
+            fixed(width: 250) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        engineeringLogo: file(relativePath: {eq: "logos/baple-engineering-logo.png"}) {
           childImageSharp {
             fixed(width: 250) {
               ...GatsbyImageSharpFixed
@@ -80,11 +107,11 @@ const Layout: React.SFC<LayoutProps> = ({ children, domain }) => (
     `}
   render={(data: Data) => {
     const sm = data.site.siteMetadata;
-    const d = sm.domains[domain];
+    const d = sm.domains.find((x) => x.name === domain);
     return (
       <App
         title={d.title}
-        logo={data.logo}
+        logo={data[domain + "Logo"]}
         navLinks={d.navLinks}
         lang={"es"}
         contact={sm.contact}

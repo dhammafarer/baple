@@ -66,12 +66,11 @@ function getDomain(slug) {
     { name: 'plastics', pattern: /^\/plastics\// },
     { name: 'energy', pattern: /^\/energy\// },
     { name: 'engineering', pattern: /^\/engineering\// },
-    { name: 'metal-packaging', pattern: /^\/metal-packaging\// },
+    { name: 'metalPackaging', pattern: /^\/metal-packaging\// },
     { name: 'group', pattern: '/' },
   ];
 
-  // return domains.find(d => slug.match(d.pattern)).name;
-  return "group";
+  return domains.find(d => slug.match(d.pattern)).name;
 }
 
 function getLayout(slug) {
