@@ -28,7 +28,7 @@ const categoriesStyles = (theme: Theme) => createStyles({
     padding: theme.spacing.unit * 3,
   },
   image: {
-    width: 150,
+    width: "100%",
     height: "auto",
   },
   label: {

@@ -30,8 +30,8 @@ export const CategoriesFragment = graphql`
             label
             image {
               childImageSharp {
-                fixed(width: 250) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 250) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
