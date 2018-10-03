@@ -63,7 +63,6 @@ type Props = WithStyles<typeof styles> & EScootePageProps;
 
 const EScooterPage: React.SFC<Props> = (({ data, classes }) => {
   const { intro1, intro2, bes, categoryList } = data.javascriptFrontmatter.frontmatter.sections;
-  console.log(data);
   return (
     <Layout domain="energy">
       <Intro
@@ -107,6 +106,7 @@ const EScooterPage: React.SFC<Props> = (({ data, classes }) => {
           </div>
         }
       />
+      <CategoryList categoryItems={categoryList.categoryItems}/>
     </Layout>
   );
 });
