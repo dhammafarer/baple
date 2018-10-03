@@ -8,12 +8,12 @@ import Button from "@material-ui/core/Button";
 
 const styles = (theme: Theme) => createStyles({
   section: {
-    height: "100%",
-    display: "flex",
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "center",
+    width: "100%",
     background: theme.palette.common.white,
+  },
+  pane: {
+    width: "100%",
+    height: "100%",
   },
   before: {
     width: "100%",
@@ -23,7 +23,7 @@ const styles = (theme: Theme) => createStyles({
     marginTop: "1em",
   },
   content: {
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing.unit * 6,
     height: "100%",
     width: "100%",
     display: "flex",
@@ -33,8 +33,12 @@ const styles = (theme: Theme) => createStyles({
     textAlign: "center",
   },
   text: {},
-  link: {},
-  heading: {},
+  link: {
+    marginTop: 24,
+  },
+  heading: {
+    marginBottom: "0.4em",
+  },
   subheading: {},
   paragraph: {},
   image: {
@@ -60,41 +64,49 @@ type Props = WithStyles<typeof styles> & SectionCenteredProps;
 const SectionCentered: React.SFC<Props> = ({
   classes, before, after, gradient, heading, link, subheading, body, image, reverse}) => (
   <section className={classes.section}>
-    <div className={classes.content}>
-      {before && <div className={classes.before}>{before}</div>}
-      { heading &&
-        <Typography variant="display1" className={classes.heading}>
-          {heading}
-        </Typography>
-      }
-      { subheading &&
-        <Typography variant="subheading" className={classes.subheading}>
-          {subheading}
-        </Typography>
-      }
-      { body &&
-        <div className={classes.text}>
-          {body.map((t, i) =>
-            <Typography key={i} variant="body2" className={classes.paragraph}>
-              {t}
-            </Typography>,
-          )}
+    <Grid container className={classes.pane} direction={reverse ? "column-reverse" : "column"}>
+      <Grid item xs={12}>
+        <div className={classes.content}>
+          {before && <div className={classes.before}>{before}</div>}
+          { heading &&
+            <Typography variant="display1" className={classes.heading}>
+              {heading}
+            </Typography>
+          }
+          { subheading &&
+            <Typography variant="subheading" className={classes.subheading}>
+              {subheading}
+            </Typography>
+          }
+          { body &&
+            <div className={classes.text}>
+              {body.map((t, i) =>
+                <Typography key={i} variant="body2" className={classes.paragraph}>
+                  {t}
+                </Typography>,
+              )}
+            </div>
+          }
+          { link &&
+          <div className={classes.link}>
+            <Link to={link.to}>
+              <Button variant="outlined">
+                {link.label}
+              </Button>
+            </Link>
+          </div>
+          }
+          {after && <div className={classes.after}>{after}</div>}
         </div>
+      </Grid>
+      { image &&
+        <Grid item xs={12} className={classes.pane}>
+          <div className={classes.image}>
+            <Img fluid={image.childImageSharp.fluid}/>
+          </div>
+        </Grid>
       }
-      { link &&
-      <div className={classes.link}>
-        <Link to={link.to}>
-          <Button variant="outlined">
-            {link.label}
-          </Button>
-        </Link>
-      </div>
-      }
-      {after && <div className={classes.after}>{after}</div>}
-    </div>
-    { image &&
-      <Img fluid={image.childImageSharp.fluid} className={classes.image}/>
-    }
+    </Grid>
   </section>
 );
 

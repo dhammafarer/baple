@@ -34,6 +34,7 @@ const PowerwallPage: React.SFC<PowerwallProps> = (({ data }) => {
   return (
     <Layout domain="energy">
       <SectionCentered
+        reverse
         image={intro1.image}
         heading={intro1.heading}
         body={intro1.body}
