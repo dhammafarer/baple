@@ -1,5 +1,4 @@
 export const frontmatter = {
-  layout: "category",
   sections: {
     intro1: {
       heading: "Da la bienvenida al futuro: transporte limpio y económico",
@@ -20,28 +19,6 @@ export const frontmatter = {
         "Cómo selccionamos nuestra medio de transporte manera eficiente y económica son cuestiones que demuestran nuestra evolución a una sociedad más avanzada y concienciada con el medio ambiente. Cada uno de nosotros se enfrenta cada vez más a la cuestión de cómo tener una excelente movilidad de manera ecológica y efectiva de una manera que también permita ahorrar dinero.",
         "Los modelos B1 y B5 son un concepto que responde a varias de estas preguntas. Puede imaginar los modelos B1 y B5 como motocicletas que incorporan varías baterías (y otros componentes como el cargador, etc.), y que sólo necesitan ser conectadas a un enchufe doméstico para ser recargadas.",
       ],
-    },
-    bes: {
-      heading: "Concepto BES",
-      image: "../img/energy/bes-concept.jpg",
-      besItems: [
-        {
-          heading: "Brillante",
-          subheading: "Una genial solución para crear su independencia de movilidad.",
-        },
-        {
-          heading: "Economizador",
-          subheading: "Permite reducir la factura de transporte.Permite reducir la factura de transporte.",
-        },
-        {
-          heading: "Sostebilidad",
-          subheading: "Medio de transporte libre de CO2",
-        },
-      ],
-      link: {
-        to: "/energy/contact",
-        label: "Contáctanos!",
-      },
     },
     categoryList: {
       categoryItems: [

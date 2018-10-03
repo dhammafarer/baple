@@ -98,7 +98,7 @@ const BES: React.SFC<Props> = ({ reverse, classes }) => (
 export default withStyles(styles)(BES);
 
 export const query = graphql`
-  fragment BESQuery on bes_4 {
+  fragment BESQuery on bes_2 {
     heading
     besItems {
       heading

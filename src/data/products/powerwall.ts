@@ -5,109 +5,36 @@ export const frontmatter = {
       heading: "Da la bienvenida al futuro: transporte limpio y económico",
       image: "../img/energy/Bable Energy_Wallpaper_0823.jpg",
       body: [
-        "Lo que anteriormente fue un sueño, ahora es una realidad. Cada persona debe tener la libertad de decidir sobre un aspecto de su vida tan importante como poder decidir que tipo de medio de transporte desea, independientemente de las influencias externas.",
-        "Es por eso que tenemos la misión de ofrecer nuestra soluciones para esas personas que se preocupan por el medio ambiente y las emisiones generadas por las motocicletas de gasolina. Para ello Baple presenta un producto funcional y con la última tecnología.",
-        "Los modelos B1/B5 se convertirá en una parte esencial en su vida y le proporcionará una total independencia de movilidad.",
+        "Lo que anteriormente fue un sueño, ahora es una realidad. Cada hogar debe tener la libertad de decidir sobre un aspecto de su vida tan importante como poder decidir exactamente cuánta energía consumirá y cómo suministrará de energía su casa, independientemente de las influencias externas.",
+        "Es por eso que tenemos la misión de ofrecer nuestra soluciones para hogar, un producto funcional y con la última tecnología.",
+        "La solución BES1 se convertirá en una parte esencial en su vida y le proporcionará una total independencia. BES1 es un sistema para de acumulación de energía eléctrica en su hogar..",
       ],
     },
-    intro2: {
-      heading: "¿Cómo me permiten ahorrar y cuidar el medioambiente?",
-      image: "../img/energy/Triptic3.jpg",
+    bes1: {
+      heading: "BES1 Series - ¿Cómo funciona?",
+      image: "../img/energy/Powerwall_Infographic-01.jpg",
       body: [
-        "¿Alguna vez se imaginó no tener que volver a pasar por una gasolinera? ¿Alguna vez se imaginó poder \"reponer combustible\" en casa? ¿Alguna vez se imaginó disponer de un medio de transporte que le permitiera ahorrar y cuidar el medio ambiente a la vez?",
-        "Nuestros modelos tienen la solución.",
-        "Los modelos B1/B5 se convertirá en una parte esencial en su vida y le proporcionará una total independencia de movilidad.",
-        "Cómo selccionamos nuestra medio de transporte manera eficiente y económica son cuestiones que demuestran nuestra evolución a una sociedad más avanzada y concienciada con el medio ambiente. Cada uno de nosotros se enfrenta cada vez más a la cuestión de cómo tener una excelente movilidad de manera ecológica y efectiva de una manera que también permita ahorrar dinero.",
-        "Los modelos B1 y B5 son un concepto que responde a varias de estas preguntas. Puede imaginar los modelos B1 y B5 como motocicletas que incorporan varías baterías (y otros componentes como el cargador, etc.), y que sólo necesitan ser conectadas a un enchufe doméstico para ser recargadas.",
-      ],
-    },
-    bes: {
-      heading: "Concepto BES",
-      image: "../img/energy/bes-concept.jpg",
-      besItems: [
-        {
-          heading: "Brillante",
-          subheading: "Una genial solución para crear su independencia de movilidad.",
-        },
-        {
-          heading: "Economizador",
-          subheading: "Permite reducir la factura de transporte.Permite reducir la factura de transporte.",
-        },
-        {
-          heading: "Sostebilidad",
-          subheading: "Medio de transporte libre de CO2",
-        },
+        "Los dispositivos BES1 están diseñados para el almacenamiento de energía eléctrica (EES). Cuya función principal es almacenar energía proveniente de paneles fotovoltaicos, turbinas eólicas o de agua, un generador o la red eléctrica. O cualquier combinación de estos.",
+        "Cuando los dispositivos BES1 tienen carga, se pueden usar para alimentar los electrodomésticos de la misma forma que si fuesen alimentados directamentente desde la red eléctrica externa.",
+        "Los dispositivos BES1 están disponibles con capacidad desde 5 kWh, y fabricados con baterías con tecnología LiFePO4 de última generación, ofreciendo muchas ventajas económicas a medio plazo a diferencia de las baterías clásicas de Pb.",
       ],
       link: {
-        to: "/energy/contact",
         label: "Contáctanos!",
+        to: "/energy/contact",
       },
     },
-    categoryList: {
-      categoryItems: [
-        {
-          heading: "B1 E-Scooter",
-          image: "../img/energy/Welcome.jpg",
-          body: [
-            "El modelo B1 es un modelo básico pero sorprendente. Pues está diseñado para ser una gran opción como medio de transporte urbano de uso diario. ",
-            "El modelo B1 tiene un diseño moderno, y cool. Pero no sólo eso, además tiene unas excelentes características para aquellos usuarios interesados en disponer de una opción libre de CO2 y económica de transporte.",
-          ],
-          spec: [
-            {
-              heading: "Especificaciones Generales",
-              params: [
-                {
-                  key: "Velocidad",
-                  value: "55 Km/h",
-                },
-                {
-                  key: "Autonomía",
-                  value: "65-80 Kilómetros",
-                },
-                {
-                  key: "Carga",
-                  value: "6-9 horas",
-                },
-              ],
-            },
-          ],
-          link: {
-            to: "/plastics/contact",
-            label: "Contacta con nosotros!",
-          },
-        },
-        {
-          heading: "B5 E-Scooter",
-          image: "../img/energy/Triptic1.jpg",
-          body: [
-            "El modelo B5 es un modelo futurista que te hará sentir estar en una pelicula de ciencia ficción. Está diseñado para ser una de las mejores opciones de transporte urbano actualmente disponibles.",
-            "El modelo B5 tiene un diseño de lineas simples y futuristas. Pero no sólo eso, además tiene unas excelentes características para aquellos usuarios interesados en disponer de una de las mejores opciones de transporte: libre de CO2 y económica.",
-          ],
-          spec: [
-            {
-              heading: "Especificaciones Generales",
-              params: [
-                {
-                  key: "Velocidad",
-                  value: "55 Km/h",
-                },
-                {
-                  key: "Autonomía",
-                  value: "80-100 Kilómetros",
-                },
-                {
-                  key: "Carga",
-                  value: "4-6 horas",
-                },
-              ],
-            },
-          ],
-          link: {
-            to: "/plastics/contact",
-            label: "Contacta con nosotros!",
-          },
-        },
+    bes2: {
+      heading: "BES1 Series - ¿Cómo me permiten ahorrar en la factura?",
+      image: "../img/energy/Powerwall_Infographic-02.jpg",
+      body: [
+        "Cómo consumir, almacenar y suministrar electricidad de manera eficiente y económica son cuestiones que demuestran nuestra evolución a una sociedad más avanzada y concienciada con el medio ambiente. Cada uno de nosotros se enfrenta cada vez más a la cuestión de cómo consumir energía de manera ecológica y efectiva de una manera que también permita ahorrar dinero.",
+        "Los dispositivos BES1 es un concepto que responde a varias de estas preguntas. Es una solución para quienes desean abordar el consumo de electricidad de manera responsable e inteligente.",
+        "Puede imaginar los dispositivos BES1 como dispositivos compuestos de muchas baterías (y otros componentes como el cargador, etc.) que cumplen la función de un sistema híbrido. Gracias al uso de baterías de LiFePo4 y una durabilidad estimada de 5.000 ciclos, permitiría una vida útil superior a 10 años si contamos un ciclo de carga por día.",
       ],
+      link: {
+        label: "Contáctanos!",
+        to: "/energy/contact",
+      },
     },
   },
 };

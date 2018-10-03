@@ -3,6 +3,8 @@ import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/s
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Img from "gatsby-image";
+import { Link } from "gatsby";
+import Button from "@material-ui/core/Button";
 
 const styles = (theme: Theme) => createStyles({
   section: {
@@ -31,6 +33,7 @@ const styles = (theme: Theme) => createStyles({
     textAlign: "center",
   },
   text: {},
+  link: {},
   heading: {},
   subheading: {},
   paragraph: {},
@@ -45,8 +48,9 @@ export interface SectionCenteredProps {
   image?: any;
   gradient?: string;
   heading?: string;
+  link?: {label: string, to: string};
   subheading?: string;
-  text?: string[];
+  body?: string[];
   before?: any;
   after?: any;
 }
@@ -54,7 +58,7 @@ export interface SectionCenteredProps {
 type Props = WithStyles<typeof styles> & SectionCenteredProps;
 
 const SectionCentered: React.SFC<Props> = ({
-  classes, before, after, gradient, heading, subheading, text, image, reverse}) => (
+  classes, before, after, gradient, heading, link, subheading, body, image, reverse}) => (
   <section className={classes.section}>
     <div className={classes.content}>
       {before && <div className={classes.before}>{before}</div>}
@@ -68,14 +72,23 @@ const SectionCentered: React.SFC<Props> = ({
           {subheading}
         </Typography>
       }
-      { text &&
+      { body &&
         <div className={classes.text}>
-          {text.map((t, i) =>
+          {body.map((t, i) =>
             <Typography key={i} variant="body2" className={classes.paragraph}>
               {t}
             </Typography>,
           )}
         </div>
+      }
+      { link &&
+      <div className={classes.link}>
+        <Link to={link.to}>
+          <Button variant="outlined">
+            {link.label}
+          </Button>
+        </Link>
+      </div>
       }
       {after && <div className={classes.after}>{after}</div>}
     </div>
