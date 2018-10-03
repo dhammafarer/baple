@@ -12,7 +12,6 @@ interface EScootePageProps {
         sections: {
           intro1: IntroProps,
           intro2: IntroProps,
-          bes: BESProps,
           categoryList: CategoryListProps,
         },
       },
@@ -21,7 +20,7 @@ interface EScootePageProps {
 }
 
 const EScooterPage: React.SFC<EScootePageProps> = (({ data }) => {
-  const { intro1, intro2, bes, categoryList } = data.javascriptFrontmatter.frontmatter.sections;
+  const { intro1, intro2, categoryList } = data.javascriptFrontmatter.frontmatter.sections;
   return (
     <Layout domain="energy">
       <Intro
@@ -35,7 +34,7 @@ const EScooterPage: React.SFC<EScootePageProps> = (({ data }) => {
         heading={intro2.heading}
         body={intro2.body}
       />
-      <BES {...bes}/>
+      <BES/>
       <CategoryList categoryItems={categoryList.categoryItems}/>
     </Layout>
   );
@@ -70,7 +69,6 @@ export const query = graphql`
               }
             }
           }
-          bes { ...BESQuery }
           categoryList { categoryItems { ...ItemSpec } }
         }
       }
