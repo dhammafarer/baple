@@ -24,26 +24,7 @@ export const CategoryFragment = graphql`
         }
         categoryList {
           categoryItems {
-            heading
-            body
-            image {
-              childImageSharp {
-                fluid(maxWidth: 960) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            link {
-              to
-              label
-            }
-            spec {
-              heading
-              params {
-                key
-                value
-              }
-            }
+            ...ItemSpec
           }
         }
       }

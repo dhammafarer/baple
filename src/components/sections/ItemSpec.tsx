@@ -79,12 +79,12 @@ const ItemSpec: React.SFC<Props> = ({ heading, body, image, spec, link, classes 
                       <TableCell>
                         {c.value}
                       </TableCell>
-                    </TableRow>
+                    </TableRow>,
                   )
                 }
               </TableBody>
             </Table>
-          </div>
+          </div>,
         )
       }
     </CardContent>

@@ -5,10 +5,11 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import ItemSpec, { ItemSpecProps } from "./ItemSpec";
 
-type Props = WithStyles<typeof styles> & {
-  heading: string;
+export interface CategoryListProps {
   categoryItems: ItemSpecProps[];
-};
+}
+
+type Props = WithStyles<typeof styles> & CategoryListProps;
 
 const CategoryList: React.SFC<Props> = ({ categoryItems, classes }) => (
   <section className={classes.section}>
