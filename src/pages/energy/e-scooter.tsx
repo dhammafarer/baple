@@ -63,6 +63,7 @@ type Props = WithStyles<typeof styles> & EScootePageProps;
 
 const EScooterPage: React.SFC<Props> = (({ data, classes }) => {
   const { intro1, intro2, bes, categoryList } = data.javascriptFrontmatter.frontmatter.sections;
+  console.log(data);
   return (
     <Layout domain="energy">
       <Intro
@@ -91,7 +92,7 @@ const EScooterPage: React.SFC<Props> = (({ data, classes }) => {
                     {x.subheading}
                   </Typography>
                   {i !== (bes.besItems.length - 1) && <Divider className={classes.divider}/>}
-                </div>
+                </div>,
               )}
             </div>
 
@@ -114,10 +115,10 @@ export default withStyles(styles)(EScooterPage);
 
 export const query = graphql`
   query EScooterPageQuery {
-    javascriptFrontmatter {
+    javascriptFrontmatter(fileAbsolutePath: {regex: "/products/e-scooter.ts/"}) {
       frontmatter {
         sections {
-          intro {
+          intro1 {
             heading
             body
             image {
@@ -137,6 +138,29 @@ export const query = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+            }
+          }
+          bes {
+            heading
+            image {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            besItems {
+              heading
+              subheading
+            }
+            link {
+              to
+              label
+            }
+          }
+          categoryList {
+            categoryItems {
+              ...ItemSpec
             }
           }
         }
