@@ -209,7 +209,7 @@ export interface ContactPage extends Page {
   layout: "contact";
   sections: {
     contactUs: ContactUs;
-    contactDetails: ContactDetails;
+    contactDetails?: ContactDetails;
   };
 }
 

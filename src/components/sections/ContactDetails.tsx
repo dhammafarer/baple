@@ -56,7 +56,7 @@ const ContactDetails: React.SFC<Props> = ({ contact, classes }) => (
             <div className={classes.textContent}>
               <div className={classes.address}>
                 {contact.address.map((y, i) =>
-                  <Typography className={classes.detailText} variant="title">
+                  <Typography key={i} className={classes.detailText} variant="title">
                     {y}
                   </Typography>,
                 )}

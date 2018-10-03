@@ -12,10 +12,5 @@ module.exports = {
       to: "/contact",
       links: [],
     },
-    {
-      label: "About",
-      to: "/about",
-      links: [],
-    },
   ],
 };
