@@ -16,7 +16,7 @@ const CategoryList: React.SFC<Props> = ({ categoryItems, classes }) => (
     <Grid container spacing={32}>
       {
         categoryItems.map((x) =>
-        <Grid key={x.heading} item xs={12} md={6}>
+        <Grid key={x.heading} item xs={12} xl={6}>
           <ItemSpec {...x}/>
         </Grid>,
         )

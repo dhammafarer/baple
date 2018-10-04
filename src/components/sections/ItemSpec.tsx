@@ -2,6 +2,7 @@ import * as React from "react";
 import { WithStyles, withStyles } from "@material-ui/core/styles";
 import styles from "../../styles/components/item-spec-styles";
 import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -41,52 +42,62 @@ type Props = WithStyles<typeof styles> & ItemSpecProps;
 const ItemSpec: React.SFC<Props> = ({ heading, body, image, spec, link, classes }) => (
   <Card key={heading} className={classes.card}>
     <CardContent className={classes.cardContent}>
-      <Img className={classes.media} fluid={image.childImageSharp.fluid}/>
+      <Grid container spacing={32}>
+        <Grid item xs={12} md={4}>
+          <Img className={classes.media} fluid={image.childImageSharp.fluid}/>
+        </Grid>
+        <Grid item xs={12} md={8} justify="center">
+          <div className={classes.cardText}>
+            <div className={classes.header}>
+              <Typography variant="title" className={classes.heading}>
+                {heading}
+              </Typography>
 
-      <div className={classes.header}>
-        <Typography variant="title" className={classes.heading}>
-          {heading}
-        </Typography>
+              <div className={classes.text}>
+                {body.map((t, n) =>
+                  <Typography key={n} variant="body2" className={classes.paragraph}>
+                    {t}
+                  </Typography>,
+                )}
+              </div>
+              <Link to={link.to}>
+                <Button color="primary" variant="outlined">
+                  {link.label}
+                </Button>
+              </Link>
+            </div>
 
-        <div className={classes.text}>
-          {body.map((t, n) =>
-            <Typography key={n} variant="body2" className={classes.paragraph}>
-              {t}
-            </Typography>,
-          )}
-        </div>
-        <Link to={link.to}>
-          <Button color="primary" variant="outlined">
-            {link.label}
-          </Button>
-        </Link>
-      </div>
+            {
+              spec.map((s, j) =>
+                <div key={j} className={classes.spec}>
+                  <Typography variant="subheading">
+                    {s.heading}
+                  </Typography>
+                  <Table className={classes.table}>
+                    <TableBody>
+                      {
+                        s.params.map((c, k) =>
+                          <TableRow key={k}>
+                            <TableCell className={classes.key}>
+                              {c.key}
+                            </TableCell>
+                            <TableCell>
+                              {c.value}
+                            </TableCell>
+                          </TableRow>,
+                        )
+                      }
+                    </TableBody>
+                  </Table>
+                </div>,
+              )
+            }
+            
+          </div>
+        </Grid>
 
-      {
-        spec.map((s, j) =>
-          <div key={j} className={classes.spec}>
-            <Typography variant="subheading">
-              {s.heading}
-            </Typography>
-            <Table className={classes.table}>
-              <TableBody>
-                {
-                  s.params.map((c, k) =>
-                    <TableRow key={k}>
-                      <TableCell className={classes.key}>
-                        {c.key}
-                      </TableCell>
-                      <TableCell>
-                        {c.value}
-                      </TableCell>
-                    </TableRow>,
-                  )
-                }
-              </TableBody>
-            </Table>
-          </div>,
-        )
-      }
+      </Grid>
+
     </CardContent>
   </Card>
 );

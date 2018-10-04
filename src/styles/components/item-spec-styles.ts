@@ -27,6 +27,10 @@ const ItemSpecStyles = (theme: Theme) => createStyles({
   cardContent: {
     padding: theme.spacing.unit * 3,
   },
+  cardText: {
+    maxWidth: 800,
+    margin: "0 auto",
+  },
   spec: {
     marginTop: "2em",
   },
