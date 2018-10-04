@@ -17,7 +17,7 @@ export const IndexFragment = graphql`
             }
             image {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(quality: 100, maxWidth: 800) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -28,7 +28,7 @@ export const IndexFragment = graphql`
           heading
           image {
             childImageSharp {
-              fluid(maxWidth: 1200) {
+              fluid(quality: 100, maxWidth: 1200) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -37,7 +37,7 @@ export const IndexFragment = graphql`
             label
             image {
               childImageSharp {
-                fluid(maxWidth: 250) {
+                fluid(quality: 100, maxWidth: 250) {
                   ...GatsbyImageSharpFluid
                 }
               }

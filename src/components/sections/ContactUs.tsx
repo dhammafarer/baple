@@ -12,6 +12,7 @@ type Props = WithStyles<typeof styles> & {
 
 const ContactUs: React.SFC<Props> = ({ heading, logo, image, classes }) => (
   <SectionFeatured
+    gradient={"linear-gradient(60deg, #ded, #eee)"}
     image={image}
     heading={heading}
     before={<Img fluid={logo.childImageSharp.fixed} className={classes.logo}/>}

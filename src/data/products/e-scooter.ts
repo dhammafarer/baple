@@ -11,7 +11,7 @@ export const frontmatter = {
     },
     intro2: {
       heading: "¿Cómo me permiten ahorrar y cuidar el medioambiente?",
-      image: "../img/energy/Triptic3.jpg",
+      image: "../img/background/Scooter_half.jpg",
       body: [
         "¿Alguna vez se imaginó no tener que volver a pasar por una gasolinera? ¿Alguna vez se imaginó poder \"reponer combustible\" en casa? ¿Alguna vez se imaginó disponer de un medio de transporte que le permitiera ahorrar y cuidar el medio ambiente a la vez?",
         "Nuestros modelos tienen la solución.",
@@ -24,7 +24,7 @@ export const frontmatter = {
       categoryItems: [
         {
           heading: "B1 E-Scooter",
-          image: "../img/energy/Welcome.jpg",
+          image: "../img/energy/Triptic1.jpg",
           body: [
             "El modelo B1 es un modelo básico pero sorprendente. Pues está diseñado para ser una gran opción como medio de transporte urbano de uso diario. ",
             "El modelo B1 tiene un diseño moderno, y cool. Pero no sólo eso, además tiene unas excelentes características para aquellos usuarios interesados en disponer de una opción libre de CO2 y económica de transporte.",
@@ -55,7 +55,7 @@ export const frontmatter = {
         },
         {
           heading: "B5 E-Scooter",
-          image: "../img/energy/Triptic1.jpg",
+          image: "../img/energy/Welcome.jpg",
           body: [
             "El modelo B5 es un modelo futurista que te hará sentir estar en una pelicula de ciencia ficción. Está diseñado para ser una de las mejores opciones de transporte urbano actualmente disponibles.",
             "El modelo B5 tiene un diseño de lineas simples y futuristas. Pero no sólo eso, además tiene unas excelentes características para aquellos usuarios interesados en disponer de una de las mejores opciones de transporte: libre de CO2 y económica.",

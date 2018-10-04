@@ -1,7 +1,7 @@
 export const frontmatter = {
   bes: {
     heading: "Concepto BES",
-    image: "./img/energy/bes-concept.jpg",
+    image: "./img/logos/BES-Concept-Black.png",
     besItems: [
       {
         heading: "Brillante",
@@ -9,7 +9,7 @@ export const frontmatter = {
       },
       {
         heading: "Economizador",
-        subheading: "Permite reducir la factura de transporte.Permite reducir la factura de transporte.",
+        subheading: "Permite reducir la factura de transporte.",
       },
       {
         heading: "Sostebilidad",

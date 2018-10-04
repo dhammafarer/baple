@@ -65,6 +65,16 @@ const Footer: React.SFC<Props> = ({ classes, contact, title, logo }) => (
           <IconButton><FacebookIcon/></IconButton>
         </a>
       }
+      {contact.socialMedia.facebook &&
+        <a href={contact.socialMedia.instagram}>
+          <IconButton><InstagramIcon/></IconButton>
+        </a>
+      }
+      {contact.socialMedia.facebook &&
+        <a href={contact.socialMedia.twitter}>
+          <IconButton><TwitterIcon/></IconButton>
+        </a>
+      }
     </div>
     <div className={classNames(classes.footerCopy, classes.layout)}>
       <Typography variant="caption" color="secondary">

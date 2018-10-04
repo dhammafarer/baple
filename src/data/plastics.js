@@ -3,6 +3,10 @@ module.exports = {
   title: "Baple Plastics",
   navLinks: [
     {
+      label: "Home",
+      to: "/plastics/",
+    },
+    {
       label: "Soluciones",
       to: "/plastics/products",
       links: [

@@ -15,6 +15,7 @@ export const frontmatter: IndexPage = {
         },
       ],
       logo: "../../img/logos/baple-energy-logo.png",
+      image: "../../img/background/Powerwall.jpg"
     },
     products: {
       productList: [
@@ -27,29 +28,29 @@ export const frontmatter: IndexPage = {
           ],
           link: {
             to: "/energy/e-scooter",
-            label: "Learn More",
+            label: "Más",
           },
         },
         {
           heading: "Baple Powerwalls",
-          image: "../../img/energy/Bable Energy_Wallpaper_0823.jpg",
+          image: "../../img/background/Powerwall_Half.jpg",
           body: [
             "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
           ],
           link: {
             to: "/energy/powerwall",
-            label: "Learn More",
+            label: "Más",
           },
         },
         {
           heading: "Baple Energy Storage",
-          image: "../../img/energy/Solar panel_Cube2.jpg",
+          image: "../../img/background/Storage_Half.jpg",
           body: [
             "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
           ],
           link: {
             to: "/energy/energy-storage",
-            label: "Learn More",
+            label: "Más",
           },
         },
       ],

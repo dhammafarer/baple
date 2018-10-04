@@ -4,7 +4,7 @@ export const frontmatter: IndexPage = {
   layout: "index",
   sections: {
     welcome: {
-      logo: "../../img/logos/baple-group-logo-no-text.png",
+      logo: "../../img/logos/baple-engineering-logo.png",
       image: "../../img/engineering/diego-ph-249471-unsplash.jpg",
       quotes: [
         {
@@ -56,7 +56,7 @@ export const frontmatter: IndexPage = {
       ],
     },
     more: {
-      logo: "../../img/logos/baple-group-logo-no-text.png",
+      logo: "../../img/logos/baple-engineering-logo.png",
       heading: "Quieres saber más de nosotros?",
       image: "../../img/engineering/rawpixel-659474-unsplash.jpg",
       link: {

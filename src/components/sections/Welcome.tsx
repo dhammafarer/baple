@@ -23,7 +23,7 @@ const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes, 
     image={image && image}
     before={
       <div className={classes.section}>
-        {logo && <Img fixed={logo.childImageSharp.fixed}/>}
+        {logo && <img src={logo.childImageSharp.fixed.src}/>}
         <div className={classes.text}>
           { heading &&
             <Typography

@@ -5,7 +5,7 @@ export const frontmatter: AboutPage = {
   sections: {
     about1: {
       logo: "../../img/logos/baple-energy-logo.png",
-      image: "../../img/energy/Solar panel_Cube2.jpg",
+      image: "../../img/background/Powerwall.jpg",
       heading: "Baple Energy",
       body: [
         "Baple fue fundada en 2013 con una clara visión y misión.",

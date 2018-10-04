@@ -6,7 +6,7 @@ export const frontmatter: IndexPage = {
     welcome: {
       heading: "Because innovation sells packaging and packaging sells products",
       subheading: "Porque innovación vende packaging y el packaging vende productos",
-      logo: "../../img/logos/baple-group-logo-no-text.png",
+      logo: "../../img/logos/baple-plastics-logo.png",
       image: "../../img/plastics/Products_Welcome.jpg",
     },
     categories: {
@@ -40,7 +40,7 @@ export const frontmatter: IndexPage = {
       ],
     },
     more: {
-      logo: "../../img/logos/baple-group-logo-no-text.png",
+      logo: "../../img/logos/baple-plastics-logo.png",
       heading: "Quieres saber más de nosotros?",
       image: "../../img/contact-us-1.jpg",
       link: {
