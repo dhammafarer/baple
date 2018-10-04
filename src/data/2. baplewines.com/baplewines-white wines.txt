@@ -1,0 +1,42 @@
+﻿COMMENTARIES
+
+
+intro:
+  heading: Azua Verdejo
+  subheading: Los blancos
+  image: './White wine verdejo.jpg'
+  text:
+    - "Nice pale yellow colour with green tones In the nose it is rich and complex, with aromas of fresh herbs Pleasantly fruity with a clean finish"
+link:
+    label: Data Sheet
+    to: /baplewines/download Azua Verdejo-datasheet
+
+
+intro:
+  heading: Azua Macabeo
+  subheading: Los blancos
+  image: './White wine macabeo.jpg'
+  text:
+    - "Nice pale yellow colour with green tones It displays fresh and fruity aromas Equilibrate wine with long aftertaste and lively smooth finish"
+link:
+    label: Data Sheet
+    to: /baplewines/download Azua-macabeo-datasheet
+
+intro:
+  heading: Azua Macabeo Medium Sweet
+  subheading: Los blancos
+  image: './White wine semi sweet.jpg'
+  text:
+    - "Its colour is a clean bright golden yellow This beautifully perfumed wine presents primary aromas, with a floral touch and offers outstanding notes of ripe fruit It gives a tasty, silk bodied sweetness to the palate"
+link:
+    label: Data Sheet
+    to: /baplewines/download Azua-macabeo-medium-sweet-datasheet
+
+more:
+  heading: Do you want something more?
+  image: './img/learn-more-2.jpg'
+  logo: './img/logos/baplewines-logo.png'
+  link:
+    label: Contact us!
+    to: /baplewines/contact
+

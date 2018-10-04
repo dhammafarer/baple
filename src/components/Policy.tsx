@@ -50,7 +50,7 @@ class Policy extends React.Component<Props, State> {
           className={classes.snackbar}
           anchorOrigin={{
             vertical: "bottom",
-            horizontal: "center",
+            horizontal: "right",
           }}
           open={this.state.open}
           onClose={this.handleClose}

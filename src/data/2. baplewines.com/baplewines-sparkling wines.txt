@@ -1,0 +1,42 @@
+﻿COMMENTARIES
+
+
+intro:
+  heading: Dulzón Blanco
+  subheading: The elegancy of the Spanish bubbles
+  image: './Sparkling wine yellow.jpg'
+  text:
+    - "Yellow color with greenish tones. Very fine and abundant bubbles forming a Crown on top. Intense, elegant and refined aroma, emerging tropical fruit flavours with citric touch. Very good entry , tasty, elegant with a touch of sweetness. Well balanced and Harmonic. The aftertaste is long and very pleasant remenbering the Sweetness of Spain!"
+link:
+    label: Data Sheet
+    to: /baplewines/download dulzon-blanco-datasheet
+
+
+intro:
+  heading: Dulzón Azul
+  subheading: The elegancy of the Spanish bubbles
+  image: './Sparkling wine blue.jpg'
+  text:
+    - "Blue color with greenish tones. Very fine and abundant bubbles forming a Crown on top. Intense, elegant and refined aroma, emerging tropical fruit flavours with citric touch. Very good entry , tasty, elegant with a touch of sweetness. Well balanced and Harmonic. The aftertaste is long and very pleasant remenbering the elegance and Sweetness of Spain!"
+link:
+    label: Data Sheet
+    to: /baplewines/download dulzon-azul-datasheet
+
+intro:
+  heading: Dulzón Rosado
+  subheading: The elegancy of the Spanish bubbles
+  image: './Sparkling wine pink.jpg'
+  text:
+    - "Strawberry pink with violet tones. Yellow color with greenish tones. Very fine and abundant bubbles forming a Crown on top. Intense fruity and pleasant aromas. The palate is very soft, next o carbón make it cheerful, elegant and fresh wine that remenber the Sweetness  and elegance of Spain!"
+link:
+    label: Data Sheet
+    to: /baplewines/download dulzon-rosado-datasheet
+
+more:
+  heading: Do you want something more?
+  image: './img/learn-more-2.jpg'
+  logo: './img/logos/baplewines-logo.png'
+  link:
+    label: Contact us!
+    to: /baplewines/contact
+

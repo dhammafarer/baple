@@ -1,0 +1,67 @@
+﻿COMMENTARIES
+CONCEPT BES. Could you get it from the triptic pics?
+LINK: We would like to created a link to download the data sheet of each wine. Can we? They are not ready but you can add the link with link for now.
+
+
+intro:
+  heading: Azua Colección Bobal
+  subheading: La Barrica de Vitivinos
+  image: './reserva.jpg'
+  text:
+    - "Its appearance is clean and vibrant, with an intense red colour. Presents mineral and balsamic aromas.It is full bodied and well structured, shows a black mature fruit flavour with a hint of spice."
+link:
+    label: Data Sheet
+    to: /baplewines/download Azua-coleccion-bobal-datasheet
+
+
+intro:
+  heading: Azua Crianza
+  subheading: La Barrica de Vitivinos
+  image: './crianza.jpg'
+  text:
+    - "Intense cherry red colour . The nose presents a complex bouquet of smoked and dark roasted aromas. Full bodied, well structured wine, with taste of black matures fruits and spice tones."
+link:
+    label: Data Sheet
+    to: /baplewines/download Azua-Crianza-datasheet
+
+intro:
+  heading: Azua Roble
+  subheading: La Barrica de Vitivinos
+  image: './roble.jpg'
+  text:
+    - "This red wine has a cherry red colour with a violet   border. With aromas of cocoa, mature black fruits, vanilla and white pepper Full-bodied, tasty and polished tannins; its palate is pleasant, medium-long final elegant with a liveliness that    invites you to drink."
+link:
+    label: Data Sheet
+    to: /baplewines/download Azua-Roble-datasheet
+
+intro:
+  heading: Llanos del Marqués
+  subheading: La juventud de Vitivinos
+  image: './Joven.jpg'
+  text:
+    - "This red wine present a gorgeous deep cherry colour clean, bright and intense. Rich and fragrant with aromas reminiscent of fresh grapes, particularly ripe and healthy, together with attractive floral hints. Well-balanced, powerful and tasty with excellent tannins. Lively and fresh with a surprisingly generous ripe fruit intensity. "
+link:
+    label: Data Sheet
+    to: /baplewines/download Llanos-del-Marques-datasheet
+
+intro:
+  heading: Azua Rosado
+  subheading: La juventud de Vitivinos
+  image: './Rosado.jpg'
+  text:
+    - "Nice strawberry red colour.In nose shows aromas of flowers like roses and fruits jam (strawberries, peach and lemon) . Its palate is fruity, fresh and well-balanced, typical of the variety Bobal "
+link:
+    label: Data Sheet
+    to: /baplewines/download Azua-rosado-datasheet
+
+more:
+  heading: Do you want something more?
+  image: './img/learn-more-2.jpg'
+  logo: './img/logos/baplewines-logo.png'
+  link:
+    label: Contact us!
+    to: /baplewines/contact
+
+
+
+
