@@ -33,7 +33,6 @@ const EnergyStoragePage: React.SFC<EnergyStorageProps> = (({ data }) => {
         body={intro1.body}
       />
       <SectionCentered
-        heading={infographic.heading}
         image={infographic.image}
       />
     </Layout>

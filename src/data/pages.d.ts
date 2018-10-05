@@ -62,6 +62,7 @@ interface CategoryItem {
 
 interface ProductListItem {
   heading: Heading;
+  subheading: Subheading;
   image: Image;
   body: Body;
   link: Link;

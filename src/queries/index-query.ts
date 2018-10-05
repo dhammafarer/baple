@@ -10,6 +10,7 @@ export const IndexFragment = graphql`
         products {
           productList {
             heading
+            subheading
             body
             link {
               to

@@ -27,7 +27,7 @@ const styles = (theme: Theme) => createStyles({
     position: "absolute",
     width: "100%",
     height: "100%",
-    opacity: 0.8,
+    opacity: 0.6,
   },
   fullHeight: {
     minHeight: "calc(100vh - 64px)",

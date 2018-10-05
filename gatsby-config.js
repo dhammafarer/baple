@@ -16,7 +16,7 @@ module.exports = {
         name: 'baple-group',
         short_name: 'baple',
         start_url: '/',
-        background_color: '#663399',
+        background_color: '#336699',
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: './src/images/logos/baple-group-logo.png', // This path is relative to the root of the site.

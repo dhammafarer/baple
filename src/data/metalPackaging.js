@@ -3,8 +3,12 @@ module.exports = {
   title: "Baple Metal Packaging",
   navLinks: [
     {
+      label: "Home",
+      to: "/metal-packaging",
+    },
+    {
       label: "Soluciones",
-      to: "/metal-packaging/products",
+      to: "/metal-packaging/solutions",
       links: [
         {
           label: "Botes de Aerosol",

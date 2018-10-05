@@ -10,6 +10,7 @@ export const CategoriesFragment = graphql`
         products {
           productList {
             heading
+            subheading
             body
             link {
               to

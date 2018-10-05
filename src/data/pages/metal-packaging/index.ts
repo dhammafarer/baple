@@ -7,7 +7,7 @@ export const frontmatter: IndexPage = {
       heading: "Because innovation sells packaging and packaging sells products",
       subheading: "Porque innovación vende packaging y el packaging vende productos",
       logo: "../../img/logos/baple-metal-packaging-logo.png",
-      image: "../../img/metal-packaging/Metal Packaging_Actuadores.jpg",
+      image: "../../img/background/MetalPackaging.jpg",
     },
     categories: {
       heading: "Soluciones de Aerosol",

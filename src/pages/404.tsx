@@ -7,8 +7,8 @@ const NotFound: React.SFC<{}> = (() => {
   return (
     <Layout domain="group">
       <SectionCentered
-        heading={"Under Construction"}
-        subheading={"This page will be available soon."}
+        heading={"404"}
+        subheading={"This page is not available."}
       />
     </Layout>
   );

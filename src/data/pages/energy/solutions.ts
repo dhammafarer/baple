@@ -6,10 +6,10 @@ export const frontmatter: CategoriesPage = {
   products: {
       productList: [
         {
-          heading: "Baple E-Scooters",
           image: "../../img/energy/Scooter_FutureAwaken_0827.jpg",
+          heading: "Baple E-Scooters",
+          subheading: "The future awakens, let's get it on!",
           body: [
-            "The future awakens, let´s get it on!",
             "El despertar del futuro, vamos a por él!",
           ],
           link: {
@@ -18,11 +18,9 @@ export const frontmatter: CategoriesPage = {
           },
         },
         {
-          heading: "Baple Powerwalls",
           image: "../../img/background/Powerwall_Half.jpg",
-          body: [
-            "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
-          ],
+          heading: "Baple Powerwalls",
+          subheading: "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
           link: {
             to: "/energy/powerwall",
             label: "Más",
@@ -31,9 +29,7 @@ export const frontmatter: CategoriesPage = {
         {
           heading: "Baple Energy Storage",
           image: "../../img/background/Storage_Half.jpg",
-          body: [
-            "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
-          ],
+          subheading: "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
           link: {
             to: "/energy/energy-storage",
             label: "Más",

@@ -4,20 +4,41 @@ import { StaticQuery, graphql } from "gatsby";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
-import SectionImage from "./SectionImage";
+import HorizontalSplit from "./HorizontalSplit";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 const styles = (theme: Theme) => createStyles({
+  content: {
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "2rem 0",
+  },
   bes: {
     borderRadius: 4,
     padding: theme.spacing.unit * 3,
     border: "1px solid gray",
     borderColor: theme.palette.grey[400],
+    textAlign: "center",
+  },
+  heading: {
+    marginBottom: "1rem",
+  },
+  image: {
+    paddingLeft: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3,
+    opacity: 0.8,
+    width: "80%",
+    margin: "0 auto",
   },
   besItem: {
   },
   link: {
-    marginTop: "1.4em",
+    margin: "1.4em 0",
   },
   divider: {
     margin: theme.spacing.unit * 3,
@@ -61,11 +82,17 @@ const BES: React.SFC<Props> = ({ reverse, classes }) => (
   render={(data: BESDataProps) => {
     const bes = data.javascriptFrontmatter.frontmatter.bes;
     return (
-      <SectionImage
-        image={bes.image}
-        heading={bes.heading}
-        after={
-          <div>
+      <HorizontalSplit
+        left={
+          <div className={classes.image}>
+            <Img fluid={bes.image.childImageSharp.fluid}/>
+          </div>
+        }
+        right={
+          <div className={classes.content}>
+            <Typography variant="display1" className={classes.heading}>
+              {bes.heading}
+            </Typography>
             <div className={classes.bes}>
               {bes.besItems.map((x, i) =>
                 <div className={classes.besItem} key={i}>
@@ -106,7 +133,7 @@ export const query = graphql`
     }
     image {
       childImageSharp {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 1400, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

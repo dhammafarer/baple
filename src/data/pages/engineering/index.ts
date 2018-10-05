@@ -22,8 +22,8 @@ export const frontmatter: IndexPage = {
         {
           heading: "Baple E-Scooters",
           image: "../../img/energy/Scooter_FutureAwaken_0827.jpg",
+          subheading: "The future awakens, let´s get it on!",
           body: [
-            "The future awakens, let´s get it on!",
             "El despertar del futuro, vamos a por él!",
           ],
           link: {
@@ -33,10 +33,9 @@ export const frontmatter: IndexPage = {
         },
         {
           heading: "Baple Powerwalls",
+          subheading: "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
           image: "../../img/energy/Bable Energy_Wallpaper_0823.jpg",
-          body: [
-            "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
-          ],
+          body: [],
           link: {
             to: "/energy/powerwall",
             label: "Learn More",
@@ -45,9 +44,8 @@ export const frontmatter: IndexPage = {
         {
           heading: "Baple Energy Storage",
           image: "../../img/energy/Solar panel_Cube2.jpg",
-          body: [
-            "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
-          ],
+          subheading: "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
+          body: [],
           link: {
             to: "/energy/energy-storage",
             label: "Learn More",
@@ -58,7 +56,6 @@ export const frontmatter: IndexPage = {
     more: {
       logo: "../../img/logos/baple-engineering-logo.png",
       heading: "Quieres saber más de nosotros?",
-      image: "../../img/engineering/rawpixel-659474-unsplash.jpg",
       link: {
         to: "/contact",
         label: "Contáctanos!",

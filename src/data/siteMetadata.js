@@ -8,16 +8,16 @@ module.exports = {
   contact: {
     name: "HQ",
     email: "info@baple.com.tw",
-    phone: "+886-2-8791-2889",
+    phone: "+886-2-2345-2384",
     address: [
-      "No. 33, Lane 21, Sec. 6",
-      "Minchuan E. Rd., Neihu District",
-      "Taipei 11494, Taiwan",
+      "5F, No. 35, Daye Rd",
+      "Beitou District, Taipei",
+      "Taiwan",
     ],
     socialMedia: {
       facebook: "https://www.facebook.com/baplenews/",
-      instagram: "https://www.facebook.com/groups/292056241330760/",
-      twitter: "https://www.facebook.com/groups/292056241330760/",
+      instagram: "https://www.facebook.com/baplenews/",
+      twitter: "https://www.facebook.com/baplenews/",
     },
   },
   domains: [group, energy, engineering, plastics, metalPackaging],

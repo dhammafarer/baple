@@ -2,6 +2,7 @@ import { createStyles, Theme } from "@material-ui/core/styles";
 
 const welcomeStyles = (theme: Theme) => createStyles({
   section: {
+    position: "relative",
     height: "100%",
     width: "100%",
     justifyConent: "center",
@@ -9,13 +10,29 @@ const welcomeStyles = (theme: Theme) => createStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    padding: theme.spacing.unit * 6,
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
     },
+    borderRadius: 4,
+    border: `1px solid transparent`,
+  },
+  logoPane: {
+    display: "flex",
+    alignItems: "center",
+    zIndex: 1,
   },
   logo: {
-    width: 300,
-    height: 300,
+    margin: "0 auto",
+    maxWidth: 350,
+    width: "100%",
+    height: "auto",
+  },
+  textPane: {
+    zIndex: 1,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   text: {
     margin: "2em 0.6em",
@@ -23,11 +40,11 @@ const welcomeStyles = (theme: Theme) => createStyles({
   },
   heading: {
     fontFamily: "Cedarville Cursive, sans-serif",
-    color: theme.palette.grey[900],
+    color: theme.palette.primary.main,
     marginBottom: "1.2em",
   },
   subheading: {
-    color: theme.palette.grey[900],
+    color: theme.palette.secondary.main,
     fontWeight: 300,
   },
   quotes: {
@@ -39,8 +56,10 @@ const welcomeStyles = (theme: Theme) => createStyles({
   quote: {
     fontStyle: "italic",
     marginBottom: "0.4em",
+    color: theme.palette.common.white,
   },
   author: {
+    color: theme.palette.secondary.main,
   },
 });
 

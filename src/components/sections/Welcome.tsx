@@ -19,50 +19,58 @@ type Props = WithStyles<typeof styles> & {
 const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes, quotes, gradient }) => (
   <SectionFeatured
     fullHeight
-    gradient={"linear-gradient(60deg, #ded, #eee)"}
+    gradient="linear-gradient(60deg, #ccc, #fff)"
     image={image && image}
     before={
       <div className={classes.section}>
-        {logo && <img src={logo.childImageSharp.fixed.src}/>}
-        <div className={classes.text}>
-          { heading &&
-            <Typography
-              className={classes.heading}
-              variant="display2"
-            >
-              {heading}
-            </Typography>
+        <Grid container>
+          {logo &&
+            <Grid item xs={12} md={4} className={classes.logoPane}>
+              <img className={classes.logo} src={logo.childImageSharp.fixed.src}/>
+            </Grid>
+          }
+            <Grid item xs={12} md={8} className={classes.textPane}>
+              <div className={classes.text}>
+                { heading &&
+                  <Typography
+                    className={classes.heading}
+                    variant="display2"
+                  >
+                    {heading}
+                  </Typography>
 
-          }
-          { subheading &&
-            <Typography
-              className={classes.subheading}
-              variant="display1"
-            >
-              {subheading}
-            </Typography>
-          }
-          { quotes &&
-            <div className={classes.quotes}>
-              {quotes.map((q, i) =>
-                <blockquote key={i} className={classes.blockquote}>
+                }
+                { subheading &&
                   <Typography
-                    variant="headline"
-                    className={classes.quote}
+                    className={classes.subheading}
+                    variant="display1"
                   >
-                    {q.quote}
+                    {subheading}
                   </Typography>
-                  <Typography
-                    className={classes.author}
-                    variant="subheading"
-                  >
-                    {q.author}
-                  </Typography>
-                </blockquote>
-              )}
-            </div>
-          }
-        </div>
+                }
+                { quotes &&
+                  <div className={classes.quotes}>
+                    {quotes.map((q, i) =>
+                      <blockquote key={i} className={classes.blockquote}>
+                        <Typography
+                          variant="headline"
+                          className={classes.quote}
+                        >
+                          {q.quote}
+                        </Typography>
+                        <Typography
+                          className={classes.author}
+                          variant="subheading"
+                        >
+                          {q.author}
+                        </Typography>
+                      </blockquote>,
+                    )}
+                  </div>
+                }
+              </div>
+          </Grid>
+        </Grid>
       </div>
     }
   />

@@ -28,6 +28,7 @@ const CategoriesTemplate: React.SFC<Props> = (({ data }) => {
       { categories &&
         <Categories
           heading={categories.heading}
+          subheading={categories.subheading}
           categoryLinks={categories.categoryLinks}
         />
       }

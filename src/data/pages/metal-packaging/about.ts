@@ -5,7 +5,7 @@ export const frontmatter: AboutPage = {
   sections: {
     about1: {
       logo: "../../img/logos/baple-plastics-logo.png",
-      image: "../../img/metal-packaging/Aerosol Can.jpg",
+      image: "../../img/background/MetalPackaging_Half.jpg",
       heading: "Baple Metal Packaging",
       body: [
         "Baple fue fundada en 2013 con una clara visión y misión.",

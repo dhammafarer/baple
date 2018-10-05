@@ -60,13 +60,13 @@ class Policy extends React.Component<Props, State> {
           message={
             <div className={classes.content}>
               <Typography variant="body2" color="inherit">
-                This site uses cookies. By continuing to browse this website, you are agreeing to our use of cookies.
+                Utilizamos cookies propias y de terceros para realizar análisis de uso y medición de nuestra web para mejorar nuestros servicios.
               </Typography>
             </div>
           }
           action={[
             <Button key="undo" color="secondary" size="small" onClick={this.handleAccept}>
-              Accept
+              Acepto
             </Button>,
           ]}
         />

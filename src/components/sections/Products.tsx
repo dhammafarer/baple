@@ -9,6 +9,7 @@ import SectionImage from "./SectionImage";
 
 interface Product {
   heading?: string;
+  subheading?: string;
   body?: string[];
   image?: any;
   link?: {
@@ -31,6 +32,7 @@ const Products: React.SFC<Props> = ({ heading, subheading, products, image, clas
         reverse={i % 2 === 0}
         key={i}
         heading={p.heading}
+        subheading={p.subheading}
         body={p.body}
         image={p.image}
         after={

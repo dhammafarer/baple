@@ -5,7 +5,7 @@ export const frontmatter: ContactPage = {
   sections: {
     contactUs: {
       logo: "../../img/logos/baple-metal-packaging-logo.png",
-      image: "../../img/metal-packaging/Aerosol Can.jpg",
+      image: "../../img/contact-us-1.jpg",
       heading: "Contáctanos!",
     },
   },

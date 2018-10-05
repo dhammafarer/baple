@@ -8,7 +8,7 @@ module.exports = {
     },
     {
       label: "Soluciones",
-      to: "/plastics/products",
+      to: "/plastics/solutions",
       links: [
         {
           label: "Pulverizadores",
