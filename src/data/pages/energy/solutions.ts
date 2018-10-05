@@ -14,25 +14,27 @@ export const frontmatter: CategoriesPage = {
           ],
           link: {
             to: "/energy/e-scooter",
-            label: "Más",
+            label: "Más Info",
           },
         },
         {
           image: "../../img/background/Powerwall_Half.jpg",
           heading: "Baple Powerwalls",
+          body: [],
           subheading: "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
           link: {
             to: "/energy/powerwall",
-            label: "Más",
+            label: "Más Info",
           },
         },
         {
           heading: "Baple Energy Storage",
           image: "../../img/background/Storage_Half.jpg",
+          body: [],
           subheading: "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
           link: {
             to: "/energy/energy-storage",
-            label: "Más",
+            label: "Más Info",
           },
         },
       ],

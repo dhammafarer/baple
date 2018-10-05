@@ -8,9 +8,9 @@ module.exports = {
   contact: {
     name: "HQ",
     email: "info@baple.com.tw",
-    phone: "+886-2-2345-2384",
+    phone: "+886-2-2897-0076",
     address: [
-      "5F, No. 35, Daye Rd",
+      "4F, No. 384, Daye Rd",
       "Beitou District, Taipei",
       "Taiwan",
     ],

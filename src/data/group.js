@@ -3,12 +3,12 @@ module.exports = {
   title: "Baple Group",
   navLinks: [
     {
-      label: "Home",
+      label: "Inicio",
       to: "/",
       links: [],
     },
     {
-      label: "Contact",
+      label: "Contacto",
       to: "/contact",
       links: [],
     },

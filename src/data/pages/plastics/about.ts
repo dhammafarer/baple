@@ -9,8 +9,8 @@ export const frontmatter: AboutPage = {
       heading: "Baple Plastics",
       body: [
         "Baple fue fundada en 2013 con una clara visión y misión.",
-        "Visión: Ayudar a la Industria Española a ser un referente internacional.",
-        "Misión: Ayudar a empresas locales suministrando soluciones para que aumenten su nivel de competitividad internacional.",
+        "VISIÓN: Ayudar a la Industria Española a ser un referente internacional.",
+        "MISIÓN: Ayudar a empresas locales suministrando soluciones para que aumenten su nivel de competitividad internacional.",
       ],
     },
     about2: {

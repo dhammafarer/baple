@@ -3,7 +3,7 @@ module.exports = {
   title: "Baple Plastics",
   navLinks: [
     {
-      label: "Home",
+      label: "Inicio",
       to: "/plastics/",
     },
     {
@@ -33,11 +33,11 @@ module.exports = {
       ],
     },
     {
-      label: "About",
+      label: "Sobre Nosotros",
       to: "/plastics/about",
     },
     {
-      label: "Contact",
+      label: "Contacto",
       to: "/plastics/contact",
     },
   ],

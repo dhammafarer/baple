@@ -3,7 +3,7 @@ module.exports = {
   title: "Baple Metal Packaging",
   navLinks: [
     {
-      label: "Home",
+      label: "Inicio",
       to: "/metal-packaging",
     },
     {
@@ -25,11 +25,11 @@ module.exports = {
       ],
     },
     {
-      label: "About",
+      label: "Sobre Nosotros",
       to: "/metal-packaging/about",
     },
     {
-      label: "Contact",
+      label: "Contacto",
       to: "/metal-packaging/contact",
       links: [],
     },

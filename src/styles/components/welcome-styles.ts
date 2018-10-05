@@ -56,10 +56,10 @@ const welcomeStyles = (theme: Theme) => createStyles({
   quote: {
     fontStyle: "italic",
     marginBottom: "0.4em",
-    color: theme.palette.common.white,
+    color: theme.palette.primary.main,
   },
   author: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.common.white,
   },
 });
 

@@ -3,7 +3,7 @@ module.exports = {
   title: "Baple Energy",
   navLinks: [
     {
-      label: "Home",
+      label: "Inicio",
       to: "/energy",
       links: [],
     },
@@ -26,12 +26,12 @@ module.exports = {
       ],
     },
     {
-      label: "About",
+      label: "Sobre Nosotros",
       to: "/energy/about",
       links: [],
     },
     {
-      label: "Contact",
+      label: "Contacto",
       to: "/energy/contact",
       links: [],
     },

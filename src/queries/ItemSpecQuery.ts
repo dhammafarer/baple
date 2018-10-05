@@ -6,7 +6,7 @@ export const ItemSpecQuery = graphql`
     body
     image {
       childImageSharp {
-        fluid(maxWidth: 960) {
+        fluid(maxWidth: 1400) {
           ...GatsbyImageSharpFluid
         }
       }

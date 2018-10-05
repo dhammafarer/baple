@@ -3,17 +3,17 @@ module.exports = {
   title: "Baple Engineering",
   navLinks: [
     {
-      label: "Home",
+      label: "Inicio",
       to: "/engineering",
       links: [],
     },
     {
-      label: "About",
+      label: "Sobre Nosotros",
       to: "/engineering/about",
       links: [],
     },
     {
-      label: "Contact",
+      label: "Contacto",
       to: "/engineering/contact",
       links: [],
     },

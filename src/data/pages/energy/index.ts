@@ -28,7 +28,7 @@ export const frontmatter: IndexPage = {
           ],
           link: {
             to: "/energy/e-scooter",
-            label: "Más",
+            label: "Más Info",
           },
         },
         {
@@ -38,7 +38,7 @@ export const frontmatter: IndexPage = {
           body: [],
           link: {
             to: "/energy/powerwall",
-            label: "Más",
+            label: "Más Info",
           },
         },
         {
@@ -48,7 +48,7 @@ export const frontmatter: IndexPage = {
           body: [],
           link: {
             to: "/energy/energy-storage",
-            label: "Más",
+            label: "Más Info",
           },
         },
       ],
@@ -56,7 +56,6 @@ export const frontmatter: IndexPage = {
     more: {
       logo: "../../img/logos/baple-energy-logo.png",
       heading: "Quieres saber más de nosotros?",
-      image: "../../img/contact-us-1.jpg",
       link: {
         to: "/contact",
         label: "Contáctanos!",
