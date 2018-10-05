@@ -5,7 +5,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
 import styles from "../../styles/components/nav-styles";
@@ -53,12 +52,11 @@ const Nav: React.SFC<NavProps & WithStyles<typeof styles>> = ({
         {title}
       </Typography>
       <List className={classes.list}>
-        <Divider/>
         {
           navLinks.map((x: any) => {
             return (
               x.links ?
-              <ListItem key={x.to} divider className={classes.listItem}>
+              <ListItem key={x.to} className={classes.listItem}>
                 <List className={classes.list}>
                   <ListItem button className={classes.listItem}>
                     <Link to={x.to} className={classes.link}>
@@ -87,7 +85,7 @@ const Nav: React.SFC<NavProps & WithStyles<typeof styles>> = ({
                 </List>
               </ListItem>
               :
-              <ListItem key={x.to} button divider className={classes.listItem}>
+              <ListItem key={x.to} button className={classes.listItem}>
                 <Link to={x.to} className={classes.link}>
                   <Typography
                     variant="body1"
