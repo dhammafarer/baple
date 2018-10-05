@@ -1,16 +1,21 @@
-﻿COMMENTARIES
-
-
+﻿export default {
+  sections: {
+    abouts: [
+      {
+        heading: Baplewines WINE SOLUTIONS
+        subheading: Customized Solutions for your wine business line
+        image: './Low cost wine_new.jpg'
+        text:
+          - "It is our advantage a Group of Spanish Wineries to create a UNIQUE SERVICE for our clients to help them, stress free from complicated procedure. Our BAPLEWINES WINE SOLUTIONS SERVICE is a service that allows you to have your own products lineup without having you to have your own vineyard, production line, design team or dealing with a stressful of procedures"
+        link: {
+          label: "Contact us!",
+          to: "/baplewines/contact",
+        }
+      }
+    ]
+  }
+};
 intro:
-  heading: Baplewines WINE SOLUTIONS
-  subheading: Customized Solutions for your wine business line
-  image: './Low cost wine_new.jpg'
-  text:
-    - "It is our advantage a Group of Spanish Wineries to create a UNIQUE SERVICE for our clients to help them, stress free from complicated procedure. Our BAPLEWINES WINE SOLUTIONS SERVICE is a service that allows you to have your own products lineup without having you to have your own vineyard, production line, design team or dealing with a stressful of procedures"
-
-link:
-    label: Contact us!
-    to: /baplewines/contact
 
 
 intro:
