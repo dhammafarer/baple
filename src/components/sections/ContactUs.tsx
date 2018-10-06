@@ -14,7 +14,11 @@ const ContactUs: React.SFC<Props> = ({ heading, logo, image, classes }) => (
   <SectionFeatured
     gradient="linear-gradient(60deg, #ded, #fef)"
     image={image}
-    before={<Img fluid={logo.childImageSharp.fixed} className={classes.logo}/>}
+    before={
+      <div className={classes.logo}>
+        <Img fluid={logo.childImageSharp.fluid}/>
+      </div>
+    }
   />
 );
 

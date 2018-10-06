@@ -18,8 +18,8 @@ export const ContactFragment = graphql`
           }
           logo {
             childImageSharp {
-              fixed(width: 250) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 350) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

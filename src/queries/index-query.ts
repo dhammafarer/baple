@@ -50,8 +50,8 @@ export const IndexFragment = graphql`
           heading
           logo {
             childImageSharp {
-              fixed(width: 200) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 250) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

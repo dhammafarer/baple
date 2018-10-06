@@ -22,8 +22,8 @@ const moreStyles = (theme: Theme) => createStyles({
     textAlign: "center",
   },
   logo: {
-    width: 200,
-    height: 200,
+    width: "80%",
+    maxWidth: 250,
   },
   details: {
     width: "100%",

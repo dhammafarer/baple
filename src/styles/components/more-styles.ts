@@ -17,13 +17,12 @@ const moreStyles = (theme: Theme) => createStyles({
     margin: "0.5em 0",
   },
   logo: {
-    width: 200,
-    height: 200,
-    marginTop: "2em",
-    marginBottom: "1em",
+    width: "100%",
+    maxWidth: 250,
+    margin: "1rem auto",
   },
   button: {
-    margin: "2em 0",
+    margin: "1rem 0",
   },
 });
 
