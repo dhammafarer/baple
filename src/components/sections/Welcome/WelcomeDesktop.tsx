@@ -1,27 +1,19 @@
 import * as React from "react";
 import { withStyles, WithStyles } from "@material-ui/core/styles";
-import styles from "../../styles/components/welcome-styles";
+import styles from "../../../styles/components/welcome-styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import { Welcome_2 } from "../../graphql";
-import SectionFeatured from "../sections/Hero";
+import Hero from "../../sections/Hero";
 import Img from "gatsby-image";
+import { WelcomeProps } from "./index";
 
-type Props = WithStyles<typeof styles> & {
-  heading?: string,
-  subheading?: string,
-  logo?: any,
-  image?: any,
-  quotes?: Array<{quote: string, author: string}>,
-  gradient?: string,
-};
+type Props = WithStyles<typeof styles> & WelcomeProps;
 
-const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes, quotes, gradient }) => (
-  <SectionFeatured
+const WelcomeDesktop: React.SFC<Props> = ({ heading, subheading, logo, image, classes, quotes, gradient }) => (
+  <Hero
     fullHeight
-    gradient="linear-gradient(60deg, #ccc, #fff)"
     image={image && image}
-    before={
+    after={
       <div className={classes.section}>
         <Grid container>
           {logo &&
@@ -76,4 +68,4 @@ const Welcome: React.SFC<Props> = ({ heading, subheading, logo, image, classes, 
   />
 );
 
-export default withStyles(styles)(Welcome);
+export default withStyles(styles)(WelcomeDesktop);

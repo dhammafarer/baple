@@ -9,36 +9,38 @@ const Header = <div>Header</div>;
 
 const styles = (theme: Theme) => createStyles({
   section: {
+    position: "relative",
     display: "flex",
     flexDirection: "column",
   },
   fullHeight: {
     minHeight: "calc(100vh - 64px)",
   },
-  main: {},
   header: {
     position: "relative",
     height: "100%",
     width: "100%",
   },
   image: {
+    position: "absolute",
     height: "100%",
     width: "100%",
+    top: 0,
+    left: 0,
   },
   img: {
     height: "100%",
     width: "100%",
   },
   headerContent: {
-    position: "absolute",
     height: "100%",
     width: "100%",
-    top: 0,
-    left: 0,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "center",
+    paddingTop: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 3,
   },
   container: {
     position: "relative",
@@ -81,12 +83,14 @@ const HeroMobile: React.SFC<Props> = ({
     className={classes.section}
   >
     <div className={classes.header}>
-      <div className={classes.image}>
-        <Img
-          className={classes.img}
-          fluid={image.childImageSharp.fluid}
-        />
-      </div>
+      {image &&
+        <div className={classes.image}>
+          <Img
+            className={classes.img}
+            fluid={image.childImageSharp.fluid}
+          />
+        </div>
+      }
       <div className={classes.headerContent}>
         <div className={classes.container}>
           <div className={classes.overlay}/>

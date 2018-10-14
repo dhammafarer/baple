@@ -10,7 +10,7 @@ const welcomeStyles = (theme: Theme) => createStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    padding: theme.spacing.unit * 6,
+    padding: theme.spacing.unit * 3,
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
     },
@@ -24,7 +24,7 @@ const welcomeStyles = (theme: Theme) => createStyles({
   },
   logo: {
     margin: "0 auto",
-    maxWidth: 350,
+    maxWidth: 300,
     width: "100%",
     height: "auto",
   },
@@ -35,7 +35,7 @@ const welcomeStyles = (theme: Theme) => createStyles({
     justifyContent: "center",
   },
   text: {
-    margin: "2em 0.6em",
+    marginTop: "1rem",
     textAlign: "center",
   },
   heading: {
@@ -59,7 +59,7 @@ const welcomeStyles = (theme: Theme) => createStyles({
     color: theme.palette.primary.main,
   },
   author: {
-    color: theme.palette.common.white,
+    color: theme.palette.secondary.main,
   },
 });
 
