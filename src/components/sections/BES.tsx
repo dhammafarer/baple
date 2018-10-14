@@ -45,87 +45,63 @@ const styles = (theme: Theme) => createStyles({
   },
 });
 
-export interface BESDataProps {
-  javascriptFrontmatter: {
-    frontmatter: {
-      bes: {
-        heading: string;
-        besItems: Array<{heading: string, subheading: string}>;
-        image: any;
-        link: {
-          label: string
-          to: string,
-        }
-      },
-    },
-  };
-}
-
 export interface BESProps {
   reverse?: boolean;
+  heading: string;
+  besItems: Array<{heading: string, subheading: string}>;
+  image: any;
+  link: {
+    label: string
+    to: string,
+  };
 }
 
 type Props = WithStyles<typeof styles> & BESProps;
 
-const BES: React.SFC<Props> = ({ reverse, classes }) => (
-  <StaticQuery
-    query={graphql`
-      query BESStaticQuery {
-        javascriptFrontmatter(fileAbsolutePath: {regex: "/bes.ts/"}) {
-          frontmatter {
-            bes { ...BESQuery }
-          }
-        }
+const BES: React.SFC<Props> = ({ reverse, classes, heading, image, besItems, link }) => {
+  return (
+    <HorizontalSplit
+      left={
+        <div className={classes.image}>
+          <Img fluid={image.childImageSharp.fluid}/>
+        </div>
       }
-      `
-    }
-  render={(data: BESDataProps) => {
-    const bes = data.javascriptFrontmatter.frontmatter.bes;
-    return (
-      <HorizontalSplit
-        left={
-          <div className={classes.image}>
-            <Img fluid={bes.image.childImageSharp.fluid}/>
+      right={
+        <div className={classes.content}>
+          <Typography variant="display1" className={classes.heading}>
+            {heading}
+          </Typography>
+          <div className={classes.bes}>
+            {besItems.map((x, i) =>
+              <div className={classes.besItem} key={i}>
+                <Typography variant="headline" color="primary" gutterBottom>
+                  {x.heading}
+                </Typography>
+                <Typography variant="subheading">
+                  {x.subheading}
+                </Typography>
+                {i !== (besItems.length - 1) && <Divider className={classes.divider}/>}
+              </div>,
+            )}
           </div>
-        }
-        right={
-          <div className={classes.content}>
-            <Typography variant="display1" className={classes.heading}>
-              {bes.heading}
-            </Typography>
-            <div className={classes.bes}>
-              {bes.besItems.map((x, i) =>
-                <div className={classes.besItem} key={i}>
-                  <Typography variant="headline" color="primary" gutterBottom>
-                    {x.heading}
-                  </Typography>
-                  <Typography variant="subheading">
-                    {x.subheading}
-                  </Typography>
-                  {i !== (bes.besItems.length - 1) && <Divider className={classes.divider}/>}
-                </div>,
-              )}
-            </div>
 
-            <div className={classes.link}>
-              <Link to={bes.link.to}>
-                <Button variant="contained" color="primary" size="large">
-                  {bes.link.label}
-                </Button>
-              </Link>
-            </div>
+          <div className={classes.link}>
+            <Link to={link.to}>
+              <Button variant="contained" color="primary" size="large">
+                {link.label}
+              </Button>
+            </Link>
           </div>
-        }
-      />
-    ); }
-    }
-  />
-);
+        </div>
+      }
+    />
+  );
+};
 
 export default withStyles(styles)(BES);
 
 export const query = graphql`
-  fragment BESQuery on bes_2 {
+  fragment BESQuery on bes_3 {
     heading
     besItems {
       heading

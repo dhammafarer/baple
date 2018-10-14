@@ -20,6 +20,28 @@ export const frontmatter = {
         "Los modelos B1 y B5 son un concepto que responde a varias de estas preguntas. Puede imaginar los modelos B1 y B5 como motocicletas que incorporan varías baterías (y otros componentes como el cargador, etc.), y que sólo necesitan ser conectadas a un enchufe doméstico para ser recargadas.",
       ],
     },
+    bes: {
+      heading: "Concepto BES",
+      image: "../img/logos/BES-Concept-Black.png",
+      besItems: [
+        {
+          heading: "Brillante",
+          subheading: "Una genial solución para crear su independencia de movilidad.",
+        },
+        {
+          heading: "Economizador",
+          subheading: "Permite reducir la factura de transporte.",
+        },
+        {
+          heading: "Sostenibilidad",
+          subheading: "Medio de transporte libre de CO2",
+        },
+      ],
+      link: {
+        to: "/energy/contact",
+        label: "Contáctanos!",
+      },
+    },
     categoryList: {
       categoryItems: [
         {

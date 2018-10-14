@@ -10,6 +10,28 @@ export const frontmatter = {
         "La solución BES1 se convertirá en una parte esencial en su vida y le proporcionará una total independencia. BES1 es un sistema para de acumulación de energía eléctrica en su hogar..",
       ],
     },
+    bes: {
+      heading: "Concepto BES",
+      image: "../img/logos/BES-Concept-Black.png",
+      besItems: [
+        {
+          heading: "Brillante",
+          subheading: "Una genial solución para crear su independencia de movilidad.",
+        },
+        {
+          heading: "Economizador",
+          subheading: "Permite reducir la factura de luz.",
+        },
+        {
+          heading: "Sostenibilidad",
+          subheading: "Energia libre de CO2",
+        },
+      ],
+      link: {
+        to: "/energy/contact",
+        label: "Contáctanos!",
+      },
+    },
     bes1: {
       heading: "BES1 Series - ¿Cómo funciona?",
       image: "../img/energy/Powerwall_Infographic-01.jpg",

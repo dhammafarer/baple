@@ -2,10 +2,10 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/layouts/Layout";
 import Intro, { IntroProps } from "../../components/sections/Intro";
-import BES from "../../components/sections/BES";
+import BES, { BESProps } from "../../components/sections/BES";
 import SectionCentered from "../../components/sections/SectionCentered";
 
-interface BesProps {
+interface BesProps12 {
   heading: string;
   body: string[];
   image: any;
@@ -21,8 +21,9 @@ interface PowerwallProps {
       frontmatter: {
         sections: {
           intro1: IntroProps,
-          bes1: BesProps,
-          bes2: BesProps,
+          bes: BESProps,
+          bes1: BesProps12,
+          bes2: BesProps12,
         },
       },
     },
@@ -30,7 +31,7 @@ interface PowerwallProps {
 }
 
 const PowerwallPage: React.SFC<PowerwallProps> = (({ data }) => {
-  const { intro1, bes1, bes2 } = data.javascriptFrontmatter.frontmatter.sections;
+  const { intro1, bes, bes1, bes2 } = data.javascriptFrontmatter.frontmatter.sections;
   return (
     <Layout domain="energy">
       <SectionCentered
@@ -39,7 +40,12 @@ const PowerwallPage: React.SFC<PowerwallProps> = (({ data }) => {
         heading={intro1.heading}
         body={intro1.body}
       />
-      <BES/>
+      <BES
+        heading={bes.heading}
+        besItems={bes.besItems}
+        link={bes.link}
+        image={bes.image}
+      />
       <SectionCentered
         image={bes1.image}
         heading={bes1.heading}
@@ -74,6 +80,7 @@ export const query = graphql`
               }
             }
           }
+          bes { ...BESQuery }
           bes1 {
             heading
             body
