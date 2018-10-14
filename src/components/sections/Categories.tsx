@@ -7,7 +7,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import { Link } from "gatsby";
-import SectionFeatured from "./Hero";
+import Hero from "./Hero";
 import Img from "gatsby-image";
 
 type Props = WithStyles<typeof styles> & {
@@ -19,7 +19,7 @@ type Props = WithStyles<typeof styles> & {
 };
 
 const Categories: React.SFC<Props> = ({ classes, image, gradient, heading, subheading, categoryLinks }) => (
-  <SectionFeatured
+  <Hero
     image={image && image}
     gradient={gradient}
     fullHeight
@@ -29,9 +29,9 @@ const Categories: React.SFC<Props> = ({ classes, image, gradient, heading, subhe
       <Grid container spacing={32} className={classes.cards}>
         {categoryLinks.map((x) =>
           <Grid key={x.label}item xs={12} sm={6} md={3} xl={2}>
-            <Card className={classes.card}>
-              <CardActionArea className={classes.cardAction}>
-                <Link to={x.to}>
+            <Link to={x.to}>
+              <Card className={classes.card}>
+                <CardActionArea className={classes.cardAction}>
                   <CardContent className={classes.content}>
                     <img className={classes.image} src={x.image.childImageSharp.fluid.src}/>
                     <Typography
@@ -41,9 +41,9 @@ const Categories: React.SFC<Props> = ({ classes, image, gradient, heading, subhe
                       {x.label}
                     </Typography>
                   </CardContent>
-                </Link>
-              </CardActionArea>
-            </Card>
+                </CardActionArea>
+              </Card>
+            </Link>
           </Grid>,
         )}
       </Grid>

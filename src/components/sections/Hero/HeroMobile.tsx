@@ -55,7 +55,7 @@ const styles = (theme: Theme) => createStyles({
     width: "100%",
     height: "100%",
     opacity: 0.6,
-    background: "linear-gradient(60deg, #fff, #ccc)",
+    background: "linear-gradient(60deg, #fff, #eee)",
     zIndex: -1,
   },
   heading: {
