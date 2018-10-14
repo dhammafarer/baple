@@ -7,12 +7,9 @@ import Img from "gatsby-image";
 const styles = (theme: Theme) => createStyles({
   section: {
     position: "relative",
-    padding: "3em",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
   },
   image: {
     position: "absolute",
@@ -23,35 +20,39 @@ const styles = (theme: Theme) => createStyles({
     width: "100%",
     height: "100%",
   },
-  overlay: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    opacity: 0.6,
-  },
   fullHeight: {
     minHeight: "calc(100vh - 64px)",
   },
-  content: {
+  container: {
+    textAlign: "center",
+    position: "relative",
+    width: "100%",
+    paddingTop: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 6,
+    paddingLeft: theme.spacing.unit * 6,
+    borderTop: `1px solid ${theme.palette.common.white}`,
+    borderBottom: `1px solid ${theme.palette.common.white}`,
     zIndex: 1,
+  },
+  overlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
     width: "100%",
     height: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-    paddingLeft: theme.spacing.unit * 3,
-    paddingRight: theme.spacing.unit * 3,
+    opacity: 0.6,
+    background: "linear-gradient(60deg, #fff, #ccc)",
+    zIndex: -1,
   },
   text: {},
   header: {
     marginBottom: "1em",
   },
-  heading: {
-    paddingBottom: theme.spacing.unit * 3,
+  heading: {},
+  subheading: {
+    marginTop: "1rem",
   },
-  subheading: {},
   paragraph: {},
 });
 
@@ -68,7 +69,7 @@ export interface SectionFeaturedProps {
 
 type Props = WithStyles<typeof styles> & SectionFeaturedProps;
 
-const SectionFeatured: React.SFC<Props> = ({
+const HeroDesktop: React.SFC<Props> = ({
   classes, before, after, gradient, heading, subheading, text, image, fullHeight,
 }) => (
   <section
@@ -77,11 +78,8 @@ const SectionFeatured: React.SFC<Props> = ({
     <div className={classes.image}>
       {image && <Img className={classes.img} fluid={image.childImageSharp.fluid}/>}
     </div>
-    <div style={{
-      background: `${gradient ? gradient : ""}` }}
-      className={classes.overlay}
-    />
-    <div className={classes.content}>
+    <div className={classes.container}>
+      <div className={classes.overlay}/>
       {before && before}
       <div className={classes.header}>
         { heading &&
@@ -109,4 +107,4 @@ const SectionFeatured: React.SFC<Props> = ({
   </section>
 );
 
-export default withStyles(styles)(SectionFeatured);
+export default withStyles(styles)(HeroDesktop);
