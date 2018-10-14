@@ -7,7 +7,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import { Link } from "gatsby";
-import SectionFeatured from "./SectionFeatured";
+import SectionFeatured from "./Hero";
 import Img from "gatsby-image";
 
 type Props = WithStyles<typeof styles> & {

@@ -4,7 +4,7 @@ import styles from "../../styles/components/welcome-styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { Welcome_2 } from "../../graphql";
-import SectionFeatured from "../sections/SectionFeatured";
+import SectionFeatured from "../sections/Hero";
 import Img from "gatsby-image";
 
 type Props = WithStyles<typeof styles> & {

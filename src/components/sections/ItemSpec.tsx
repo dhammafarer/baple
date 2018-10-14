@@ -46,7 +46,7 @@ const ItemSpec: React.SFC<Props> = ({ heading, body, image, spec, link, classes 
         <Grid item xs={12} md={4}>
           <Img className={classes.media} fluid={image.childImageSharp.fluid}/>
         </Grid>
-        <Grid item xs={12} md={8} justify="center">
+        <Grid item xs={12} md={8}>
           <div className={classes.cardText}>
             <div className={classes.header}>
               <Typography variant="title" className={classes.heading}>
