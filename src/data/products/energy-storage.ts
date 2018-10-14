@@ -1,7 +1,7 @@
 export const frontmatter = {
   sections: {
     intro1: {
-      heading: "Da la bienvenida al futuro: transporte limpio y económico",
+      heading: "Da la bienvenida al futuro: energía limpia y económica",
       image: "../img/energy/Solar panel_Cube2.jpg",
       body: [
         "Baple está especializado en proporcionar Sistemas de Baterías para Almacenamiento de Energía (BESS) de alto voltaje para plantas de generación de energía, plantas industriales, centros comerciales, edificios públicos, hospitales, ...",

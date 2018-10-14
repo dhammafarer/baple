@@ -29,6 +29,10 @@ export const frontmatter: CategoryPage = {
               heading: "Especificaciones Generales",
               params: [
                 {
+                  key: "Tipos",
+                  value: "Neck-In y Straight",
+                },
+                {
                   key: "Diámetros",
                   value: "Ø45mm-Ø70mm",
                 },

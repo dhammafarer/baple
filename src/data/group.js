@@ -1,6 +1,7 @@
 module.exports = {
   name: "group",
   title: "Baple Group",
+  home: "/",
   navLinks: [
     {
       label: "Inicio",

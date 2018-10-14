@@ -12,7 +12,7 @@ export const frontmatter = {
         subheading: "Permite reducir la factura de transporte.",
       },
       {
-        heading: "Sostebilidad",
+        heading: "Sostenibilidad",
         subheading: "Medio de transporte libre de CO2",
       },
     ],

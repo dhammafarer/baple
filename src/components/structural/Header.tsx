@@ -4,6 +4,7 @@ import HeaderBar from "./HeaderBar";
 export interface HeaderProps {
   logo: string;
   title: string;
+  home: string;
   navLinks: any;
   contact?: any;
 }
@@ -26,13 +27,14 @@ class Header extends React.Component<HeaderProps, State> {
   }
 
   render() {
-    const { navLinks, logo, title, contact } = this.props;
+    const { navLinks, logo, home, title, contact } = this.props;
 
     return (
       <HeaderBar
         navLinks={navLinks}
         title={title}
         logo={logo}
+        home={home}
         contact={contact}
         toggleMenu={this.toggleMenu}
         handleClose={this.handleClose}

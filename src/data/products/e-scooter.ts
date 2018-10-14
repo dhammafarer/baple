@@ -16,7 +16,7 @@ export const frontmatter = {
         "¿Alguna vez se imaginó no tener que volver a pasar por una gasolinera? ¿Alguna vez se imaginó poder \"reponer combustible\" en casa? ¿Alguna vez se imaginó disponer de un medio de transporte que le permitiera ahorrar y cuidar el medio ambiente a la vez?",
         "Nuestros modelos tienen la solución.",
         "Los modelos B1/B5 se convertirá en una parte esencial en su vida y le proporcionará una total independencia de movilidad.",
-        "Cómo selccionamos nuestra medio de transporte manera eficiente y económica son cuestiones que demuestran nuestra evolución a una sociedad más avanzada y concienciada con el medio ambiente. Cada uno de nosotros se enfrenta cada vez más a la cuestión de cómo tener una excelente movilidad de manera ecológica y efectiva de una manera que también permita ahorrar dinero.",
+        "Cómo seleccionamos nuestra medio de transporte manera eficiente y económica son cuestiones que demuestran nuestra evolución a una sociedad más avanzada y concienciada con el medio ambiente. Cada uno de nosotros se enfrenta cada vez más a la cuestión de cómo tener una excelente movilidad de manera ecológica y efectiva de una manera que también permita ahorrar dinero.",
         "Los modelos B1 y B5 son un concepto que responde a varias de estas preguntas. Puede imaginar los modelos B1 y B5 como motocicletas que incorporan varías baterías (y otros componentes como el cargador, etc.), y que sólo necesitan ser conectadas a un enchufe doméstico para ser recargadas.",
       ],
     },

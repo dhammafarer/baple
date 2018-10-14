@@ -1,6 +1,7 @@
 module.exports = {
   name: "metalPackaging",
   title: "Baple Metal Packaging",
+  home: "/metal-packaging/",
   navLinks: [
     {
       label: "Inicio",

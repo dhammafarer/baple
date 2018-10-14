@@ -1,6 +1,7 @@
 module.exports = {
   name: "engineering",
   title: "Baple Engineering",
+  home: "/engineering/",
   navLinks: [
     {
       label: "Inicio",

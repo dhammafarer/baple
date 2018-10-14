@@ -24,14 +24,14 @@ export const frontmatter: IndexPage = {
         },
         {
           label: "Tapas",
-          image: "../../img/metal-packaging/caps icon.png",
+          image: "../../img/metal-packaging/tapa-icon-new.png",
           to: "/metal-packaging/tapas",
         },
       ],
     },
     more: {
       logo: "../../img/logos/baple-metal-packaging-logo.png",
-      heading: "Quieres saber más de nosotros?",
+      heading: "¿Quieres conocer más sobre Baple Metal Packaging?",
       image: "../../img/contact-us-1.jpg",
       link: {
         to: "/contact",

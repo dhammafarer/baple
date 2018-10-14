@@ -44,7 +44,7 @@ export const frontmatter: IndexPage = {
         {
           heading: "Baple Energy Storage",
           image: "../../img/background/Storage_Half.jpg",
-          subheading: "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
+          subheading: "Da la bienvenida al futuro: energía limpia y económica",
           body: [],
           link: {
             to: "/energy/energy-storage",
@@ -55,7 +55,7 @@ export const frontmatter: IndexPage = {
     },
     more: {
       logo: "../../img/logos/baple-energy-logo.png",
-      heading: "Quieres saber más de nosotros?",
+      heading: "¿Quieres conocer más sobre Baple Energy?",
       link: {
         to: "/contact",
         label: "Contáctanos!",

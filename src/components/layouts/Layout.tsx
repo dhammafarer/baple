@@ -12,6 +12,7 @@ export interface LayoutProps {
 
 interface AppData {
   name: Domain;
+  home: string;
   title: string;
   navLinks: any;
 }
@@ -48,6 +49,7 @@ const Layout: React.SFC<LayoutProps> = ({ children, domain }) => (
             domains {
               name
               title
+              home
               navLinks {
                 to
                 label
@@ -115,6 +117,7 @@ const Layout: React.SFC<LayoutProps> = ({ children, domain }) => (
         title={d.title}
         logo={logo}
         navLinks={d.navLinks}
+        home={d.home}
         lang={"es"}
         contact={sm.contact}
       >

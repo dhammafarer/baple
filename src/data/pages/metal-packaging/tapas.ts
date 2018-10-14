@@ -5,7 +5,7 @@ export const frontmatter: CategoryPage = {
   sections: {
     intro: {
       heading: "Tapas",
-      image: "../../img/metal-packaging/caps icon.png",
+      image: "../../img/metal-packaging/tapa-icon-new.png",
       body: [
         "Baple dispone de la gran mayoría de soluciones demandadas por la industria. Adicionalmente, la incorporación de nuevas y modernas soluciones forma parte del trabajo rutinario para ofrecer siempre soluciones de valor añadido a nuestros partners.",
         "Nuestro rango de soluciones para aerosol están disponibles en la mayoria de diametros y alturas demandadas por la industria, en materiales de aluminio y hojalata, y con un estricto cumplimiento con los estándares FEA (European Aerosol Federation)."

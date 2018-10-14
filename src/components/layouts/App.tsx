@@ -14,16 +14,17 @@ export interface AppProps {
   logo: any;
   lang: string;
   navLinks: any;
+  home: string;
   contact: any;
 }
 
 const App: React.SFC<AppProps & WithStyles<typeof styles>> = ({
-  title, logo, contact, children, navLinks, classes, lang }) => (
+  title, logo, home, contact, children, navLinks, classes, lang }) => (
   <div className={classes.layout}>
     <CssBaseline/>
     <Policy />
     <Head title={title} lang={lang}/>
-    <Header title={title} logo={logo} navLinks={navLinks} contact={contact}/>
+    <Header title={title} logo={logo} home={home} navLinks={navLinks} contact={contact}/>
     <main className={classes.main}>
       {children}
     </main>

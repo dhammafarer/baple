@@ -15,7 +15,7 @@ export const frontmatter = {
       image: "../img/energy/Powerwall_Infographic-01.jpg",
       body: [
         "Los dispositivos BES1 están diseñados para el almacenamiento de energía eléctrica (EES). Cuya función principal es almacenar energía proveniente de paneles fotovoltaicos, turbinas eólicas o de agua, un generador o la red eléctrica. O cualquier combinación de estos.",
-        "Cuando los dispositivos BES1 tienen carga, se pueden usar para alimentar los electrodomésticos de la misma forma que si fuesen alimentados directamentente desde la red eléctrica externa.",
+        "Cuando los dispositivos BES1 tienen carga, se pueden usar para alimentar los electrodomésticos de la misma forma que si fuesen alimentados directamente desde la red eléctrica externa.",
         "Los dispositivos BES1 están disponibles con capacidad desde 5 kWh, y fabricados con baterías con tecnología LiFePO4 de última generación, ofreciendo muchas ventajas económicas a medio plazo a diferencia de las baterías clásicas de Pb.",
       ],
       link: {

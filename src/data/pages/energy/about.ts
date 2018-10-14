@@ -14,7 +14,7 @@ export const frontmatter: AboutPage = {
       ],
     },
     advantages: {
-      heading: "Advantages of Baple Plastics",
+      heading: "Ventajas de Baple Energy",
       body: [
         "Innovación y Tecnología es la base para poder suministrar productos con los niveles de calidad exigidos por el mercado internacional, ofreciendo soluciones cada vez más modernas y más personalizadas a nuestros partners.",
       "Debido a los múltiples centros de fabricación, tenemos la capacidad de ofrecer una gran flexibilidad en la personalización de productos y servicios adicionales que aporten valor añadido al consumidor.",

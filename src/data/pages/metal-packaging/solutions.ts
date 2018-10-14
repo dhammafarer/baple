@@ -18,7 +18,7 @@ export const frontmatter: CategoriesPage = {
         },
         {
           label: "Tapas",
-          image: "../../img/metal-packaging/caps icon.png",
+          image: "../../img/metal-packaging/tapa-icon-new.png",
           to: "/metal-packaging/tapas",
         },
       ],

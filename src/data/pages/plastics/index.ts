@@ -41,7 +41,7 @@ export const frontmatter: IndexPage = {
     },
     more: {
       logo: "../../img/logos/baple-plastics-logo.png",
-      heading: "Quieres saber más de nosotros?",
+      heading: "¿Quieres conocer más sobre Baple Plastic?",
       image: "../../img/contact-us-1.jpg",
       link: {
         to: "/contact",

@@ -31,7 +31,7 @@ export const frontmatter: CategoriesPage = {
           heading: "Baple Energy Storage",
           image: "../../img/background/Storage_Half.jpg",
           body: [],
-          subheading: "Da la bienvenida al futuro: energía limpia y de autoconsumo!",
+          subheading: "Da la bienvenida al futuro: energía limpia y económica",
           link: {
             to: "/energy/energy-storage",
             label: "Más Info",
