@@ -10,8 +10,8 @@ export const AboutFragment = graphql`
         about1 {
           logo {
             childImageSharp {
-              fixed(quality: 90, width: 400) {
-                ...GatsbyImageSharpFixed
+              fluid(quality: 90, maxWidth: 400) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

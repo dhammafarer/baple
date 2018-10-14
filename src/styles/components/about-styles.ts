@@ -15,18 +15,6 @@ const aboutStyles = (theme: Theme) => createStyles({
     backgroundPosition: "center center",
     overflow: "hidden",
   },
-  mainImg: {
-    width: "100%",
-  },
-  heading: {
-    fontSize: "1.8em",
-    fontWeight: 700,
-    color: theme.palette.primary.main,
-    width: "100%",
-    textTransform: "uppercase",
-    marginBottom: "1.2em",
-    textAlign: "center",
-  },
   body: {
     paddingLeft: theme.spacing.unit * 3,
     paddingRight: theme.spacing.unit * 3,
@@ -44,6 +32,8 @@ const aboutStyles = (theme: Theme) => createStyles({
     alignItems: "center",
   },
   logo: {
+    maxWidth: 300,
+    margin: "0 auto",
     marginBottom: "1rem",
   },
   text: {

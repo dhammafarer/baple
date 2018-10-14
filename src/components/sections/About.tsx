@@ -24,7 +24,7 @@ const About: React.SFC<Props> = ({ heading, subheading, image, logo, body, rever
     body={body}
     image={image}
     before={logo &&
-      <Img className={classes.logo} fixed={logo.childImageSharp.fixed}/>
+      <Img className={classes.logo} fluid={logo.childImageSharp.fluid}/>
     }
   />
 );
