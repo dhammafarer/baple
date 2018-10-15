@@ -23,7 +23,7 @@ const styles = (theme: Theme) => createStyles({
     marginTop: "1em",
   },
   content: {
-    padding: theme.spacing.unit * 6,
+    padding: theme.spacing.unit * 3,
     height: "100%",
     width: "100%",
     display: "flex",
@@ -31,6 +31,9 @@ const styles = (theme: Theme) => createStyles({
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
+    [theme.breakpoints.up("md")]: {
+      padding: theme.spacing.unit * 6,
+    },
   },
   text: {},
   link: {
