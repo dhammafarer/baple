@@ -19,11 +19,16 @@ const styles = (theme: Theme) => createStyles({
     margin: "2rem 0",
   },
   bes: {
+    marginLeft: theme.spacing.unit * 3,
+    marginRight: theme.spacing.unit * 3,
     borderRadius: 4,
     padding: theme.spacing.unit * 3,
     border: "1px solid gray",
     borderColor: theme.palette.grey[400],
     textAlign: "center",
+    [theme.breakpoints.up("md")]: {
+      margin: 0,
+    },
   },
   heading: {
     marginBottom: "1rem",

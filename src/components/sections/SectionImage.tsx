@@ -15,8 +15,11 @@ const styles = (theme: Theme) => createStyles({
     width: "100%",
     paddingTop: theme.spacing.unit * 6,
     paddingBottom: theme.spacing.unit * 6,
-    paddingLeft: theme.spacing.unit * 6,
-    paddingRight: theme.spacing.unit * 6,
+    paddingLeft: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3,
+    [theme.breakpoints.up("md")]: {
+      padding: theme.spacing.unit * 6,
+    },
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
