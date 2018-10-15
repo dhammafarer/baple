@@ -11,6 +11,12 @@ const ItemSpecStyles = (theme: Theme) => createStyles({
   paragraph: {},
   card: {
     height: "100%",
+    marginLeft: theme.spacing.unit * 3,
+    marginRight: theme.spacing.unit * 3,
+    [theme.breakpoints.up("md")]: {
+      marginLeft: 0,
+      marginRight: 0,
+    },
   },
   media: {
     width: "100%",
