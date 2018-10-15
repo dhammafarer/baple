@@ -2,7 +2,7 @@ export const frontmatter = {
   layout: "category",
   sections: {
     intro1: {
-      heading: "Da la bienvenida al futuro: transporte limpio y económico",
+      heading: "Da la bienvenida al futuro: energía limpia y de autoconsumo",
       image: "../img/energy/Bable Energy_Wallpaper_0823.jpg",
       body: [
         "Lo que anteriormente fue un sueño, ahora es una realidad. Cada hogar debe tener la libertad de decidir sobre un aspecto de su vida tan importante como poder decidir exactamente cuánta energía consumirá y cómo suministrará de energía su casa, independientemente de las influencias externas.",
