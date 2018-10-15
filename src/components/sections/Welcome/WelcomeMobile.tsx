@@ -47,10 +47,14 @@ const styles = (theme: Theme) => createStyles({
     fontWeight: 300,
   },
   quotes: {
-    maxWidth: 600,
   },
   blockquote: {
-    marginBottom: "0.2em",
+    margin: 0,
+    marginBottom: "1rem",
+    padding: 0,
+    ["&:last-child"]: {
+      marginBottom: 0,
+    },
   },
   quote: {
     fontStyle: "italic",
