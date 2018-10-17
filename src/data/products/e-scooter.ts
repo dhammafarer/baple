@@ -46,7 +46,7 @@ export const frontmatter = {
       categoryItems: [
         {
           heading: "B1 E-Scooter",
-          image: "../img/energy/Welcome.jpg",
+          image: "../img/energy/Welcome_B1.jpg",
           body: [
             "El modelo B1 es un modelo básico pero sorprendente. Pues está diseñado para ser una gran opción como medio de transporte urbano de uso diario. ",
             "El modelo B1 tiene un diseño moderno, y cool. Pero no sólo eso, además tiene unas excelentes características para aquellos usuarios interesados en disponer de una opción libre de CO2 y económica de transporte.",
